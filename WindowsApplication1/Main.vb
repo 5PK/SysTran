@@ -50,4 +50,12 @@
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
         ExitForm.SaveAndExit(Me)
     End Sub
+
+    Private Sub AddToolStripMenuItem2_Click(sender As Object, e As EventArgs) Handles AddToolStripMenuItem2.Click
+        AddVehicleCuSelect.Show()
+    End Sub
+
+    Private Sub CreateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateToolStripMenuItem.Click
+        CreateWOSelect.Show()
+    End Sub
 End Class

@@ -161,13 +161,13 @@ Partial Class SysTran
         'TransactionsToolStripMenuItem
         '
         Me.TransactionsToolStripMenuItem.Name = "TransactionsToolStripMenuItem"
-        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.TransactionsToolStripMenuItem.Text = "Transactions"
         '
         'SummaryToolStripMenuItem
         '
         Me.SummaryToolStripMenuItem.Name = "SummaryToolStripMenuItem"
-        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
+        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.SummaryToolStripMenuItem.Text = "Summary"
         '
         'DeleteToolStripMenuItem
@@ -199,14 +199,14 @@ Partial Class SysTran
         '
         Me.VehiclesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyToolStripMenuItem, Me.VehicleHistoryToolStripMenuItem, Me.VehicleRemindersToolStripMenuItem, Me.VehicleListToolStripMenuItem})
         Me.VehiclesToolStripMenuItem.Name = "VehiclesToolStripMenuItem"
-        Me.VehiclesToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
+        Me.VehiclesToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
         Me.VehiclesToolStripMenuItem.Text = "Vehicles"
         '
         'ModifyToolStripMenuItem
         '
         Me.ModifyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.UpdateToolStripMenuItem2, Me.DeleteToolStripMenuItem2})
         Me.ModifyToolStripMenuItem.Name = "ModifyToolStripMenuItem"
-        Me.ModifyToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.ModifyToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.ModifyToolStripMenuItem.Text = "Modify"
         '
         'AddToolStripMenuItem2
@@ -230,19 +230,19 @@ Partial Class SysTran
         'VehicleHistoryToolStripMenuItem
         '
         Me.VehicleHistoryToolStripMenuItem.Name = "VehicleHistoryToolStripMenuItem"
-        Me.VehicleHistoryToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.VehicleHistoryToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.VehicleHistoryToolStripMenuItem.Text = "Vehicle History"
         '
         'VehicleRemindersToolStripMenuItem
         '
         Me.VehicleRemindersToolStripMenuItem.Name = "VehicleRemindersToolStripMenuItem"
-        Me.VehicleRemindersToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.VehicleRemindersToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.VehicleRemindersToolStripMenuItem.Text = "Vehicle Reminders"
         '
         'VehicleListToolStripMenuItem
         '
         Me.VehicleListToolStripMenuItem.Name = "VehicleListToolStripMenuItem"
-        Me.VehicleListToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
+        Me.VehicleListToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
         Me.VehicleListToolStripMenuItem.Text = "Vehicle List"
         '
         'OrderWritingToolStripMenuItem
@@ -256,26 +256,26 @@ Partial Class SysTran
         '
         Me.WorkOrdersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateToolStripMenuItem, Me.UpdateToolStripMenuItem3})
         Me.WorkOrdersToolStripMenuItem.Name = "WorkOrdersToolStripMenuItem"
-        Me.WorkOrdersToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.WorkOrdersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.WorkOrdersToolStripMenuItem.Text = "Work Orders"
         '
         'CreateToolStripMenuItem
         '
         Me.CreateToolStripMenuItem.Name = "CreateToolStripMenuItem"
-        Me.CreateToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
+        Me.CreateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.CreateToolStripMenuItem.Text = "Create"
         '
         'UpdateToolStripMenuItem3
         '
         Me.UpdateToolStripMenuItem3.Name = "UpdateToolStripMenuItem3"
-        Me.UpdateToolStripMenuItem3.Size = New System.Drawing.Size(112, 22)
+        Me.UpdateToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
         Me.UpdateToolStripMenuItem3.Text = "Update"
         '
         'EstimatesToolStripMenuItem
         '
         Me.EstimatesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateToolStripMenuItem1, Me.UpdateToolStripMenuItem4})
         Me.EstimatesToolStripMenuItem.Name = "EstimatesToolStripMenuItem"
-        Me.EstimatesToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.EstimatesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.EstimatesToolStripMenuItem.Text = "Estimates"
         '
         'CreateToolStripMenuItem1
@@ -294,7 +294,7 @@ Partial Class SysTran
         '
         Me.InvoicesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateToolStripMenuItem2, Me.UpdateToolStripMenuItem5})
         Me.InvoicesToolStripMenuItem.Name = "InvoicesToolStripMenuItem"
-        Me.InvoicesToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.InvoicesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.InvoicesToolStripMenuItem.Text = "Invoices"
         '
         'CreateToolStripMenuItem2
@@ -312,7 +312,7 @@ Partial Class SysTran
         'PreSetJobsToolStripMenuItem
         '
         Me.PreSetJobsToolStripMenuItem.Name = "PreSetJobsToolStripMenuItem"
-        Me.PreSetJobsToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.PreSetJobsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.PreSetJobsToolStripMenuItem.Text = "Pre-Set Jobs"
         '
         'SuppliersToolStripMenuItem
@@ -325,19 +325,19 @@ Partial Class SysTran
         'TransactionsToolStripMenuItem1
         '
         Me.TransactionsToolStripMenuItem1.Name = "TransactionsToolStripMenuItem1"
-        Me.TransactionsToolStripMenuItem1.Size = New System.Drawing.Size(141, 22)
+        Me.TransactionsToolStripMenuItem1.Size = New System.Drawing.Size(140, 22)
         Me.TransactionsToolStripMenuItem1.Text = "Transactions"
         '
         'AddToolStripMenuItem3
         '
         Me.AddToolStripMenuItem3.Name = "AddToolStripMenuItem3"
-        Me.AddToolStripMenuItem3.Size = New System.Drawing.Size(141, 22)
+        Me.AddToolStripMenuItem3.Size = New System.Drawing.Size(140, 22)
         Me.AddToolStripMenuItem3.Text = "Add"
         '
         'UpdateToolStripMenuItem6
         '
         Me.UpdateToolStripMenuItem6.Name = "UpdateToolStripMenuItem6"
-        Me.UpdateToolStripMenuItem6.Size = New System.Drawing.Size(141, 22)
+        Me.UpdateToolStripMenuItem6.Size = New System.Drawing.Size(140, 22)
         Me.UpdateToolStripMenuItem6.Text = "Update"
         '
         'SystemAdminToolStripMenuItem

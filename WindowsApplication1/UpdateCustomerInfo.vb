@@ -4,7 +4,7 @@
 Public Class UpdateCustomerInfo
 
     Private Access As New DBControl
-    Public cusID As String
+
 
 
 
@@ -21,9 +21,10 @@ Public Class UpdateCustomerInfo
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
 
         UpdateRecord()
-        MessageBox.Show(tbFname.Text)
+        MessageBox.Show("CUSTOMER UPDATED")
 
-        Call ExitForm.SaveAndExit(Me)
+        Me.Close()
+
 
 
     End Sub

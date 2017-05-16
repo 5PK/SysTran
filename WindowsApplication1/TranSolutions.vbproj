@@ -72,6 +72,18 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddVehicleCuSelect.Designer.vb">
+      <DependentUpon>AddVehicleCuSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddVehicleCuSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddVehicleInfo.Designer.vb">
+      <DependentUpon>AddVehicleInfo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddVehicleInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DBControl.vb" />
     <Compile Include="TSauto1DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -82,12 +94,6 @@
       <DependentUpon>UpdateVehicleSelect.vb</DependentUpon>
     </Compile>
     <Compile Include="UpdateVehicleSelect.vb">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="WOUpdate.Designer.vb">
-      <DependentUpon>WOUpdate.vb</DependentUpon>
-    </Compile>
-    <Compile Include="WOUpdate.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="CreateWOSelect.Designer.vb">
@@ -149,16 +155,25 @@
     <Compile Include="WOOdometerEntry.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WrWoInvoice.Designer.vb">
+      <DependentUpon>WrWoInvoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="WrWoInvoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddVehicleCuSelect.resx">
+      <DependentUpon>AddVehicleCuSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddVehicleInfo.resx">
+      <DependentUpon>AddVehicleInfo.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UpdateVehicleSelect.resx">
       <DependentUpon>UpdateVehicleSelect.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="WOUpdate.resx">
-      <DependentUpon>WOUpdate.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CreateWOSelect.resx">
       <DependentUpon>CreateWOSelect.vb</DependentUpon>
@@ -183,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="WOOdometerEntry.resx">
       <DependentUpon>WOOdometerEntry.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WrWoInvoice.resx">
+      <DependentUpon>WrWoInvoice.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +230,17 @@
     <Content Include="TSauto1.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

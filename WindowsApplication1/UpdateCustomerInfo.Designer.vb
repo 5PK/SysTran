@@ -119,12 +119,12 @@ Partial Class UpdateCustomerInfo
         '
         Me.tbEmail.Location = New System.Drawing.Point(112, 219)
         Me.tbEmail.Name = "tbEmail"
-        Me.tbEmail.Size = New System.Drawing.Size(173, 20)
+        Me.tbEmail.Size = New System.Drawing.Size(163, 20)
         Me.tbEmail.TabIndex = 41
         '
         'tbBHomeNum
         '
-        Me.tbBHomeNum.Location = New System.Drawing.Point(175, 134)
+        Me.tbBHomeNum.Location = New System.Drawing.Point(175, 141)
         Me.tbBHomeNum.Name = "tbBHomeNum"
         Me.tbBHomeNum.Size = New System.Drawing.Size(100, 20)
         Me.tbBHomeNum.TabIndex = 40
@@ -187,7 +187,7 @@ Partial Class UpdateCustomerInfo
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 137)
+        Me.Label2.Location = New System.Drawing.Point(11, 144)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(48, 13)
         Me.Label2.TabIndex = 32
@@ -265,7 +265,7 @@ Partial Class UpdateCustomerInfo
         '
         'tbAHomeNum
         '
-        Me.tbAHomeNum.Location = New System.Drawing.Point(112, 134)
+        Me.tbAHomeNum.Location = New System.Drawing.Point(112, 141)
         Me.tbAHomeNum.Name = "tbAHomeNum"
         Me.tbAHomeNum.Size = New System.Drawing.Size(47, 20)
         Me.tbAHomeNum.TabIndex = 51
