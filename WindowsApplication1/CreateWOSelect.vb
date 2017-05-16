@@ -42,6 +42,8 @@ Public Class CreateWOSelect
 
         frm.tbvehid.Text = vehicleID
 
+        Me.Close()
+
 
     End Sub
 

@@ -1,7 +1,11 @@
-﻿Option Strict On
+﻿'TO Create a Word file, import word libary then create 3 objects
 
 
 Public Class WrWoInvoice
+
+    Dim oWord As Microsoft.Office.Interop.Word.Application
+    Dim wd As Microsoft.Office.Interop.Word.Document
+
 
     Public Sub New()
 
@@ -13,21 +17,15 @@ Public Class WrWoInvoice
     End Sub
     Private Sub WrWoInvoice_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
-    End Sub
+        'TODO - Fill Customer/Vehicle/Admin
 
-    Private Sub GroupBox1_Enter(sender As Object, e As EventArgs) Handles GroupBox1.Enter
 
-    End Sub
-
-    Private Sub GroupBox2_Enter(sender As Object, e As EventArgs) Handles GroupBox2.Enter
 
     End Sub
 
-    Private Sub GroupBox4_Enter(sender As Object, e As EventArgs) Handles GroupBox4.Enter
 
-    End Sub
-
-    Private Sub tpWorkOrder_Click(sender As Object, e As EventArgs) Handles tpWorkOrder.Click
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles btnPrintWR.Click
+        oWord.Documents.Add()
 
     End Sub
 End Class

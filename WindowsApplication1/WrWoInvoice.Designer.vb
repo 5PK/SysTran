@@ -25,6 +25,8 @@ Partial Class WrWoInvoice
         Me.tbvehid = New System.Windows.Forms.TextBox()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.tpWorkRequest = New System.Windows.Forms.TabPage()
+        Me.Button10 = New System.Windows.Forms.Button()
+        Me.btnPrintWR = New System.Windows.Forms.Button()
         Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
         Me.Button5 = New System.Windows.Forms.Button()
@@ -59,8 +61,6 @@ Partial Class WrWoInvoice
         Me.lblCuName = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.tpInvoice = New System.Windows.Forms.TabPage()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
         Me.TabControl1.SuspendLayout()
         Me.tpWorkRequest.SuspendLayout()
         Me.GroupBox5.SuspendLayout()
@@ -98,7 +98,7 @@ Partial Class WrWoInvoice
         Me.tpWorkRequest.BackColor = System.Drawing.Color.Gainsboro
         Me.tpWorkRequest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpWorkRequest.Controls.Add(Me.Button10)
-        Me.tpWorkRequest.Controls.Add(Me.Button9)
+        Me.tpWorkRequest.Controls.Add(Me.btnPrintWR)
         Me.tpWorkRequest.Controls.Add(Me.RichTextBox1)
         Me.tpWorkRequest.Controls.Add(Me.GroupBox5)
         Me.tpWorkRequest.Controls.Add(Me.GroupBox6)
@@ -108,6 +108,24 @@ Partial Class WrWoInvoice
         Me.tpWorkRequest.Size = New System.Drawing.Size(726, 462)
         Me.tpWorkRequest.TabIndex = 2
         Me.tpWorkRequest.Text = "Work Request"
+        '
+        'Button10
+        '
+        Me.Button10.Location = New System.Drawing.Point(491, 260)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(75, 46)
+        Me.Button10.TabIndex = 11
+        Me.Button10.Text = "Button10"
+        Me.Button10.UseVisualStyleBackColor = True
+        '
+        'btnPrintWR
+        '
+        Me.btnPrintWR.Location = New System.Drawing.Point(491, 198)
+        Me.btnPrintWR.Name = "btnPrintWR"
+        Me.btnPrintWR.Size = New System.Drawing.Size(75, 46)
+        Me.btnPrintWR.TabIndex = 10
+        Me.btnPrintWR.Text = "Save And Print"
+        Me.btnPrintWR.UseVisualStyleBackColor = True
         '
         'RichTextBox1
         '
@@ -418,24 +436,6 @@ Partial Class WrWoInvoice
         Me.tpInvoice.Text = "Invoice"
         Me.tpInvoice.UseVisualStyleBackColor = True
         '
-        'Button9
-        '
-        Me.Button9.Location = New System.Drawing.Point(491, 198)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(75, 46)
-        Me.Button9.TabIndex = 10
-        Me.Button9.Text = "Button9"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button10
-        '
-        Me.Button10.Location = New System.Drawing.Point(491, 260)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(75, 46)
-        Me.Button10.TabIndex = 11
-        Me.Button10.Text = "Button10"
-        Me.Button10.UseVisualStyleBackColor = True
-        '
         'WrWoInvoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -504,5 +504,5 @@ Partial Class WrWoInvoice
     Friend WithEvents Label1 As Label
     Friend WithEvents RichTextBox1 As RichTextBox
     Friend WithEvents Button10 As Button
-    Friend WithEvents Button9 As Button
+    Friend WithEvents btnPrintWR As Button
 End Class
