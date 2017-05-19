@@ -22,6 +22,7 @@ Partial Class SysTran
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SysTran))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
@@ -65,47 +66,62 @@ Partial Class SysTran
         Me.UpdateToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button5 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.MenuStrip1.SuspendLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
         '
+        Me.Button1.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(40, 90)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(131, 43)
-        Me.Button1.TabIndex = 0
+        Me.Button1.TabIndex = 1
         Me.Button1.Text = "Work In Progress"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
         '
+        Me.Button2.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(40, 241)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(131, 43)
-        Me.Button2.TabIndex = 1
+        Me.Button2.TabIndex = 3
         Me.Button2.Text = "Create Work Order"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.Button2.UseVisualStyleBackColor = False
         '
         'Button3
         '
+        Me.Button3.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button3.Location = New System.Drawing.Point(40, 165)
         Me.Button3.Name = "Button3"
         Me.Button3.Size = New System.Drawing.Size(131, 43)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Customers"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.Button3.UseVisualStyleBackColor = False
         '
         'Button4
         '
+        Me.Button4.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button4.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button4.Location = New System.Drawing.Point(40, 316)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(131, 43)
-        Me.Button4.TabIndex = 3
+        Me.Button4.TabIndex = 4
         Me.Button4.Text = "Invoices"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.Button4.UseVisualStyleBackColor = False
         '
         'MenuStrip1
         '
+        Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.VehiclesToolStripMenuItem, Me.OrderWritingToolStripMenuItem, Me.SuppliersToolStripMenuItem, Me.SystemAdminToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -256,26 +272,26 @@ Partial Class SysTran
         '
         Me.WorkOrdersToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateToolStripMenuItem, Me.UpdateToolStripMenuItem3})
         Me.WorkOrdersToolStripMenuItem.Name = "WorkOrdersToolStripMenuItem"
-        Me.WorkOrdersToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.WorkOrdersToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.WorkOrdersToolStripMenuItem.Text = "Work Orders"
         '
         'CreateToolStripMenuItem
         '
         Me.CreateToolStripMenuItem.Name = "CreateToolStripMenuItem"
-        Me.CreateToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.CreateToolStripMenuItem.Size = New System.Drawing.Size(112, 22)
         Me.CreateToolStripMenuItem.Text = "Create"
         '
         'UpdateToolStripMenuItem3
         '
         Me.UpdateToolStripMenuItem3.Name = "UpdateToolStripMenuItem3"
-        Me.UpdateToolStripMenuItem3.Size = New System.Drawing.Size(152, 22)
+        Me.UpdateToolStripMenuItem3.Size = New System.Drawing.Size(112, 22)
         Me.UpdateToolStripMenuItem3.Text = "Update"
         '
         'EstimatesToolStripMenuItem
         '
         Me.EstimatesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateToolStripMenuItem1, Me.UpdateToolStripMenuItem4})
         Me.EstimatesToolStripMenuItem.Name = "EstimatesToolStripMenuItem"
-        Me.EstimatesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.EstimatesToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.EstimatesToolStripMenuItem.Text = "Estimates"
         '
         'CreateToolStripMenuItem1
@@ -294,7 +310,7 @@ Partial Class SysTran
         '
         Me.InvoicesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.CreateToolStripMenuItem2, Me.UpdateToolStripMenuItem5})
         Me.InvoicesToolStripMenuItem.Name = "InvoicesToolStripMenuItem"
-        Me.InvoicesToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.InvoicesToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.InvoicesToolStripMenuItem.Text = "Invoices"
         '
         'CreateToolStripMenuItem2
@@ -312,7 +328,7 @@ Partial Class SysTran
         'PreSetJobsToolStripMenuItem
         '
         Me.PreSetJobsToolStripMenuItem.Name = "PreSetJobsToolStripMenuItem"
-        Me.PreSetJobsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.PreSetJobsToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.PreSetJobsToolStripMenuItem.Text = "Pre-Set Jobs"
         '
         'SuppliersToolStripMenuItem
@@ -348,19 +364,35 @@ Partial Class SysTran
         '
         'Button5
         '
-        Me.Button5.Location = New System.Drawing.Point(825, 493)
+        Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button5.AutoSize = True
+        Me.Button5.BackColor = System.Drawing.Color.Crimson
+        Me.Button5.Font = New System.Drawing.Font("Courier New", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(870, 485)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(169, 79)
+        Me.Button5.Size = New System.Drawing.Size(154, 79)
         Me.Button5.TabIndex = 6
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.Button5.Text = " EXIT"
+        Me.Button5.UseVisualStyleBackColor = False
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
+        Me.PictureBox1.Location = New System.Drawing.Point(747, 27)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(329, 142)
+        Me.PictureBox1.TabIndex = 7
+        Me.PictureBox1.TabStop = False
         '
         'SysTran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
+        Me.BackColor = System.Drawing.SystemColors.ControlLight
         Me.ClientSize = New System.Drawing.Size(1076, 609)
+        Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Button4)
@@ -373,6 +405,7 @@ Partial Class SysTran
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -421,4 +454,5 @@ Partial Class SysTran
     Friend WithEvents UpdateToolStripMenuItem6 As ToolStripMenuItem
     Friend WithEvents SystemAdminToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button5 As Button
+    Friend WithEvents PictureBox1 As PictureBox
 End Class

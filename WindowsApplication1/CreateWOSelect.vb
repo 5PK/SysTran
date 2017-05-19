@@ -31,6 +31,21 @@ Public Class CreateWOSelect
 
     Private Sub CreateWO_Click(sender As Object, e As EventArgs) Handles btnCreateWO.Click
 
+
+
+        FillLabels()
+        Me.Close()
+
+
+    End Sub
+
+    Private Sub FillLabels()
+
+        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TSAuto1.accdb"
+
+        con.Open()
+
+
         Dim SelectedRowIndex As Integer = dgvVehicles.SelectedCells(0).RowIndex
         Dim selectedRow As DataGridViewRow = dgvVehicles.Rows(SelectedRowIndex)
 
@@ -41,11 +56,34 @@ Public Class CreateWOSelect
         frm.Show()
 
         frm.tbvehid.Text = vehicleID
+        frm.tbCuID.Text = customerID
 
-        Me.Close()
+        ''QUERIES RECORDS PERTAINING TO CUSTOMER ID
+        Dim str As String
+
+        str = "SELECT * FROM Customers WHERE ID = " & customerID & " "
+        Dim cmd As OleDbCommand = New OleDbCommand(str, con)
+
+        'READ DATA INTO NEXT FORM TEXTBOXES
+        Dim rdr As OleDbDataReader = cmd.ExecuteReader()
 
 
+        'TODO - Fill Customer/Vehicle/Admin
+
+        While rdr.Read
+            frm.lblCuFname.Text = rdr("fname").ToString
+            frm.lblCuLname.Text = rdr("lname").ToString
+            frm.lblCuAHomeNum.Text = rdr("AHTEL").ToString
+            frm.lblCuBHomeNum.Text = rdr("htel").ToString
+            frm.lblACellNum.Text = rdr("acell").ToString
+            frm.lblBCellNum.Text = rdr("cell").ToString
+
+
+
+        End While
     End Sub
+
+
 
     Private Sub CreateWOSelect_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
