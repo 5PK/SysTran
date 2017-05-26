@@ -46,8 +46,15 @@ Public Class DBControl
         End Try
 
         ' CLOSE YOUR CONNECTION
+
+
         If DBCon.State = ConnectionState.Open Then DBCon.Close()
+
+
+
+
     End Sub
+
 
     ' INCLUDE QUERY & COMMAND PARAMETERS
     Public Sub AddParam(Name As String, Value As Object)

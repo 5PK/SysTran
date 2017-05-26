@@ -25,7 +25,7 @@ Partial Class SysTran
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(SysTran))
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.btnCustomers = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.FileToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -67,6 +67,7 @@ Partial Class SysTran
         Me.SystemAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button3 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -79,8 +80,8 @@ Partial Class SysTran
         Me.Button1.Location = New System.Drawing.Point(40, 90)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(131, 43)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Work In Progress"
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "WORK IN PROGRESS"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'Button2
@@ -88,35 +89,35 @@ Partial Class SysTran
         Me.Button2.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(40, 241)
+        Me.Button2.Location = New System.Drawing.Point(40, 167)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(131, 43)
-        Me.Button2.TabIndex = 3
-        Me.Button2.Text = "Create Work Order"
+        Me.Button2.TabIndex = 0
+        Me.Button2.Text = "CREATE WORK ORDER"
         Me.Button2.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnCustomers
         '
-        Me.Button3.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(40, 165)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(131, 43)
-        Me.Button3.TabIndex = 2
-        Me.Button3.Text = "Customers"
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnCustomers.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCustomers.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnCustomers.Location = New System.Drawing.Point(40, 320)
+        Me.btnCustomers.Name = "btnCustomers"
+        Me.btnCustomers.Size = New System.Drawing.Size(131, 43)
+        Me.btnCustomers.TabIndex = 0
+        Me.btnCustomers.Text = "CUSTOMERS"
+        Me.btnCustomers.UseVisualStyleBackColor = False
         '
         'Button4
         '
         Me.Button4.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(40, 316)
+        Me.Button4.Location = New System.Drawing.Point(40, 244)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(131, 43)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Invoices"
+        Me.Button4.TabIndex = 0
+        Me.Button4.Text = "INVOICES"
         Me.Button4.UseVisualStyleBackColor = False
         '
         'MenuStrip1
@@ -367,11 +368,12 @@ Partial Class SysTran
         Me.Button5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Button5.AutoSize = True
         Me.Button5.BackColor = System.Drawing.Color.Crimson
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Courier New", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button5.Location = New System.Drawing.Point(870, 485)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(154, 79)
-        Me.Button5.TabIndex = 6
+        Me.Button5.TabIndex = 0
         Me.Button5.Text = " EXIT"
         Me.Button5.UseVisualStyleBackColor = False
         '
@@ -385,23 +387,37 @@ Partial Class SysTran
         Me.PictureBox1.TabIndex = 7
         Me.PictureBox1.TabStop = False
         '
+        'Button3
+        '
+        Me.Button3.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button3.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(40, 399)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(131, 43)
+        Me.Button3.TabIndex = 8
+        Me.Button3.Text = "VEHICLES"
+        Me.Button3.UseVisualStyleBackColor = False
+        '
         'SysTran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.BackColor = System.Drawing.SystemColors.ControlLight
+        Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(1076, 609)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.btnCustomers)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "SysTran"
-        Me.Text = "SysTran"
+        Me.Text = "SYSTRAN - Automotive Business Solution by  Tran Solutions LTD."
         Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -413,7 +429,7 @@ Partial Class SysTran
 
     Friend WithEvents Button1 As Button
     Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
+    Friend WithEvents btnCustomers As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents MenuStrip1 As MenuStrip
     Friend WithEvents FileToolStripMenuItem As ToolStripMenuItem
@@ -455,4 +471,5 @@ Partial Class SysTran
     Friend WithEvents SystemAdminToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button5 As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Button3 As Button
 End Class

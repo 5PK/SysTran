@@ -116,5 +116,12 @@ Public Class UpdateCustomerSelect
 
     End Sub
 
+    Private Sub Exit_click(sender As Object, e As EventArgs) Handles Button1.Click
+        Me.Close()
 
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
 End Class

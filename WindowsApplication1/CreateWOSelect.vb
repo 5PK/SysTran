@@ -1,5 +1,6 @@
 ﻿Imports System.Data.OleDb
 
+
 Public Class CreateWOSelect
 
     Dim con As New OleDbConnection
@@ -31,38 +32,40 @@ Public Class CreateWOSelect
 
     Private Sub CreateWO_Click(sender As Object, e As EventArgs) Handles btnCreateWO.Click
 
-
-
-        FillLabels()
+        'CREATES WORK REQUEST WORK ORDER INVOICE FORM
+        Dim frm As New WrWoInvoice
+        frm.Show()
+        FillLabels(frm)
+        frm.IsWOFirstCreation(True)
         Me.Close()
-
 
     End Sub
 
-    Private Sub FillLabels()
+
+
+
+
+    Private Sub FillLabels(ByRef frm As WrWoInvoice)
 
         con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TSAuto1.accdb"
-
         con.Open()
-
 
         Dim SelectedRowIndex As Integer = dgvVehicles.SelectedCells(0).RowIndex
         Dim selectedRow As DataGridViewRow = dgvVehicles.Rows(SelectedRowIndex)
 
         vehicleID = Convert.ToString(selectedRow.Cells(0).Value)
 
-        'CREATES WORK REQUEST WORK ORDER INVOICE FORM
-        Dim frm As New WrWoInvoice
-        frm.Show()
-
-        frm.tbvehid.Text = vehicleID
+        frm.tbVehID.Text = vehicleID
         frm.tbCuID.Text = customerID
 
         ''QUERIES RECORDS PERTAINING TO CUSTOMER ID
-        Dim str As String
+        Dim strCu As String
+        Dim strVe As String
 
-        str = "SELECT * FROM Customers WHERE ID = " & customerID & " "
-        Dim cmd As OleDbCommand = New OleDbCommand(str, con)
+        strCu = "SELECT * FROM Customers WHERE ID = " & customerID & " "
+        strVe = "SELECT * FROM CuVehicles WHERE ID = " & vehicleID & " "
+
+        Dim cmd As OleDbCommand = New OleDbCommand(strCu, con)
 
         'READ DATA INTO NEXT FORM TEXTBOXES
         Dim rdr As OleDbDataReader = cmd.ExecuteReader()
@@ -77,10 +80,25 @@ Public Class CreateWOSelect
             frm.lblCuBHomeNum.Text = rdr("htel").ToString
             frm.lblACellNum.Text = rdr("acell").ToString
             frm.lblBCellNum.Text = rdr("cell").ToString
-
-
-
         End While
+        rdr.Close()
+
+        cmd = New OleDbCommand(strVe, con)
+        Dim rdr2 As OleDbDataReader = cmd.ExecuteReader()
+
+
+        While rdr2.Read
+            frm.lblYear.Text = rdr2("year").ToString
+            frm.lblMake.Text = rdr2("make").ToString
+            frm.lblModel.Text = rdr2("model").ToString
+            frm.lblPlate.Text = rdr2("plate").ToString
+            frm.lblOdometer.Text = rdr2("odometer").ToString
+            frm.lblVin.Text = rdr2("vin").ToString
+            frm.lblUnitNo.Text = rdr2("unitno").ToString
+        End While
+
+        rdr2.Close()
+        con.Close()
     End Sub
 
 
@@ -94,8 +112,6 @@ Public Class CreateWOSelect
         dgvCustomers.Columns(0).Visible = True
 
         ds2.Tables.Add(dt2a)
-
-
 
     End Sub
 
@@ -124,9 +140,6 @@ Public Class CreateWOSelect
     End Sub
 
     Private Sub dgvVehiclesShow()
-
-
-
 
 
         'Clears the dataset
@@ -162,6 +175,8 @@ Public Class CreateWOSelect
         customerID = Convert.ToString(selectedRow.Cells(0).Value)
 
         dgvVehiclesShow()
+
+        btnCreateWO.Enabled = True
 
 
     End Sub

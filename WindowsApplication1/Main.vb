@@ -44,8 +44,8 @@
 
     End Sub
 
-    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
-        My.Forms.UpdateCustomerSelect.Show()
+    Private Sub Customers_Click(sender As Object, e As EventArgs) Handles btnCustomers.Click
+        My.Forms.CuMenuSel.Show()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
@@ -58,5 +58,17 @@
 
     Private Sub CreateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles CreateToolStripMenuItem.Click
         CreateWOSelect.Show()
+    End Sub
+
+    Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
+
+    End Sub
+
+    Private Sub SysTran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        My.Forms.VeMenuSel.Show()
     End Sub
 End Class

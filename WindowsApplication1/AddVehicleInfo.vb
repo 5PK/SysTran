@@ -39,8 +39,12 @@
 
     End Sub
 
-    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+    Private Sub AddVehicle_Click(sender As Object, e As EventArgs) Handles btnAddVehicle.Click
         AddVehicle()
-        MessageBox.Show(tbPlate.Text)
+        MessageBox.Show("Vehicle Added! :D")
+    End Sub
+
+    Private Sub Cancel_Click(sender As Object, e As EventArgs) Handles btnCancel.Click
+        Me.Close()
     End Sub
 End Class

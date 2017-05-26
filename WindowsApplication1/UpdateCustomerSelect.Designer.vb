@@ -32,6 +32,7 @@ Partial Class UpdateCustomerSelect
         Me.TSauto1DataSetBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CustomersBindingSource = New System.Windows.Forms.BindingSource(Me.components)
         Me.CustomersTableAdapter = New WindowsApplication1.TSauto1DataSetTableAdapters.CustomersTableAdapter()
+        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.dgvCustomers, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TSauto1DataSet, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.TSauto1DataSetBindingSource, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -41,17 +42,19 @@ Partial Class UpdateCustomerSelect
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(51, 42)
+        Me.Label2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(51, 37)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(579, 18)
+        Me.Label2.Size = New System.Drawing.Size(656, 16)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Enter the first few characters of the customer's First Name, Last Name or Company" &
     ""
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(54, 76)
+        Me.TextBox1.BackColor = System.Drawing.SystemColors.ButtonFace
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Location = New System.Drawing.Point(54, 82)
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.Size = New System.Drawing.Size(199, 20)
         Me.TextBox1.TabIndex = 3
@@ -59,21 +62,24 @@ Partial Class UpdateCustomerSelect
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Font = New System.Drawing.Font("Arial", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(51, 120)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(325, 17)
+        Me.Label3.Size = New System.Drawing.Size(357, 14)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Click on the customer from the list, then click OK"
         '
         'btnOK
         '
+        Me.btnOK.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnOK.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnOK.Location = New System.Drawing.Point(54, 352)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(90, 54)
         Me.btnOK.TabIndex = 6
         Me.btnOK.Text = "OK"
-        Me.btnOK.UseVisualStyleBackColor = True
+        Me.btnOK.UseVisualStyleBackColor = False
         '
         'dgvCustomers
         '
@@ -110,18 +116,32 @@ Partial Class UpdateCustomerSelect
         '
         Me.CustomersTableAdapter.ClearBeforeFill = True
         '
+        'Button1
+        '
+        Me.Button1.BackColor = System.Drawing.Color.Crimson
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(180, 352)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(90, 54)
+        Me.Button1.TabIndex = 8
+        Me.Button1.Text = "CANCEL"
+        Me.Button1.UseVisualStyleBackColor = False
+        '
         'UpdateCustomerSelect
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(653, 462)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgvCustomers)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.Label2)
         Me.Name = "UpdateCustomerSelect"
-        Me.Text = "ntnt"
+        Me.Text = "Customer Select"
         CType(Me.dgvCustomers, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TSauto1DataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.TSauto1DataSetBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
@@ -139,4 +159,5 @@ Partial Class UpdateCustomerSelect
     Friend WithEvents TSauto1DataSet As TSauto1DataSet
     Friend WithEvents CustomersBindingSource As BindingSource
     Friend WithEvents CustomersTableAdapter As TSauto1DataSetTableAdapters.CustomersTableAdapter
+    Friend WithEvents Button1 As Button
 End Class

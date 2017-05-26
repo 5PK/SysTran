@@ -48,7 +48,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Spire.Doc">
-      <HintPath>..\..\..\..\..\Spire\Bin\NET4.0 ClientProfile\Spire.Doc.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\..\Spire\Bin\NET4.0 ClientProfile\Spire.Doc.dll</HintPath>
+    </Reference>
+    <Reference Include="Spire.XLS">
+      <HintPath>..\..\..\..\..\..\..\Spire\Bin\NET4.0 ClientProfile\Spire.XLS.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -88,6 +91,18 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBControl.vb" />
+    <Compile Include="CuMenuSel.Designer.vb">
+      <DependentUpon>CuMenuSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="CuMenuSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice.Designer.vb">
+      <DependentUpon>Invoice.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TSauto1DataSet.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -152,12 +167,19 @@
     <Compile Include="UpdateCustomerInfo.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="VeMenuSel.Designer.vb">
+      <DependentUpon>VeMenuSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VeMenuSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="WOOdometerEntry.Designer.vb">
       <DependentUpon>WOOdometerEntry.vb</DependentUpon>
     </Compile>
     <Compile Include="WOOdometerEntry.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="WRWOINVMethods.vb" />
     <Compile Include="WrWoInvoice.Designer.vb">
       <DependentUpon>WrWoInvoice.vb</DependentUpon>
     </Compile>
@@ -174,6 +196,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddVehicleInfo.resx">
       <DependentUpon>AddVehicleInfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CuMenuSel.resx">
+      <DependentUpon>CuMenuSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice.resx">
+      <DependentUpon>Invoice.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateVehicleSelect.resx">
       <DependentUpon>UpdateVehicleSelect.vb</DependentUpon>
@@ -198,6 +226,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateCustomerSelect.resx">
       <DependentUpon>UpdateCustomerSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VeMenuSel.resx">
+      <DependentUpon>VeMenuSel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="WOOdometerEntry.resx">
       <DependentUpon>WOOdometerEntry.vb</DependentUpon>
@@ -236,6 +267,24 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>8</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
     <COMReference Include="Microsoft.Office.Interop.Word">
       <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
       <VersionMajor>8</VersionMajor>
