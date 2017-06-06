@@ -26,7 +26,6 @@ Partial Class CreateWOSelect
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.tbCustomerSel = New System.Windows.Forms.TextBox()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.btnCuSelect = New System.Windows.Forms.Button()
         Me.dgvVehicles = New System.Windows.Forms.DataGridView()
         Me.dgvCustomers = New System.Windows.Forms.DataGridView()
         Me.btnCreateWO = New System.Windows.Forms.Button()
@@ -63,7 +62,6 @@ Partial Class CreateWOSelect
         '
         'GroupBox2
         '
-        Me.GroupBox2.Controls.Add(Me.btnCuSelect)
         Me.GroupBox2.Controls.Add(Me.dgvVehicles)
         Me.GroupBox2.Controls.Add(Me.dgvCustomers)
         Me.GroupBox2.Location = New System.Drawing.Point(46, 157)
@@ -73,18 +71,6 @@ Partial Class CreateWOSelect
         Me.GroupBox2.TabStop = False
         Me.GroupBox2.Text = "Customer List"
         '
-        'btnCuSelect
-        '
-        Me.btnCuSelect.BackColor = System.Drawing.Color.LightSteelBlue
-        Me.btnCuSelect.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnCuSelect.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCuSelect.Location = New System.Drawing.Point(157, 184)
-        Me.btnCuSelect.Name = "btnCuSelect"
-        Me.btnCuSelect.Size = New System.Drawing.Size(145, 32)
-        Me.btnCuSelect.TabIndex = 2
-        Me.btnCuSelect.Text = "Select Customer"
-        Me.btnCuSelect.UseVisualStyleBackColor = False
-        '
         'dgvVehicles
         '
         Me.dgvVehicles.AllowUserToAddRows = False
@@ -93,12 +79,12 @@ Partial Class CreateWOSelect
         Me.dgvVehicles.AllowUserToResizeRows = False
         Me.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVehicles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgvVehicles.Location = New System.Drawing.Point(21, 233)
+        Me.dgvVehicles.Location = New System.Drawing.Point(21, 221)
         Me.dgvVehicles.MultiSelect = False
         Me.dgvVehicles.Name = "dgvVehicles"
         Me.dgvVehicles.ReadOnly = True
         Me.dgvVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvVehicles.Size = New System.Drawing.Size(432, 150)
+        Me.dgvVehicles.Size = New System.Drawing.Size(432, 162)
         Me.dgvVehicles.TabIndex = 1
         '
         'dgvCustomers
@@ -114,7 +100,7 @@ Partial Class CreateWOSelect
         Me.dgvCustomers.Name = "dgvCustomers"
         Me.dgvCustomers.ReadOnly = True
         Me.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCustomers.Size = New System.Drawing.Size(432, 150)
+        Me.dgvCustomers.Size = New System.Drawing.Size(432, 170)
         Me.dgvCustomers.TabIndex = 0
         '
         'btnCreateWO
@@ -213,7 +199,6 @@ Partial Class CreateWOSelect
     Friend WithEvents tbCustomerSel As TextBox
     Friend WithEvents dgvVehicles As DataGridView
     Friend WithEvents dgvCustomers As DataGridView
-    Friend WithEvents btnCuSelect As Button
     Friend WithEvents TSauto1DataSetBindingSource As BindingSource
     Friend WithEvents TSauto1DataSet As TSauto1DataSet
 End Class

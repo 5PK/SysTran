@@ -6,7 +6,8 @@
     End Sub
 
     Private Sub btnModifyVehicle_Click(sender As Object, e As EventArgs) Handles btnModifyVehicle.Click
-
+        My.Forms.UpdateVehicleSelect.Show()
+        Me.Close()
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click

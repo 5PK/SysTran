@@ -52,7 +52,7 @@ Partial Class AddCustomer
         '
         Me.AddCstCompanyLabel.AutoSize = True
         Me.AddCstCompanyLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddCstCompanyLabel.Location = New System.Drawing.Point(48, 23)
+        Me.AddCstCompanyLabel.Location = New System.Drawing.Point(53, 21)
         Me.AddCstCompanyLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AddCstCompanyLabel.Name = "AddCstCompanyLabel"
         Me.AddCstCompanyLabel.Size = New System.Drawing.Size(72, 16)
@@ -63,7 +63,7 @@ Partial Class AddCustomer
         '
         Me.AddCstFNameLabel.AutoSize = True
         Me.AddCstFNameLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddCstFNameLabel.Location = New System.Drawing.Point(16, 64)
+        Me.AddCstFNameLabel.Location = New System.Drawing.Point(29, 65)
         Me.AddCstFNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AddCstFNameLabel.Name = "AddCstFNameLabel"
         Me.AddCstFNameLabel.Size = New System.Drawing.Size(96, 16)
@@ -74,7 +74,7 @@ Partial Class AddCustomer
         '
         Me.AddCstLNameLabel.AutoSize = True
         Me.AddCstLNameLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddCstLNameLabel.Location = New System.Drawing.Point(27, 105)
+        Me.AddCstLNameLabel.Location = New System.Drawing.Point(37, 103)
         Me.AddCstLNameLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AddCstLNameLabel.Name = "AddCstLNameLabel"
         Me.AddCstLNameLabel.Size = New System.Drawing.Size(88, 16)
@@ -85,7 +85,7 @@ Partial Class AddCustomer
         '
         Me.AddCstStreetLabel.AutoSize = True
         Me.AddCstStreetLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddCstStreetLabel.Location = New System.Drawing.Point(569, 100)
+        Me.AddCstStreetLabel.Location = New System.Drawing.Point(575, 99)
         Me.AddCstStreetLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AddCstStreetLabel.Name = "AddCstStreetLabel"
         Me.AddCstStreetLabel.Size = New System.Drawing.Size(64, 16)
@@ -107,7 +107,7 @@ Partial Class AddCustomer
         '
         Me.AddCstProvLabel.AutoSize = True
         Me.AddCstProvLabel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AddCstProvLabel.Location = New System.Drawing.Point(548, 62)
+        Me.AddCstProvLabel.Location = New System.Drawing.Point(559, 60)
         Me.AddCstProvLabel.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.AddCstProvLabel.Name = "AddCstProvLabel"
         Me.AddCstProvLabel.Size = New System.Drawing.Size(80, 16)
@@ -118,7 +118,7 @@ Partial Class AddCustomer
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(516, 135)
+        Me.Label1.Location = New System.Drawing.Point(535, 136)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(104, 16)
@@ -172,7 +172,7 @@ Partial Class AddCustomer
         'tbCompany
         '
         Me.tbCompany.Location = New System.Drawing.Point(173, 18)
-        Me.tbCompany.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCompany.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCompany.Name = "tbCompany"
         Me.tbCompany.Size = New System.Drawing.Size(229, 22)
         Me.tbCompany.TabIndex = 11
@@ -180,7 +180,7 @@ Partial Class AddCustomer
         'tbFname
         '
         Me.tbFname.Location = New System.Drawing.Point(173, 62)
-        Me.tbFname.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbFname.Margin = New System.Windows.Forms.Padding(4)
         Me.tbFname.Name = "tbFname"
         Me.tbFname.Size = New System.Drawing.Size(229, 22)
         Me.tbFname.TabIndex = 12
@@ -188,7 +188,7 @@ Partial Class AddCustomer
         'tbLastName
         '
         Me.tbLastName.Location = New System.Drawing.Point(173, 100)
-        Me.tbLastName.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbLastName.Margin = New System.Windows.Forms.Padding(4)
         Me.tbLastName.Name = "tbLastName"
         Me.tbLastName.Size = New System.Drawing.Size(229, 22)
         Me.tbLastName.TabIndex = 13
@@ -196,7 +196,7 @@ Partial Class AddCustomer
         'tbCity
         '
         Me.tbCity.Location = New System.Drawing.Point(677, 15)
-        Me.tbCity.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbCity.Margin = New System.Windows.Forms.Padding(4)
         Me.tbCity.Name = "tbCity"
         Me.tbCity.Size = New System.Drawing.Size(229, 22)
         Me.tbCity.TabIndex = 14
@@ -204,15 +204,15 @@ Partial Class AddCustomer
         'TextBox5
         '
         Me.TextBox5.Location = New System.Drawing.Point(173, 150)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.Size = New System.Drawing.Size(132, 22)
         Me.TextBox5.TabIndex = 15
         '
         'TextBox6
         '
-        Me.TextBox6.Location = New System.Drawing.Point(173, 255)
-        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox6.Location = New System.Drawing.Point(173, 254)
+        Me.TextBox6.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox6.Name = "TextBox6"
         Me.TextBox6.Size = New System.Drawing.Size(229, 22)
         Me.TextBox6.TabIndex = 16
@@ -220,7 +220,7 @@ Partial Class AddCustomer
         'TextBox7
         '
         Me.TextBox7.Location = New System.Drawing.Point(173, 223)
-        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox7.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox7.Name = "TextBox7"
         Me.TextBox7.Size = New System.Drawing.Size(132, 22)
         Me.TextBox7.TabIndex = 17
@@ -228,7 +228,7 @@ Partial Class AddCustomer
         'TextBox8
         '
         Me.TextBox8.Location = New System.Drawing.Point(173, 191)
-        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TextBox8.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox8.Name = "TextBox8"
         Me.TextBox8.Size = New System.Drawing.Size(132, 22)
         Me.TextBox8.TabIndex = 18
@@ -236,7 +236,7 @@ Partial Class AddCustomer
         'tbProvince
         '
         Me.tbProvince.Location = New System.Drawing.Point(677, 57)
-        Me.tbProvince.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbProvince.Margin = New System.Windows.Forms.Padding(4)
         Me.tbProvince.Name = "tbProvince"
         Me.tbProvince.Size = New System.Drawing.Size(229, 22)
         Me.tbProvince.TabIndex = 19
@@ -244,7 +244,7 @@ Partial Class AddCustomer
         'tbStreet
         '
         Me.tbStreet.Location = New System.Drawing.Point(677, 96)
-        Me.tbStreet.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbStreet.Margin = New System.Windows.Forms.Padding(4)
         Me.tbStreet.Name = "tbStreet"
         Me.tbStreet.Size = New System.Drawing.Size(229, 22)
         Me.tbStreet.TabIndex = 20
@@ -252,7 +252,7 @@ Partial Class AddCustomer
         'tbPostalCode
         '
         Me.tbPostalCode.Location = New System.Drawing.Point(677, 133)
-        Me.tbPostalCode.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.tbPostalCode.Margin = New System.Windows.Forms.Padding(4)
         Me.tbPostalCode.Name = "tbPostalCode"
         Me.tbPostalCode.Size = New System.Drawing.Size(103, 22)
         Me.tbPostalCode.TabIndex = 21
@@ -263,7 +263,7 @@ Partial Class AddCustomer
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(564, 220)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(95, 59)
         Me.Button1.TabIndex = 22
@@ -276,7 +276,7 @@ Partial Class AddCustomer
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(687, 220)
-        Me.Button2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(4)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(95, 59)
         Me.Button2.TabIndex = 23
@@ -315,7 +315,7 @@ Partial Class AddCustomer
         Me.Controls.Add(Me.AddCstFNameLabel)
         Me.Controls.Add(Me.AddCstCompanyLabel)
         Me.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "AddCustomer"
         Me.Text = "Form3"
         Me.ResumeLayout(False)

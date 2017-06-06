@@ -4,7 +4,7 @@
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
-
+        My.Forms.InvoiceSelect.Show()
     End Sub
 
     Private Sub ToolStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs)
@@ -70,5 +70,40 @@
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         My.Forms.VeMenuSel.Show()
+    End Sub
+
+    Private Sub Button6_Click(sender As Object, e As EventArgs)
+        My.Forms.Invoice.Show()
+    End Sub
+
+    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lblSelDay.Click
+
+    End Sub
+
+    Private Sub SettingsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SettingsToolStripMenuItem.Click
+
+        'TODO ADD SETTINGS
+        My.Forms.AdminSettings.Show()
+
+    End Sub
+
+    Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
+
+    End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        My.Forms.AccReceivable.Show()
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Dim frm As New PaymentSel
+
+
+        frm.tbAR.Text = 100.0
+        frm.tbInvTotal.Text = 100.0
+        frm.tbOutstanding.Text = 0.0
+
+        frm.Show()
+
     End Sub
 End Class

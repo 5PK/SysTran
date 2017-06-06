@@ -24,15 +24,22 @@ Partial Class PendingWO
     Private Sub InitializeComponent()
         Me.dgvWOPending = New System.Windows.Forms.DataGridView()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnExit = New System.Windows.Forms.Button()
         CType(Me.dgvWOPending, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'dgvWOPending
         '
+        Me.dgvWOPending.AllowUserToAddRows = False
+        Me.dgvWOPending.AllowUserToDeleteRows = False
+        Me.dgvWOPending.AllowUserToResizeColumns = False
+        Me.dgvWOPending.AllowUserToResizeRows = False
         Me.dgvWOPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvWOPending.Location = New System.Drawing.Point(12, 14)
+        Me.dgvWOPending.Location = New System.Drawing.Point(12, 27)
+        Me.dgvWOPending.MultiSelect = False
         Me.dgvWOPending.Name = "dgvWOPending"
+        Me.dgvWOPending.ReadOnly = True
+        Me.dgvWOPending.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvWOPending.Size = New System.Drawing.Size(494, 390)
         Me.dgvWOPending.TabIndex = 0
         '
@@ -45,14 +52,17 @@ Partial Class PendingWO
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'Button2
+        'btnExit
         '
-        Me.Button2.Location = New System.Drawing.Point(299, 438)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(75, 45)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.btnExit.BackColor = System.Drawing.Color.Crimson
+        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnExit.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnExit.Location = New System.Drawing.Point(299, 438)
+        Me.btnExit.Name = "btnExit"
+        Me.btnExit.Size = New System.Drawing.Size(75, 45)
+        Me.btnExit.TabIndex = 2
+        Me.btnExit.Text = "EXIT"
+        Me.btnExit.UseVisualStyleBackColor = False
         '
         'PendingWO
         '
@@ -60,10 +70,11 @@ Partial Class PendingWO
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
         Me.ClientSize = New System.Drawing.Size(518, 495)
-        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgvWOPending)
         Me.Name = "PendingWO"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Form2"
         CType(Me.dgvWOPending, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -72,5 +83,5 @@ Partial Class PendingWO
 
     Friend WithEvents dgvWOPending As DataGridView
     Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
+    Friend WithEvents btnExit As Button
 End Class

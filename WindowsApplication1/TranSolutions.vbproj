@@ -78,6 +78,24 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccPayable.Designer.vb">
+      <DependentUpon>AccPayable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccPayable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccReceivable.Designer.vb">
+      <DependentUpon>AccReceivable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccReceivable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AccReceivableCustomer.Designer.vb">
+      <DependentUpon>AccReceivableCustomer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccReceivableCustomer.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddVehicleCuSelect.Designer.vb">
       <DependentUpon>AddVehicleCuSelect.vb</DependentUpon>
     </Compile>
@@ -88,6 +106,12 @@
       <DependentUpon>AddVehicleInfo.vb</DependentUpon>
     </Compile>
     <Compile Include="AddVehicleInfo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AdminSettings.Designer.vb">
+      <DependentUpon>AdminSettings.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AdminSettings.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DBControl.vb" />
@@ -101,6 +125,30 @@
       <DependentUpon>Invoice.vb</DependentUpon>
     </Compile>
     <Compile Include="Invoice.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceHistoryChild.Designer.vb">
+      <DependentUpon>InvoiceHistoryChild.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceHistoryChild.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceHistorySelChild.Designer.vb">
+      <DependentUpon>InvoiceHistorySelChild.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceHistorySelChild.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InvoiceSelect.Designer.vb">
+      <DependentUpon>InvoiceSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="InvoiceSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PaymentSel.Designer.vb">
+      <DependentUpon>PaymentSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PaymentSel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TSauto1DataSet.Designer.vb">
@@ -188,6 +236,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AccReceivable.resx">
+      <DependentUpon>AccReceivable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccReceivableCustomer.resx">
+      <DependentUpon>AccReceivableCustomer.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
     </EmbeddedResource>
@@ -197,11 +251,26 @@
     <EmbeddedResource Include="AddVehicleInfo.resx">
       <DependentUpon>AddVehicleInfo.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AdminSettings.resx">
+      <DependentUpon>AdminSettings.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CuMenuSel.resx">
       <DependentUpon>CuMenuSel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Invoice.resx">
       <DependentUpon>Invoice.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceHistoryChild.resx">
+      <DependentUpon>InvoiceHistoryChild.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceHistorySelChild.resx">
+      <DependentUpon>InvoiceHistorySelChild.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InvoiceSelect.resx">
+      <DependentUpon>InvoiceSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PaymentSel.resx">
+      <DependentUpon>PaymentSel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateVehicleSelect.resx">
       <DependentUpon>UpdateVehicleSelect.vb</DependentUpon>

@@ -22,121 +22,88 @@ Partial Class UpdateVehicleSelect
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
-        Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.Label2 = New System.Windows.Forms.Label()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.ListBox2 = New System.Windows.Forms.ListBox()
+        Me.dgvCustomers = New System.Windows.Forms.DataGridView()
+        Me.dgvVehicles = New System.Windows.Forms.DataGridView()
+        Me.tbCustomerSel = New System.Windows.Forms.TextBox()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.btnSelectVehicle = New System.Windows.Forms.Button()
+        CType(Me.dgvCustomers, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvVehicles, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'Button1
+        'dgvCustomers
         '
-        Me.Button1.Location = New System.Drawing.Point(341, 511)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
-        Me.Button1.TabIndex = 13
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvCustomers.Location = New System.Drawing.Point(23, 116)
+        Me.dgvCustomers.Name = "dgvCustomers"
+        Me.dgvCustomers.Size = New System.Drawing.Size(485, 184)
+        Me.dgvCustomers.TabIndex = 0
         '
-        'ListBox1
+        'dgvVehicles
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(29, 154)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(439, 108)
-        Me.ListBox1.TabIndex = 12
+        Me.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvVehicles.Location = New System.Drawing.Point(23, 319)
+        Me.dgvVehicles.Name = "dgvVehicles"
+        Me.dgvVehicles.Size = New System.Drawing.Size(485, 179)
+        Me.dgvVehicles.TabIndex = 1
         '
-        'Label3
+        'tbCustomerSel
         '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(29, 125)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(165, 13)
-        Me.Label3.TabIndex = 11
-        Me.Label3.Text = "Click on the customer from the list"
+        Me.tbCustomerSel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbCustomerSel.Location = New System.Drawing.Point(23, 63)
+        Me.tbCustomerSel.Name = "tbCustomerSel"
+        Me.tbCustomerSel.Size = New System.Drawing.Size(169, 22)
+        Me.tbCustomerSel.TabIndex = 2
         '
-        'TextBox1
+        'Button2
         '
-        Me.TextBox1.Location = New System.Drawing.Point(29, 84)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(199, 20)
-        Me.TextBox1.TabIndex = 10
+        Me.Button2.BackColor = System.Drawing.Color.Crimson
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(413, 540)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(95, 58)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "CANCEL"
+        Me.Button2.UseVisualStyleBackColor = False
         '
-        'Label2
+        'btnSelectVehicle
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(26, 53)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(172, 13)
-        Me.Label2.TabIndex = 9
-        Me.Label2.Text = "Enter the first few characters of the"
-        '
-        'ComboBox1
-        '
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(107, 19)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(121, 21)
-        Me.ComboBox1.TabIndex = 8
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(26, 19)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(59, 13)
-        Me.Label1.TabIndex = 7
-        Me.Label1.Text = "Search By:"
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(26, 290)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(191, 13)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Click on one of the customer's vehicles"
-        '
-        'ListBox2
-        '
-        Me.ListBox2.FormattingEnabled = True
-        Me.ListBox2.Location = New System.Drawing.Point(29, 338)
-        Me.ListBox2.Name = "ListBox2"
-        Me.ListBox2.Size = New System.Drawing.Size(439, 108)
-        Me.ListBox2.TabIndex = 15
+        Me.btnSelectVehicle.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.btnSelectVehicle.Enabled = False
+        Me.btnSelectVehicle.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnSelectVehicle.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSelectVehicle.Location = New System.Drawing.Point(23, 540)
+        Me.btnSelectVehicle.Name = "btnSelectVehicle"
+        Me.btnSelectVehicle.Size = New System.Drawing.Size(95, 58)
+        Me.btnSelectVehicle.TabIndex = 5
+        Me.btnSelectVehicle.Text = "SELECT VEHICLE"
+        Me.btnSelectVehicle.UseVisualStyleBackColor = False
         '
         'UpdateVehicleSelect
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(760, 559)
-        Me.Controls.Add(Me.ListBox2)
-        Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.ListBox1)
-        Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
-        Me.Controls.Add(Me.Label2)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.Label1)
+        Me.BackColor = System.Drawing.Color.LightGray
+        Me.ClientSize = New System.Drawing.Size(535, 639)
+        Me.Controls.Add(Me.Button2)
+        Me.Controls.Add(Me.btnSelectVehicle)
+        Me.Controls.Add(Me.tbCustomerSel)
+        Me.Controls.Add(Me.dgvVehicles)
+        Me.Controls.Add(Me.dgvCustomers)
         Me.Name = "UpdateVehicleSelect"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "UpdateVehicleSelect"
+        CType(Me.dgvCustomers, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvVehicles, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
 
-    Friend WithEvents Button1 As Button
-    Friend WithEvents ListBox1 As ListBox
-    Friend WithEvents Label3 As Label
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents Label2 As Label
-    Friend WithEvents ComboBox1 As ComboBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents ListBox2 As ListBox
+    Friend WithEvents dgvCustomers As DataGridView
+    Friend WithEvents dgvVehicles As DataGridView
+    Friend WithEvents tbCustomerSel As TextBox
+    Friend WithEvents Button2 As Button
+    Friend WithEvents btnSelectVehicle As Button
 End Class

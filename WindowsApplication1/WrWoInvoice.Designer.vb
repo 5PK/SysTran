@@ -22,8 +22,18 @@ Partial Class WrWoInvoice
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim DataGridViewCellStyle43 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle44 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle27 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle28 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle37 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle38 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle39 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle40 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle41 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle42 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(WrWoInvoice))
-        Me.tbVehID = New System.Windows.Forms.TextBox()
         Me.tcWorkFlow = New System.Windows.Forms.TabControl()
         Me.tpWorkRequest = New System.Windows.Forms.TabPage()
         Me.GroupBox9 = New System.Windows.Forms.GroupBox()
@@ -46,20 +56,63 @@ Partial Class WrWoInvoice
         Me.btnPreview = New System.Windows.Forms.Button()
         Me.btnPrint = New System.Windows.Forms.Button()
         Me.GroupBox8 = New System.Windows.Forms.GroupBox()
+        Me.lblBBusNum = New System.Windows.Forms.Label()
+        Me.lblABusNum = New System.Windows.Forms.Label()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.lblCompany = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.lblBCellNum = New System.Windows.Forms.Label()
         Me.lblACellNum = New System.Windows.Forms.Label()
-        Me.lblCuBHomeNum = New System.Windows.Forms.Label()
-        Me.lblCuAHomeNum = New System.Windows.Forms.Label()
+        Me.lblBHomeNum = New System.Windows.Forms.Label()
+        Me.lblAHomeNum = New System.Windows.Forms.Label()
         Me.lblCuLname = New System.Windows.Forms.Label()
         Me.lblCuFname = New System.Windows.Forms.Label()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.GroupBox5 = New System.Windows.Forms.GroupBox()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.lblAdminFname = New System.Windows.Forms.Label()
+        Me.lblAdminLname = New System.Windows.Forms.Label()
+        Me.lblWoNo = New System.Windows.Forms.Label()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.tpWorkOrder = New System.Windows.Forms.TabPage()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.tbTax = New System.Windows.Forms.TextBox()
+        Me.lblTax = New System.Windows.Forms.Label()
+        Me.tbTotal = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
         Me.btnSaveAndCnvrtToInvoice = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.lblUnitNo2 = New System.Windows.Forms.Label()
+        Me.lblVin2 = New System.Windows.Forms.Label()
+        Me.lblOdometer2 = New System.Windows.Forms.Label()
+        Me.lblPlate2 = New System.Windows.Forms.Label()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label13 = New System.Windows.Forms.Label()
+        Me.Label14 = New System.Windows.Forms.Label()
+        Me.lblModel2 = New System.Windows.Forms.Label()
+        Me.lblMake2 = New System.Windows.Forms.Label()
+        Me.lblYear2 = New System.Windows.Forms.Label()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.lblBBusNum2 = New System.Windows.Forms.Label()
+        Me.lblABusNum2 = New System.Windows.Forms.Label()
+        Me.Label18 = New System.Windows.Forms.Label()
+        Me.lblCompany2 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.lblBCellNum2 = New System.Windows.Forms.Label()
+        Me.lblACellNum2 = New System.Windows.Forms.Label()
+        Me.lblBHomeNum2 = New System.Windows.Forms.Label()
+        Me.lblAHomeNum2 = New System.Windows.Forms.Label()
+        Me.lblCuLname2 = New System.Windows.Forms.Label()
+        Me.lblCuFname2 = New System.Windows.Forms.Label()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.dgvWorkOrder = New System.Windows.Forms.DataGridView()
         Me.colQty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colHrs = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -69,40 +122,22 @@ Partial Class WrWoInvoice
         Me.colLabour = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colTax = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colTotal = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label10 = New System.Windows.Forms.Label()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.Label13 = New System.Windows.Forms.Label()
-        Me.Label14 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
-        Me.Label16 = New System.Windows.Forms.Label()
-        Me.Label17 = New System.Windows.Forms.Label()
-        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
-        Me.Label18 = New System.Windows.Forms.Label()
-        Me.Label19 = New System.Windows.Forms.Label()
-        Me.Label20 = New System.Windows.Forms.Label()
-        Me.Label21 = New System.Windows.Forms.Label()
-        Me.Label22 = New System.Windows.Forms.Label()
-        Me.Label23 = New System.Windows.Forms.Label()
-        Me.Label24 = New System.Windows.Forms.Label()
-        Me.lblWOCuFname = New System.Windows.Forms.Label()
-        Me.Button4 = New System.Windows.Forms.Button()
+        Me.ContextMenuStrip1 = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.DeleteRowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.GroupBox10 = New System.Windows.Forms.GroupBox()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.lblDate2 = New System.Windows.Forms.Label()
+        Me.Label33 = New System.Windows.Forms.Label()
+        Me.Label34 = New System.Windows.Forms.Label()
+        Me.lblAdminFname2 = New System.Windows.Forms.Label()
+        Me.lblAdminLname2 = New System.Windows.Forms.Label()
+        Me.lblWoNo2 = New System.Windows.Forms.Label()
+        Me.Button10 = New System.Windows.Forms.Button()
         Me.btnSaveWRWO = New System.Windows.Forms.Button()
-        Me.tbCuID = New System.Windows.Forms.TextBox()
         Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
         Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
         Me.btnSaveAndExit = New System.Windows.Forms.Button()
         Me.btnCancel = New System.Windows.Forms.Button()
-        Me.tbWOno = New System.Windows.Forms.TextBox()
+        Me.btnHistory = New System.Windows.Forms.Button()
         Me.tcWorkFlow.SuspendLayout()
         Me.tpWorkRequest.SuspendLayout()
         Me.GroupBox9.SuspendLayout()
@@ -112,29 +147,23 @@ Partial Class WrWoInvoice
         Me.GroupBox5.SuspendLayout()
         Me.tpWorkOrder.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.dgvWorkOrder, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
+        CType(Me.dgvWorkOrder, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ContextMenuStrip1.SuspendLayout()
         Me.GroupBox10.SuspendLayout()
         Me.SuspendLayout()
-        '
-        'tbVehID
-        '
-        Me.tbVehID.Location = New System.Drawing.Point(252, 0)
-        Me.tbVehID.Name = "tbVehID"
-        Me.tbVehID.ReadOnly = True
-        Me.tbVehID.Size = New System.Drawing.Size(100, 20)
-        Me.tbVehID.TabIndex = 3
         '
         'tcWorkFlow
         '
         Me.tcWorkFlow.Controls.Add(Me.tpWorkRequest)
         Me.tcWorkFlow.Controls.Add(Me.tpWorkOrder)
+        Me.tcWorkFlow.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.tcWorkFlow.Location = New System.Drawing.Point(28, 26)
         Me.tcWorkFlow.Name = "tcWorkFlow"
         Me.tcWorkFlow.SelectedIndex = 0
-        Me.tcWorkFlow.Size = New System.Drawing.Size(734, 488)
+        Me.tcWorkFlow.Size = New System.Drawing.Size(734, 530)
         Me.tcWorkFlow.TabIndex = 2
         '
         'tpWorkRequest
@@ -142,9 +171,9 @@ Partial Class WrWoInvoice
         Me.tpWorkRequest.BackColor = System.Drawing.Color.Gainsboro
         Me.tpWorkRequest.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.tpWorkRequest.Controls.Add(Me.GroupBox9)
-        Me.tpWorkRequest.Location = New System.Drawing.Point(4, 22)
+        Me.tpWorkRequest.Location = New System.Drawing.Point(4, 23)
         Me.tpWorkRequest.Name = "tpWorkRequest"
-        Me.tpWorkRequest.Size = New System.Drawing.Size(726, 462)
+        Me.tpWorkRequest.Size = New System.Drawing.Size(726, 503)
         Me.tpWorkRequest.TabIndex = 2
         Me.tpWorkRequest.Text = "Work Request"
         '
@@ -159,7 +188,7 @@ Partial Class WrWoInvoice
         Me.GroupBox9.Controls.Add(Me.GroupBox5)
         Me.GroupBox9.Location = New System.Drawing.Point(3, 3)
         Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(718, 454)
+        Me.GroupBox9.Size = New System.Drawing.Size(718, 496)
         Me.GroupBox9.TabIndex = 14
         Me.GroupBox9.TabStop = False
         '
@@ -181,108 +210,119 @@ Partial Class WrWoInvoice
         Me.GroupBox6.Controls.Add(Me.Button7)
         Me.GroupBox6.Location = New System.Drawing.Point(251, 16)
         Me.GroupBox6.Name = "GroupBox6"
-        Me.GroupBox6.Size = New System.Drawing.Size(216, 159)
+        Me.GroupBox6.Size = New System.Drawing.Size(216, 171)
         Me.GroupBox6.TabIndex = 7
         Me.GroupBox6.TabStop = False
         '
         'lblUnitNo
         '
         Me.lblUnitNo.AutoSize = True
+        Me.lblUnitNo.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblUnitNo.Location = New System.Drawing.Point(88, 143)
         Me.lblUnitNo.Name = "lblUnitNo"
-        Me.lblUnitNo.Size = New System.Drawing.Size(31, 13)
+        Me.lblUnitNo.Size = New System.Drawing.Size(14, 14)
         Me.lblUnitNo.TabIndex = 15
-        Me.lblUnitNo.Text = "Plate"
+        Me.lblUnitNo.Text = "*"
         '
         'lblVin
         '
         Me.lblVin.AutoSize = True
-        Me.lblVin.Location = New System.Drawing.Point(44, 121)
+        Me.lblVin.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVin.Location = New System.Drawing.Point(47, 123)
         Me.lblVin.Name = "lblVin"
-        Me.lblVin.Size = New System.Drawing.Size(31, 13)
+        Me.lblVin.Size = New System.Drawing.Size(14, 14)
         Me.lblVin.TabIndex = 14
-        Me.lblVin.Text = "Plate"
+        Me.lblVin.Text = "*"
         '
         'lblOdometer
         '
         Me.lblOdometer.AutoSize = True
+        Me.lblOdometer.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblOdometer.Location = New System.Drawing.Point(88, 99)
         Me.lblOdometer.Name = "lblOdometer"
-        Me.lblOdometer.Size = New System.Drawing.Size(31, 13)
+        Me.lblOdometer.Size = New System.Drawing.Size(14, 14)
         Me.lblOdometer.TabIndex = 13
-        Me.lblOdometer.Text = "Plate"
+        Me.lblOdometer.Text = "*"
         '
         'lblPlate
         '
         Me.lblPlate.AutoSize = True
+        Me.lblPlate.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblPlate.Location = New System.Drawing.Point(88, 77)
         Me.lblPlate.Name = "lblPlate"
-        Me.lblPlate.Size = New System.Drawing.Size(31, 13)
+        Me.lblPlate.Size = New System.Drawing.Size(14, 14)
         Me.lblPlate.TabIndex = 12
-        Me.lblPlate.Text = "Plate"
+        Me.lblPlate.Text = "*"
         '
         'Label7
         '
         Me.Label7.AutoSize = True
+        Me.Label7.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label7.Location = New System.Drawing.Point(13, 143)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(36, 13)
+        Me.Label7.Size = New System.Drawing.Size(49, 14)
         Me.Label7.TabIndex = 11
         Me.Label7.Text = "Unit #"
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(13, 121)
+        Me.Label6.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(13, 123)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(25, 13)
+        Me.Label6.Size = New System.Drawing.Size(28, 14)
         Me.Label6.TabIndex = 10
         Me.Label6.Text = "VIN"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
+        Me.Label3.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.Location = New System.Drawing.Point(13, 99)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(53, 13)
+        Me.Label3.Size = New System.Drawing.Size(63, 14)
         Me.Label3.TabIndex = 9
         Me.Label3.Text = "Odometer"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(13, 77)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(31, 13)
+        Me.Label2.Size = New System.Drawing.Size(42, 14)
         Me.Label2.TabIndex = 8
         Me.Label2.Text = "Plate"
         '
         'lblModel
         '
         Me.lblModel.AutoSize = True
-        Me.lblModel.Location = New System.Drawing.Point(131, 50)
+        Me.lblModel.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblModel.Location = New System.Drawing.Point(121, 50)
         Me.lblModel.Name = "lblModel"
-        Me.lblModel.Size = New System.Drawing.Size(35, 13)
+        Me.lblModel.Size = New System.Drawing.Size(14, 14)
         Me.lblModel.TabIndex = 7
-        Me.lblModel.Text = "model"
+        Me.lblModel.Text = "*"
         '
         'lblMake
         '
         Me.lblMake.AutoSize = True
-        Me.lblMake.Location = New System.Drawing.Point(69, 50)
+        Me.lblMake.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMake.Location = New System.Drawing.Point(48, 50)
         Me.lblMake.Name = "lblMake"
-        Me.lblMake.Size = New System.Drawing.Size(33, 13)
+        Me.lblMake.Size = New System.Drawing.Size(14, 14)
         Me.lblMake.TabIndex = 6
-        Me.lblMake.Text = "make"
+        Me.lblMake.Text = "*"
         '
         'lblYear
         '
         Me.lblYear.AutoSize = True
+        Me.lblYear.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblYear.Location = New System.Drawing.Point(13, 50)
         Me.lblYear.Name = "lblYear"
-        Me.lblYear.Size = New System.Drawing.Size(29, 13)
+        Me.lblYear.Size = New System.Drawing.Size(14, 14)
         Me.lblYear.TabIndex = 5
-        Me.lblYear.Text = "Year"
+        Me.lblYear.Text = "*"
         '
         'GroupBox7
         '
@@ -349,92 +389,144 @@ Partial Class WrWoInvoice
         'GroupBox8
         '
         Me.GroupBox8.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox8.Controls.Add(Me.lblBBusNum)
+        Me.GroupBox8.Controls.Add(Me.lblABusNum)
+        Me.GroupBox8.Controls.Add(Me.Label28)
+        Me.GroupBox8.Controls.Add(Me.lblCompany)
         Me.GroupBox8.Controls.Add(Me.Label9)
         Me.GroupBox8.Controls.Add(Me.Label8)
         Me.GroupBox8.Controls.Add(Me.lblBCellNum)
         Me.GroupBox8.Controls.Add(Me.lblACellNum)
-        Me.GroupBox8.Controls.Add(Me.lblCuBHomeNum)
-        Me.GroupBox8.Controls.Add(Me.lblCuAHomeNum)
+        Me.GroupBox8.Controls.Add(Me.lblBHomeNum)
+        Me.GroupBox8.Controls.Add(Me.lblAHomeNum)
         Me.GroupBox8.Controls.Add(Me.lblCuLname)
         Me.GroupBox8.Controls.Add(Me.lblCuFname)
         Me.GroupBox8.Controls.Add(Me.Button8)
         Me.GroupBox8.Location = New System.Drawing.Point(6, 16)
         Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(216, 159)
+        Me.GroupBox8.Size = New System.Drawing.Size(216, 171)
         Me.GroupBox8.TabIndex = 6
         Me.GroupBox8.TabStop = False
+        '
+        'lblBBusNum
+        '
+        Me.lblBBusNum.AutoSize = True
+        Me.lblBBusNum.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBBusNum.Location = New System.Drawing.Point(106, 86)
+        Me.lblBBusNum.Name = "lblBBusNum"
+        Me.lblBBusNum.Size = New System.Drawing.Size(14, 14)
+        Me.lblBBusNum.TabIndex = 12
+        Me.lblBBusNum.Text = "*"
+        '
+        'lblABusNum
+        '
+        Me.lblABusNum.AutoSize = True
+        Me.lblABusNum.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblABusNum.Location = New System.Drawing.Point(61, 86)
+        Me.lblABusNum.Name = "lblABusNum"
+        Me.lblABusNum.Size = New System.Drawing.Size(14, 14)
+        Me.lblABusNum.TabIndex = 11
+        Me.lblABusNum.Text = "*"
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = True
+        Me.Label28.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label28.Location = New System.Drawing.Point(23, 86)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(35, 14)
+        Me.Label28.TabIndex = 10
+        Me.Label28.Text = "Bus#"
+        '
+        'lblCompany
+        '
+        Me.lblCompany.AutoSize = True
+        Me.lblCompany.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCompany.Location = New System.Drawing.Point(4, 40)
+        Me.lblCompany.Name = "lblCompany"
+        Me.lblCompany.Size = New System.Drawing.Size(14, 14)
+        Me.lblCompany.TabIndex = 9
+        Me.lblCompany.Text = "*"
         '
         'Label9
         '
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(16, 112)
+        Me.Label9.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label9.Location = New System.Drawing.Point(16, 131)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(31, 13)
+        Me.Label9.Size = New System.Drawing.Size(42, 14)
         Me.Label9.TabIndex = 8
         Me.Label9.Text = "Cell#"
         '
         'Label8
         '
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(16, 80)
+        Me.Label8.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(16, 108)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(40, 13)
+        Me.Label8.Size = New System.Drawing.Size(42, 14)
         Me.Label8.TabIndex = 7
-        Me.Label8.Text = "home#"
+        Me.Label8.Text = "Home#"
         '
         'lblBCellNum
         '
         Me.lblBCellNum.AutoSize = True
-        Me.lblBCellNum.Location = New System.Drawing.Point(106, 112)
+        Me.lblBCellNum.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBCellNum.Location = New System.Drawing.Point(106, 131)
         Me.lblBCellNum.Name = "lblBCellNum"
-        Me.lblBCellNum.Size = New System.Drawing.Size(43, 13)
+        Me.lblBCellNum.Size = New System.Drawing.Size(14, 14)
         Me.lblBCellNum.TabIndex = 6
-        Me.lblBCellNum.Text = "cellnum"
+        Me.lblBCellNum.Text = "*"
         '
         'lblACellNum
         '
         Me.lblACellNum.AutoSize = True
-        Me.lblACellNum.Location = New System.Drawing.Point(61, 112)
+        Me.lblACellNum.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblACellNum.Location = New System.Drawing.Point(61, 131)
         Me.lblACellNum.Name = "lblACellNum"
-        Me.lblACellNum.Size = New System.Drawing.Size(43, 13)
+        Me.lblACellNum.Size = New System.Drawing.Size(14, 14)
         Me.lblACellNum.TabIndex = 5
-        Me.lblACellNum.Text = "cellnum"
+        Me.lblACellNum.Text = "*"
         '
-        'lblCuBHomeNum
+        'lblBHomeNum
         '
-        Me.lblCuBHomeNum.AutoSize = True
-        Me.lblCuBHomeNum.Location = New System.Drawing.Point(106, 80)
-        Me.lblCuBHomeNum.Name = "lblCuBHomeNum"
-        Me.lblCuBHomeNum.Size = New System.Drawing.Size(53, 13)
-        Me.lblCuBHomeNum.TabIndex = 4
-        Me.lblCuBHomeNum.Text = "homenum"
+        Me.lblBHomeNum.AutoSize = True
+        Me.lblBHomeNum.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBHomeNum.Location = New System.Drawing.Point(106, 108)
+        Me.lblBHomeNum.Name = "lblBHomeNum"
+        Me.lblBHomeNum.Size = New System.Drawing.Size(14, 14)
+        Me.lblBHomeNum.TabIndex = 4
+        Me.lblBHomeNum.Text = "*"
         '
-        'lblCuAHomeNum
+        'lblAHomeNum
         '
-        Me.lblCuAHomeNum.AutoSize = True
-        Me.lblCuAHomeNum.Location = New System.Drawing.Point(61, 80)
-        Me.lblCuAHomeNum.Name = "lblCuAHomeNum"
-        Me.lblCuAHomeNum.Size = New System.Drawing.Size(53, 13)
-        Me.lblCuAHomeNum.TabIndex = 3
-        Me.lblCuAHomeNum.Text = "homenum"
+        Me.lblAHomeNum.AutoSize = True
+        Me.lblAHomeNum.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAHomeNum.Location = New System.Drawing.Point(61, 108)
+        Me.lblAHomeNum.Name = "lblAHomeNum"
+        Me.lblAHomeNum.Size = New System.Drawing.Size(14, 14)
+        Me.lblAHomeNum.TabIndex = 3
+        Me.lblAHomeNum.Text = "*"
         '
         'lblCuLname
         '
         Me.lblCuLname.AutoSize = True
-        Me.lblCuLname.Location = New System.Drawing.Point(97, 50)
+        Me.lblCuLname.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCuLname.Location = New System.Drawing.Point(106, 61)
         Me.lblCuLname.Name = "lblCuLname"
-        Me.lblCuLname.Size = New System.Drawing.Size(62, 13)
+        Me.lblCuLname.Size = New System.Drawing.Size(14, 14)
         Me.lblCuLname.TabIndex = 2
-        Me.lblCuLname.Text = "lblCuLname"
+        Me.lblCuLname.Text = "*"
         '
         'lblCuFname
         '
         Me.lblCuFname.AutoSize = True
-        Me.lblCuFname.Location = New System.Drawing.Point(16, 50)
+        Me.lblCuFname.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCuFname.Location = New System.Drawing.Point(16, 61)
         Me.lblCuFname.Name = "lblCuFname"
-        Me.lblCuFname.Size = New System.Drawing.Size(62, 13)
+        Me.lblCuFname.Size = New System.Drawing.Size(14, 14)
         Me.lblCuFname.TabIndex = 1
-        Me.lblCuFname.Text = "lblCuFname"
+        Me.lblCuFname.Text = "*"
         '
         'Button8
         '
@@ -450,12 +542,78 @@ Partial Class WrWoInvoice
         'GroupBox5
         '
         Me.GroupBox5.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox5.Controls.Add(Me.lblDate)
+        Me.GroupBox5.Controls.Add(Me.Label25)
+        Me.GroupBox5.Controls.Add(Me.Label26)
+        Me.GroupBox5.Controls.Add(Me.lblAdminFname)
+        Me.GroupBox5.Controls.Add(Me.lblAdminLname)
+        Me.GroupBox5.Controls.Add(Me.lblWoNo)
         Me.GroupBox5.Controls.Add(Me.Button5)
         Me.GroupBox5.Location = New System.Drawing.Point(496, 16)
         Me.GroupBox5.Name = "GroupBox5"
-        Me.GroupBox5.Size = New System.Drawing.Size(216, 159)
+        Me.GroupBox5.Size = New System.Drawing.Size(216, 171)
         Me.GroupBox5.TabIndex = 8
         Me.GroupBox5.TabStop = False
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.Location = New System.Drawing.Point(90, 108)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(14, 14)
+        Me.lblDate.TabIndex = 18
+        Me.lblDate.Text = "*"
+        '
+        'Label25
+        '
+        Me.Label25.AutoSize = True
+        Me.Label25.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label25.Location = New System.Drawing.Point(13, 108)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(35, 14)
+        Me.Label25.TabIndex = 17
+        Me.Label25.Text = "Date"
+        '
+        'Label26
+        '
+        Me.Label26.AutoSize = True
+        Me.Label26.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label26.Location = New System.Drawing.Point(13, 50)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(91, 14)
+        Me.Label26.TabIndex = 16
+        Me.Label26.Text = "Work Order #"
+        '
+        'lblAdminFname
+        '
+        Me.lblAdminFname.AutoSize = True
+        Me.lblAdminFname.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdminFname.Location = New System.Drawing.Point(13, 77)
+        Me.lblAdminFname.Name = "lblAdminFname"
+        Me.lblAdminFname.Size = New System.Drawing.Size(14, 14)
+        Me.lblAdminFname.TabIndex = 3
+        Me.lblAdminFname.Text = "*"
+        '
+        'lblAdminLname
+        '
+        Me.lblAdminLname.AutoSize = True
+        Me.lblAdminLname.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdminLname.Location = New System.Drawing.Point(90, 77)
+        Me.lblAdminLname.Name = "lblAdminLname"
+        Me.lblAdminLname.Size = New System.Drawing.Size(14, 14)
+        Me.lblAdminLname.TabIndex = 2
+        Me.lblAdminLname.Text = "*"
+        '
+        'lblWoNo
+        '
+        Me.lblWoNo.AutoSize = True
+        Me.lblWoNo.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWoNo.Location = New System.Drawing.Point(110, 50)
+        Me.lblWoNo.Name = "lblWoNo"
+        Me.lblWoNo.Size = New System.Drawing.Size(14, 14)
+        Me.lblWoNo.TabIndex = 1
+        Me.lblWoNo.Text = "*"
         '
         'Button5
         '
@@ -472,220 +630,216 @@ Partial Class WrWoInvoice
         '
         Me.tpWorkOrder.BackColor = System.Drawing.Color.Gainsboro
         Me.tpWorkOrder.Controls.Add(Me.GroupBox1)
-        Me.tpWorkOrder.Location = New System.Drawing.Point(4, 22)
+        Me.tpWorkOrder.Location = New System.Drawing.Point(4, 23)
         Me.tpWorkOrder.Name = "tpWorkOrder"
         Me.tpWorkOrder.Padding = New System.Windows.Forms.Padding(3)
-        Me.tpWorkOrder.Size = New System.Drawing.Size(726, 462)
+        Me.tpWorkOrder.Size = New System.Drawing.Size(726, 503)
         Me.tpWorkOrder.TabIndex = 0
         Me.tpWorkOrder.Text = "Work Order"
         '
         'GroupBox1
         '
+        Me.GroupBox1.BackColor = System.Drawing.Color.LightGray
+        Me.GroupBox1.Controls.Add(Me.tbTax)
+        Me.GroupBox1.Controls.Add(Me.lblTax)
+        Me.GroupBox1.Controls.Add(Me.tbTotal)
+        Me.GroupBox1.Controls.Add(Me.Label1)
         Me.GroupBox1.Controls.Add(Me.btnSaveAndCnvrtToInvoice)
-        Me.GroupBox1.Controls.Add(Me.dgvWorkOrder)
         Me.GroupBox1.Controls.Add(Me.GroupBox2)
         Me.GroupBox1.Controls.Add(Me.GroupBox4)
+        Me.GroupBox1.Controls.Add(Me.dgvWorkOrder)
         Me.GroupBox1.Controls.Add(Me.GroupBox10)
-        Me.GroupBox1.Location = New System.Drawing.Point(3, 3)
+        Me.GroupBox1.Location = New System.Drawing.Point(4, 4)
         Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(720, 456)
+        Me.GroupBox1.Size = New System.Drawing.Size(718, 494)
         Me.GroupBox1.TabIndex = 15
         Me.GroupBox1.TabStop = False
+        '
+        'tbTax
+        '
+        Me.tbTax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbTax.Location = New System.Drawing.Point(529, 429)
+        Me.tbTax.Name = "tbTax"
+        Me.tbTax.ReadOnly = True
+        Me.tbTax.Size = New System.Drawing.Size(75, 20)
+        Me.tbTax.TabIndex = 21
+        Me.tbTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblTax
+        '
+        Me.lblTax.AutoSize = True
+        Me.lblTax.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTax.Location = New System.Drawing.Point(489, 432)
+        Me.lblTax.Name = "lblTax"
+        Me.lblTax.Size = New System.Drawing.Size(32, 16)
+        Me.lblTax.TabIndex = 20
+        Me.lblTax.Text = "Tax"
+        '
+        'tbTotal
+        '
+        Me.tbTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbTotal.Location = New System.Drawing.Point(529, 448)
+        Me.tbTotal.Name = "tbTotal"
+        Me.tbTotal.ReadOnly = True
+        Me.tbTotal.Size = New System.Drawing.Size(75, 20)
+        Me.tbTotal.TabIndex = 19
+        Me.tbTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(475, 451)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(48, 16)
+        Me.Label1.TabIndex = 18
+        Me.Label1.Text = "Total"
         '
         'btnSaveAndCnvrtToInvoice
         '
         Me.btnSaveAndCnvrtToInvoice.BackColor = System.Drawing.Color.PaleGreen
         Me.btnSaveAndCnvrtToInvoice.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSaveAndCnvrtToInvoice.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnSaveAndCnvrtToInvoice.Location = New System.Drawing.Point(602, 303)
+        Me.btnSaveAndCnvrtToInvoice.Location = New System.Drawing.Point(613, 289)
         Me.btnSaveAndCnvrtToInvoice.Name = "btnSaveAndCnvrtToInvoice"
-        Me.btnSaveAndCnvrtToInvoice.Size = New System.Drawing.Size(110, 46)
+        Me.btnSaveAndCnvrtToInvoice.Size = New System.Drawing.Size(99, 46)
         Me.btnSaveAndCnvrtToInvoice.TabIndex = 17
         Me.btnSaveAndCnvrtToInvoice.Text = "CONVERT TO INVOICE"
         Me.btnSaveAndCnvrtToInvoice.UseVisualStyleBackColor = False
         '
-        'dgvWorkOrder
-        '
-        Me.dgvWorkOrder.AllowUserToResizeColumns = False
-        Me.dgvWorkOrder.AllowUserToResizeRows = False
-        Me.dgvWorkOrder.BackgroundColor = System.Drawing.Color.LightGray
-        Me.dgvWorkOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvWorkOrder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colQty, Me.colHrs, Me.colDesc, Me.colPartsEa, Me.colTotPart, Me.colLabour, Me.colTax, Me.colTotal})
-        Me.dgvWorkOrder.Location = New System.Drawing.Point(6, 213)
-        Me.dgvWorkOrder.MultiSelect = False
-        Me.dgvWorkOrder.Name = "dgvWorkOrder"
-        Me.dgvWorkOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
-        Me.dgvWorkOrder.Size = New System.Drawing.Size(590, 225)
-        Me.dgvWorkOrder.TabIndex = 16
-        '
-        'colQty
-        '
-        Me.colQty.HeaderText = "Qty"
-        Me.colQty.Name = "colQty"
-        Me.colQty.Width = 35
-        '
-        'colHrs
-        '
-        Me.colHrs.HeaderText = "Hrs"
-        Me.colHrs.Name = "colHrs"
-        Me.colHrs.Width = 35
-        '
-        'colDesc
-        '
-        Me.colDesc.HeaderText = "Description"
-        Me.colDesc.Name = "colDesc"
-        Me.colDesc.Width = 250
-        '
-        'colPartsEa
-        '
-        Me.colPartsEa.HeaderText = "Parts Ea"
-        Me.colPartsEa.Name = "colPartsEa"
-        Me.colPartsEa.Width = 50
-        '
-        'colTotPart
-        '
-        Me.colTotPart.HeaderText = "Tot Parts"
-        Me.colTotPart.Name = "colTotPart"
-        Me.colTotPart.Width = 50
-        '
-        'colLabour
-        '
-        Me.colLabour.HeaderText = "Labour"
-        Me.colLabour.Name = "colLabour"
-        Me.colLabour.Width = 50
-        '
-        'colTax
-        '
-        Me.colTax.HeaderText = "Tx"
-        Me.colTax.Name = "colTax"
-        Me.colTax.Width = 35
-        '
-        'colTotal
-        '
-        Me.colTotal.HeaderText = "Total"
-        Me.colTotal.Name = "colTotal"
-        Me.colTotal.Width = 50
-        '
         'GroupBox2
         '
         Me.GroupBox2.BackColor = System.Drawing.SystemColors.Control
-        Me.GroupBox2.Controls.Add(Me.Label1)
-        Me.GroupBox2.Controls.Add(Me.Label4)
-        Me.GroupBox2.Controls.Add(Me.Label5)
-        Me.GroupBox2.Controls.Add(Me.Label10)
+        Me.GroupBox2.Controls.Add(Me.lblUnitNo2)
+        Me.GroupBox2.Controls.Add(Me.lblVin2)
+        Me.GroupBox2.Controls.Add(Me.lblOdometer2)
+        Me.GroupBox2.Controls.Add(Me.lblPlate2)
         Me.GroupBox2.Controls.Add(Me.Label11)
         Me.GroupBox2.Controls.Add(Me.Label12)
         Me.GroupBox2.Controls.Add(Me.Label13)
         Me.GroupBox2.Controls.Add(Me.Label14)
-        Me.GroupBox2.Controls.Add(Me.Label15)
-        Me.GroupBox2.Controls.Add(Me.Label16)
-        Me.GroupBox2.Controls.Add(Me.Label17)
+        Me.GroupBox2.Controls.Add(Me.lblModel2)
+        Me.GroupBox2.Controls.Add(Me.lblMake2)
+        Me.GroupBox2.Controls.Add(Me.lblYear2)
         Me.GroupBox2.Controls.Add(Me.GroupBox3)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Location = New System.Drawing.Point(251, 16)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(216, 159)
+        Me.GroupBox2.Size = New System.Drawing.Size(216, 171)
         Me.GroupBox2.TabIndex = 7
         Me.GroupBox2.TabStop = False
         '
-        'Label1
+        'lblUnitNo2
         '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(88, 143)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(31, 13)
-        Me.Label1.TabIndex = 15
-        Me.Label1.Text = "Plate"
+        Me.lblUnitNo2.AutoSize = True
+        Me.lblUnitNo2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblUnitNo2.Location = New System.Drawing.Point(88, 143)
+        Me.lblUnitNo2.Name = "lblUnitNo2"
+        Me.lblUnitNo2.Size = New System.Drawing.Size(14, 14)
+        Me.lblUnitNo2.TabIndex = 15
+        Me.lblUnitNo2.Text = "*"
         '
-        'Label4
+        'lblVin2
         '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(44, 121)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(31, 13)
-        Me.Label4.TabIndex = 14
-        Me.Label4.Text = "Plate"
+        Me.lblVin2.AutoSize = True
+        Me.lblVin2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblVin2.Location = New System.Drawing.Point(47, 123)
+        Me.lblVin2.Name = "lblVin2"
+        Me.lblVin2.Size = New System.Drawing.Size(14, 14)
+        Me.lblVin2.TabIndex = 14
+        Me.lblVin2.Text = "*"
         '
-        'Label5
+        'lblOdometer2
         '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(88, 99)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(31, 13)
-        Me.Label5.TabIndex = 13
-        Me.Label5.Text = "Plate"
+        Me.lblOdometer2.AutoSize = True
+        Me.lblOdometer2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOdometer2.Location = New System.Drawing.Point(88, 99)
+        Me.lblOdometer2.Name = "lblOdometer2"
+        Me.lblOdometer2.Size = New System.Drawing.Size(14, 14)
+        Me.lblOdometer2.TabIndex = 13
+        Me.lblOdometer2.Text = "*"
         '
-        'Label10
+        'lblPlate2
         '
-        Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(88, 77)
-        Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(31, 13)
-        Me.Label10.TabIndex = 12
-        Me.Label10.Text = "Plate"
+        Me.lblPlate2.AutoSize = True
+        Me.lblPlate2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblPlate2.Location = New System.Drawing.Point(88, 77)
+        Me.lblPlate2.Name = "lblPlate2"
+        Me.lblPlate2.Size = New System.Drawing.Size(14, 14)
+        Me.lblPlate2.TabIndex = 12
+        Me.lblPlate2.Text = "*"
         '
         'Label11
         '
         Me.Label11.AutoSize = True
+        Me.Label11.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(13, 143)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(36, 13)
+        Me.Label11.Size = New System.Drawing.Size(49, 14)
         Me.Label11.TabIndex = 11
         Me.Label11.Text = "Unit #"
         '
         'Label12
         '
         Me.Label12.AutoSize = True
-        Me.Label12.Location = New System.Drawing.Point(13, 121)
+        Me.Label12.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label12.Location = New System.Drawing.Point(13, 123)
         Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(25, 13)
+        Me.Label12.Size = New System.Drawing.Size(28, 14)
         Me.Label12.TabIndex = 10
         Me.Label12.Text = "VIN"
         '
         'Label13
         '
         Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(13, 99)
         Me.Label13.Name = "Label13"
-        Me.Label13.Size = New System.Drawing.Size(53, 13)
+        Me.Label13.Size = New System.Drawing.Size(63, 14)
         Me.Label13.TabIndex = 9
         Me.Label13.Text = "Odometer"
         '
         'Label14
         '
         Me.Label14.AutoSize = True
+        Me.Label14.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label14.Location = New System.Drawing.Point(13, 77)
         Me.Label14.Name = "Label14"
-        Me.Label14.Size = New System.Drawing.Size(31, 13)
+        Me.Label14.Size = New System.Drawing.Size(42, 14)
         Me.Label14.TabIndex = 8
         Me.Label14.Text = "Plate"
         '
-        'Label15
+        'lblModel2
         '
-        Me.Label15.AutoSize = True
-        Me.Label15.Location = New System.Drawing.Point(131, 50)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(35, 13)
-        Me.Label15.TabIndex = 7
-        Me.Label15.Text = "model"
+        Me.lblModel2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.lblModel2.AutoSize = True
+        Me.lblModel2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblModel2.Location = New System.Drawing.Point(121, 50)
+        Me.lblModel2.Name = "lblModel2"
+        Me.lblModel2.Size = New System.Drawing.Size(14, 14)
+        Me.lblModel2.TabIndex = 7
+        Me.lblModel2.Text = "*"
+        Me.lblModel2.TextAlign = System.Drawing.ContentAlignment.TopRight
         '
-        'Label16
+        'lblMake2
         '
-        Me.Label16.AutoSize = True
-        Me.Label16.Location = New System.Drawing.Point(69, 50)
-        Me.Label16.Name = "Label16"
-        Me.Label16.Size = New System.Drawing.Size(33, 13)
-        Me.Label16.TabIndex = 6
-        Me.Label16.Text = "make"
+        Me.lblMake2.AutoSize = True
+        Me.lblMake2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblMake2.Location = New System.Drawing.Point(48, 50)
+        Me.lblMake2.Name = "lblMake2"
+        Me.lblMake2.Size = New System.Drawing.Size(14, 14)
+        Me.lblMake2.TabIndex = 6
+        Me.lblMake2.Text = "*"
         '
-        'Label17
+        'lblYear2
         '
-        Me.Label17.AutoSize = True
-        Me.Label17.Location = New System.Drawing.Point(13, 50)
-        Me.Label17.Name = "Label17"
-        Me.Label17.Size = New System.Drawing.Size(29, 13)
-        Me.Label17.TabIndex = 5
-        Me.Label17.Text = "Year"
+        Me.lblYear2.AutoSize = True
+        Me.lblYear2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblYear2.Location = New System.Drawing.Point(13, 50)
+        Me.lblYear2.Name = "lblYear2"
+        Me.lblYear2.Size = New System.Drawing.Size(14, 14)
+        Me.lblYear2.TabIndex = 5
+        Me.lblYear2.Text = "*"
         '
         'GroupBox3
         '
@@ -707,7 +861,7 @@ Partial Class WrWoInvoice
         '
         'Button2
         '
-        Me.Button2.BackColor = System.Drawing.Color.LightCoral
+        Me.Button2.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(16, 10)
         Me.Button2.Name = "Button2"
@@ -719,124 +873,358 @@ Partial Class WrWoInvoice
         'GroupBox4
         '
         Me.GroupBox4.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox4.Controls.Add(Me.lblBBusNum2)
+        Me.GroupBox4.Controls.Add(Me.lblABusNum2)
         Me.GroupBox4.Controls.Add(Me.Label18)
-        Me.GroupBox4.Controls.Add(Me.Label19)
+        Me.GroupBox4.Controls.Add(Me.lblCompany2)
         Me.GroupBox4.Controls.Add(Me.Label20)
         Me.GroupBox4.Controls.Add(Me.Label21)
-        Me.GroupBox4.Controls.Add(Me.Label22)
-        Me.GroupBox4.Controls.Add(Me.Label23)
-        Me.GroupBox4.Controls.Add(Me.Label24)
-        Me.GroupBox4.Controls.Add(Me.lblWOCuFname)
-        Me.GroupBox4.Controls.Add(Me.Button4)
+        Me.GroupBox4.Controls.Add(Me.lblBCellNum2)
+        Me.GroupBox4.Controls.Add(Me.lblACellNum2)
+        Me.GroupBox4.Controls.Add(Me.lblBHomeNum2)
+        Me.GroupBox4.Controls.Add(Me.lblAHomeNum2)
+        Me.GroupBox4.Controls.Add(Me.lblCuLname2)
+        Me.GroupBox4.Controls.Add(Me.lblCuFname2)
+        Me.GroupBox4.Controls.Add(Me.Button9)
         Me.GroupBox4.Location = New System.Drawing.Point(6, 16)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(216, 159)
+        Me.GroupBox4.Size = New System.Drawing.Size(216, 171)
         Me.GroupBox4.TabIndex = 6
         Me.GroupBox4.TabStop = False
+        '
+        'lblBBusNum2
+        '
+        Me.lblBBusNum2.AutoSize = True
+        Me.lblBBusNum2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBBusNum2.Location = New System.Drawing.Point(106, 86)
+        Me.lblBBusNum2.Name = "lblBBusNum2"
+        Me.lblBBusNum2.Size = New System.Drawing.Size(14, 14)
+        Me.lblBBusNum2.TabIndex = 12
+        Me.lblBBusNum2.Text = "*"
+        '
+        'lblABusNum2
+        '
+        Me.lblABusNum2.AutoSize = True
+        Me.lblABusNum2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblABusNum2.Location = New System.Drawing.Point(61, 86)
+        Me.lblABusNum2.Name = "lblABusNum2"
+        Me.lblABusNum2.Size = New System.Drawing.Size(14, 14)
+        Me.lblABusNum2.TabIndex = 11
+        Me.lblABusNum2.Text = "*"
         '
         'Label18
         '
         Me.Label18.AutoSize = True
-        Me.Label18.Location = New System.Drawing.Point(16, 112)
+        Me.Label18.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label18.Location = New System.Drawing.Point(23, 86)
         Me.Label18.Name = "Label18"
-        Me.Label18.Size = New System.Drawing.Size(31, 13)
-        Me.Label18.TabIndex = 8
-        Me.Label18.Text = "Cell#"
+        Me.Label18.Size = New System.Drawing.Size(35, 14)
+        Me.Label18.TabIndex = 10
+        Me.Label18.Text = "Bus#"
         '
-        'Label19
+        'lblCompany2
         '
-        Me.Label19.AutoSize = True
-        Me.Label19.Location = New System.Drawing.Point(16, 80)
-        Me.Label19.Name = "Label19"
-        Me.Label19.Size = New System.Drawing.Size(40, 13)
-        Me.Label19.TabIndex = 7
-        Me.Label19.Text = "home#"
+        Me.lblCompany2.AutoSize = True
+        Me.lblCompany2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCompany2.Location = New System.Drawing.Point(4, 40)
+        Me.lblCompany2.Name = "lblCompany2"
+        Me.lblCompany2.Size = New System.Drawing.Size(14, 14)
+        Me.lblCompany2.TabIndex = 9
+        Me.lblCompany2.Text = "*"
         '
         'Label20
         '
         Me.Label20.AutoSize = True
-        Me.Label20.Location = New System.Drawing.Point(106, 112)
+        Me.Label20.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label20.Location = New System.Drawing.Point(16, 131)
         Me.Label20.Name = "Label20"
-        Me.Label20.Size = New System.Drawing.Size(43, 13)
-        Me.Label20.TabIndex = 6
-        Me.Label20.Text = "cellnum"
+        Me.Label20.Size = New System.Drawing.Size(42, 14)
+        Me.Label20.TabIndex = 8
+        Me.Label20.Text = "Cell#"
         '
         'Label21
         '
         Me.Label21.AutoSize = True
-        Me.Label21.Location = New System.Drawing.Point(61, 112)
+        Me.Label21.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label21.Location = New System.Drawing.Point(16, 108)
         Me.Label21.Name = "Label21"
-        Me.Label21.Size = New System.Drawing.Size(43, 13)
-        Me.Label21.TabIndex = 5
-        Me.Label21.Text = "cellnum"
+        Me.Label21.Size = New System.Drawing.Size(42, 14)
+        Me.Label21.TabIndex = 7
+        Me.Label21.Text = "Home#"
         '
-        'Label22
+        'lblBCellNum2
         '
-        Me.Label22.AutoSize = True
-        Me.Label22.Location = New System.Drawing.Point(106, 80)
-        Me.Label22.Name = "Label22"
-        Me.Label22.Size = New System.Drawing.Size(53, 13)
-        Me.Label22.TabIndex = 4
-        Me.Label22.Text = "homenum"
+        Me.lblBCellNum2.AutoSize = True
+        Me.lblBCellNum2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBCellNum2.Location = New System.Drawing.Point(106, 131)
+        Me.lblBCellNum2.Name = "lblBCellNum2"
+        Me.lblBCellNum2.Size = New System.Drawing.Size(14, 14)
+        Me.lblBCellNum2.TabIndex = 6
+        Me.lblBCellNum2.Text = "*"
         '
-        'Label23
+        'lblACellNum2
         '
-        Me.Label23.AutoSize = True
-        Me.Label23.Location = New System.Drawing.Point(61, 80)
-        Me.Label23.Name = "Label23"
-        Me.Label23.Size = New System.Drawing.Size(53, 13)
-        Me.Label23.TabIndex = 3
-        Me.Label23.Text = "homenum"
+        Me.lblACellNum2.AutoSize = True
+        Me.lblACellNum2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblACellNum2.Location = New System.Drawing.Point(61, 131)
+        Me.lblACellNum2.Name = "lblACellNum2"
+        Me.lblACellNum2.Size = New System.Drawing.Size(14, 14)
+        Me.lblACellNum2.TabIndex = 5
+        Me.lblACellNum2.Text = "*"
         '
-        'Label24
+        'lblBHomeNum2
         '
-        Me.Label24.AutoSize = True
-        Me.Label24.Location = New System.Drawing.Point(97, 50)
-        Me.Label24.Name = "Label24"
-        Me.Label24.Size = New System.Drawing.Size(45, 13)
-        Me.Label24.TabIndex = 2
-        Me.Label24.Text = "Label24"
+        Me.lblBHomeNum2.AutoSize = True
+        Me.lblBHomeNum2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblBHomeNum2.Location = New System.Drawing.Point(106, 108)
+        Me.lblBHomeNum2.Name = "lblBHomeNum2"
+        Me.lblBHomeNum2.Size = New System.Drawing.Size(14, 14)
+        Me.lblBHomeNum2.TabIndex = 4
+        Me.lblBHomeNum2.Text = "*"
         '
-        'lblWOCuFname
+        'lblAHomeNum2
         '
-        Me.lblWOCuFname.AutoSize = True
-        Me.lblWOCuFname.Location = New System.Drawing.Point(16, 50)
-        Me.lblWOCuFname.Name = "lblWOCuFname"
-        Me.lblWOCuFname.Size = New System.Drawing.Size(45, 13)
-        Me.lblWOCuFname.TabIndex = 1
-        Me.lblWOCuFname.Text = "Label25"
+        Me.lblAHomeNum2.AutoSize = True
+        Me.lblAHomeNum2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAHomeNum2.Location = New System.Drawing.Point(61, 108)
+        Me.lblAHomeNum2.Name = "lblAHomeNum2"
+        Me.lblAHomeNum2.Size = New System.Drawing.Size(14, 14)
+        Me.lblAHomeNum2.TabIndex = 3
+        Me.lblAHomeNum2.Text = "*"
         '
-        'Button4
+        'lblCuLname2
         '
-        Me.Button4.BackColor = System.Drawing.Color.LightCoral
-        Me.Button4.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(16, 10)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(184, 23)
-        Me.Button4.TabIndex = 0
-        Me.Button4.Text = "Customer"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.lblCuLname2.AutoSize = True
+        Me.lblCuLname2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCuLname2.Location = New System.Drawing.Point(106, 61)
+        Me.lblCuLname2.Name = "lblCuLname2"
+        Me.lblCuLname2.Size = New System.Drawing.Size(14, 14)
+        Me.lblCuLname2.TabIndex = 2
+        Me.lblCuLname2.Text = "*"
         '
-        'GroupBox10
+        'lblCuFname2
         '
-        Me.GroupBox10.BackColor = System.Drawing.SystemColors.Control
-        Me.GroupBox10.Controls.Add(Me.Button9)
-        Me.GroupBox10.Location = New System.Drawing.Point(496, 16)
-        Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Size = New System.Drawing.Size(216, 159)
-        Me.GroupBox10.TabIndex = 8
-        Me.GroupBox10.TabStop = False
+        Me.lblCuFname2.AutoSize = True
+        Me.lblCuFname2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCuFname2.Location = New System.Drawing.Point(16, 61)
+        Me.lblCuFname2.Name = "lblCuFname2"
+        Me.lblCuFname2.Size = New System.Drawing.Size(14, 14)
+        Me.lblCuFname2.TabIndex = 1
+        Me.lblCuFname2.Text = "*"
         '
         'Button9
         '
-        Me.Button9.BackColor = System.Drawing.Color.LightCoral
+        Me.Button9.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button9.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button9.Location = New System.Drawing.Point(16, 10)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(184, 23)
         Me.Button9.TabIndex = 0
-        Me.Button9.Text = "Work Order Admin."
+        Me.Button9.Text = "Customer"
         Me.Button9.UseVisualStyleBackColor = False
+        '
+        'dgvWorkOrder
+        '
+        Me.dgvWorkOrder.AllowUserToResizeColumns = False
+        Me.dgvWorkOrder.AllowUserToResizeRows = False
+        Me.dgvWorkOrder.BackgroundColor = System.Drawing.Color.LightGray
+        Me.dgvWorkOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvWorkOrder.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colQty, Me.colHrs, Me.colDesc, Me.colPartsEa, Me.colTotPart, Me.colLabour, Me.colTax, Me.colTotal})
+        Me.dgvWorkOrder.ContextMenuStrip = Me.ContextMenuStrip1
+        DataGridViewCellStyle43.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle43.BackColor = System.Drawing.Color.WhiteSmoke
+        DataGridViewCellStyle43.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle43.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle43.SelectionBackColor = System.Drawing.Color.Gold
+        DataGridViewCellStyle43.SelectionForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle43.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvWorkOrder.DefaultCellStyle = DataGridViewCellStyle43
+        Me.dgvWorkOrder.EditMode = System.Windows.Forms.DataGridViewEditMode.EditOnKeystroke
+        Me.dgvWorkOrder.Location = New System.Drawing.Point(6, 205)
+        Me.dgvWorkOrder.MultiSelect = False
+        Me.dgvWorkOrder.Name = "dgvWorkOrder"
+        DataGridViewCellStyle44.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle44.BackColor = System.Drawing.Color.Gainsboro
+        DataGridViewCellStyle44.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle44.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle44.SelectionBackColor = System.Drawing.Color.Khaki
+        DataGridViewCellStyle44.SelectionForeColor = System.Drawing.SystemColors.ActiveCaptionText
+        DataGridViewCellStyle44.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvWorkOrder.RowHeadersDefaultCellStyle = DataGridViewCellStyle44
+        Me.dgvWorkOrder.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing
+        Me.dgvWorkOrder.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect
+        Me.dgvWorkOrder.Size = New System.Drawing.Size(598, 225)
+        Me.dgvWorkOrder.TabIndex = 16
+        '
+        'colQty
+        '
+        DataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle27.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.colQty.DefaultCellStyle = DataGridViewCellStyle27
+        Me.colQty.HeaderText = "Qty"
+        Me.colQty.Name = "colQty"
+        Me.colQty.Width = 35
+        '
+        'colHrs
+        '
+        DataGridViewCellStyle28.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle28.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.colHrs.DefaultCellStyle = DataGridViewCellStyle28
+        Me.colHrs.HeaderText = "Hrs"
+        Me.colHrs.Name = "colHrs"
+        Me.colHrs.Width = 35
+        '
+        'colDesc
+        '
+        DataGridViewCellStyle37.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.colDesc.DefaultCellStyle = DataGridViewCellStyle37
+        Me.colDesc.HeaderText = "Description"
+        Me.colDesc.Name = "colDesc"
+        Me.colDesc.Width = 250
+        '
+        'colPartsEa
+        '
+        DataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle38.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.colPartsEa.DefaultCellStyle = DataGridViewCellStyle38
+        Me.colPartsEa.HeaderText = "Parts Ea"
+        Me.colPartsEa.Name = "colPartsEa"
+        Me.colPartsEa.Width = 50
+        '
+        'colTotPart
+        '
+        DataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle39.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.colTotPart.DefaultCellStyle = DataGridViewCellStyle39
+        Me.colTotPart.HeaderText = "Tot Parts"
+        Me.colTotPart.Name = "colTotPart"
+        Me.colTotPart.Width = 50
+        '
+        'colLabour
+        '
+        DataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle40.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.colLabour.DefaultCellStyle = DataGridViewCellStyle40
+        Me.colLabour.HeaderText = "Labour"
+        Me.colLabour.Name = "colLabour"
+        Me.colLabour.Width = 50
+        '
+        'colTax
+        '
+        DataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopLeft
+        DataGridViewCellStyle41.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.colTax.DefaultCellStyle = DataGridViewCellStyle41
+        Me.colTax.HeaderText = "Tx"
+        Me.colTax.Name = "colTax"
+        Me.colTax.Width = 35
+        '
+        'colTotal
+        '
+        DataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.TopRight
+        DataGridViewCellStyle42.Font = New System.Drawing.Font("Courier New", 9.0!, System.Drawing.FontStyle.Bold)
+        Me.colTotal.DefaultCellStyle = DataGridViewCellStyle42
+        Me.colTotal.HeaderText = "Total"
+        Me.colTotal.Name = "colTotal"
+        Me.colTotal.Width = 50
+        '
+        'ContextMenuStrip1
+        '
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.DeleteRowToolStripMenuItem})
+        Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(134, 26)
+        '
+        'DeleteRowToolStripMenuItem
+        '
+        Me.DeleteRowToolStripMenuItem.Name = "DeleteRowToolStripMenuItem"
+        Me.DeleteRowToolStripMenuItem.Size = New System.Drawing.Size(133, 22)
+        Me.DeleteRowToolStripMenuItem.Text = "Delete Row"
+        '
+        'GroupBox10
+        '
+        Me.GroupBox10.BackColor = System.Drawing.SystemColors.Control
+        Me.GroupBox10.Controls.Add(Me.lblDate2)
+        Me.GroupBox10.Controls.Add(Me.Label33)
+        Me.GroupBox10.Controls.Add(Me.Label34)
+        Me.GroupBox10.Controls.Add(Me.lblAdminFname2)
+        Me.GroupBox10.Controls.Add(Me.lblAdminLname2)
+        Me.GroupBox10.Controls.Add(Me.lblWoNo2)
+        Me.GroupBox10.Controls.Add(Me.Button10)
+        Me.GroupBox10.Location = New System.Drawing.Point(496, 16)
+        Me.GroupBox10.Name = "GroupBox10"
+        Me.GroupBox10.Size = New System.Drawing.Size(216, 171)
+        Me.GroupBox10.TabIndex = 8
+        Me.GroupBox10.TabStop = False
+        '
+        'lblDate2
+        '
+        Me.lblDate2.AutoSize = True
+        Me.lblDate2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate2.Location = New System.Drawing.Point(90, 108)
+        Me.lblDate2.Name = "lblDate2"
+        Me.lblDate2.Size = New System.Drawing.Size(14, 14)
+        Me.lblDate2.TabIndex = 18
+        Me.lblDate2.Text = "*"
+        '
+        'Label33
+        '
+        Me.Label33.AutoSize = True
+        Me.Label33.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label33.Location = New System.Drawing.Point(13, 108)
+        Me.Label33.Name = "Label33"
+        Me.Label33.Size = New System.Drawing.Size(35, 14)
+        Me.Label33.TabIndex = 17
+        Me.Label33.Text = "Date"
+        '
+        'Label34
+        '
+        Me.Label34.AutoSize = True
+        Me.Label34.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label34.Location = New System.Drawing.Point(13, 50)
+        Me.Label34.Name = "Label34"
+        Me.Label34.Size = New System.Drawing.Size(91, 14)
+        Me.Label34.TabIndex = 16
+        Me.Label34.Text = "Work Order #"
+        '
+        'lblAdminFname2
+        '
+        Me.lblAdminFname2.AutoSize = True
+        Me.lblAdminFname2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdminFname2.Location = New System.Drawing.Point(13, 77)
+        Me.lblAdminFname2.Name = "lblAdminFname2"
+        Me.lblAdminFname2.Size = New System.Drawing.Size(14, 14)
+        Me.lblAdminFname2.TabIndex = 3
+        Me.lblAdminFname2.Text = "*"
+        '
+        'lblAdminLname2
+        '
+        Me.lblAdminLname2.AutoSize = True
+        Me.lblAdminLname2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblAdminLname2.Location = New System.Drawing.Point(90, 77)
+        Me.lblAdminLname2.Name = "lblAdminLname2"
+        Me.lblAdminLname2.Size = New System.Drawing.Size(14, 14)
+        Me.lblAdminLname2.TabIndex = 2
+        Me.lblAdminLname2.Text = "*"
+        '
+        'lblWoNo2
+        '
+        Me.lblWoNo2.AutoSize = True
+        Me.lblWoNo2.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblWoNo2.Location = New System.Drawing.Point(110, 50)
+        Me.lblWoNo2.Name = "lblWoNo2"
+        Me.lblWoNo2.Size = New System.Drawing.Size(14, 14)
+        Me.lblWoNo2.TabIndex = 1
+        Me.lblWoNo2.Text = "*"
+        '
+        'Button10
+        '
+        Me.Button10.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button10.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button10.Location = New System.Drawing.Point(16, 10)
+        Me.Button10.Name = "Button10"
+        Me.Button10.Size = New System.Drawing.Size(184, 23)
+        Me.Button10.TabIndex = 0
+        Me.Button10.Text = "Work Order Admin."
+        Me.Button10.UseVisualStyleBackColor = False
         '
         'btnSaveWRWO
         '
@@ -844,20 +1232,12 @@ Partial Class WrWoInvoice
         Me.btnSaveWRWO.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSaveWRWO.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSaveWRWO.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnSaveWRWO.Location = New System.Drawing.Point(221, 531)
+        Me.btnSaveWRWO.Location = New System.Drawing.Point(28, 571)
         Me.btnSaveWRWO.Name = "btnSaveWRWO"
-        Me.btnSaveWRWO.Size = New System.Drawing.Size(85, 55)
+        Me.btnSaveWRWO.Size = New System.Drawing.Size(85, 43)
         Me.btnSaveWRWO.TabIndex = 10
         Me.btnSaveWRWO.Text = "SAVE"
         Me.btnSaveWRWO.UseVisualStyleBackColor = False
-        '
-        'tbCuID
-        '
-        Me.tbCuID.Location = New System.Drawing.Point(352, 0)
-        Me.tbCuID.Name = "tbCuID"
-        Me.tbCuID.ReadOnly = True
-        Me.tbCuID.Size = New System.Drawing.Size(100, 20)
-        Me.tbCuID.TabIndex = 5
         '
         'PrintPreviewDialog1
         '
@@ -876,9 +1256,9 @@ Partial Class WrWoInvoice
         Me.btnSaveAndExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnSaveAndExit.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnSaveAndExit.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnSaveAndExit.Location = New System.Drawing.Point(334, 531)
+        Me.btnSaveAndExit.Location = New System.Drawing.Point(586, 571)
         Me.btnSaveAndExit.Name = "btnSaveAndExit"
-        Me.btnSaveAndExit.Size = New System.Drawing.Size(85, 55)
+        Me.btnSaveAndExit.Size = New System.Drawing.Size(85, 43)
         Me.btnSaveAndExit.TabIndex = 11
         Me.btnSaveAndExit.Text = "SAVE AND EXIT"
         Me.btnSaveAndExit.UseVisualStyleBackColor = False
@@ -889,33 +1269,36 @@ Partial Class WrWoInvoice
         Me.btnCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCancel.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnCancel.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.btnCancel.Location = New System.Drawing.Point(448, 531)
+        Me.btnCancel.Location = New System.Drawing.Point(677, 571)
         Me.btnCancel.Name = "btnCancel"
-        Me.btnCancel.Size = New System.Drawing.Size(85, 55)
+        Me.btnCancel.Size = New System.Drawing.Size(85, 43)
         Me.btnCancel.TabIndex = 12
         Me.btnCancel.Text = "CANCEL"
         Me.btnCancel.UseVisualStyleBackColor = False
         '
-        'tbWOno
+        'btnHistory
         '
-        Me.tbWOno.Location = New System.Drawing.Point(448, 0)
-        Me.tbWOno.Name = "tbWOno"
-        Me.tbWOno.ReadOnly = True
-        Me.tbWOno.Size = New System.Drawing.Size(100, 20)
-        Me.tbWOno.TabIndex = 13
+        Me.btnHistory.BackColor = System.Drawing.Color.BlanchedAlmond
+        Me.btnHistory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnHistory.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnHistory.Location = New System.Drawing.Point(119, 571)
+        Me.btnHistory.Name = "btnHistory"
+        Me.btnHistory.Size = New System.Drawing.Size(85, 43)
+        Me.btnHistory.TabIndex = 23
+        Me.btnHistory.Text = "HISTORY"
+        Me.btnHistory.UseVisualStyleBackColor = False
         '
         'WrWoInvoice
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.SystemColors.ControlDarkDark
-        Me.ClientSize = New System.Drawing.Size(790, 609)
-        Me.Controls.Add(Me.tbWOno)
+        Me.ClientSize = New System.Drawing.Size(790, 626)
+        Me.ControlBox = False
+        Me.Controls.Add(Me.btnHistory)
         Me.Controls.Add(Me.btnCancel)
         Me.Controls.Add(Me.btnSaveAndExit)
-        Me.Controls.Add(Me.tbCuID)
         Me.Controls.Add(Me.btnSaveWRWO)
-        Me.Controls.Add(Me.tbVehID)
         Me.Controls.Add(Me.tcWorkFlow)
         Me.Name = "WrWoInvoice"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
@@ -930,21 +1313,22 @@ Partial Class WrWoInvoice
         Me.GroupBox8.ResumeLayout(False)
         Me.GroupBox8.PerformLayout()
         Me.GroupBox5.ResumeLayout(False)
+        Me.GroupBox5.PerformLayout()
         Me.tpWorkOrder.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
-        CType(Me.dgvWorkOrder, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox2.PerformLayout()
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
         Me.GroupBox4.PerformLayout()
+        CType(Me.dgvWorkOrder, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ContextMenuStrip1.ResumeLayout(False)
         Me.GroupBox10.ResumeLayout(False)
+        Me.GroupBox10.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
-
-    Friend WithEvents tbVehID As TextBox
     Friend WithEvents tcWorkFlow As TabControl
     Friend WithEvents tpWorkRequest As TabPage
     Friend WithEvents tpWorkOrder As TabPage
@@ -960,7 +1344,7 @@ Partial Class WrWoInvoice
     Friend WithEvents btnPrint As Button
     Friend WithEvents btnSaveWRWO As Button
     Friend WithEvents lblCuLname As Label
-    Friend WithEvents lblCuAHomeNum As Label
+    Friend WithEvents lblAHomeNum As Label
     Friend WithEvents tbWorkRequests As TextBox
     Friend WithEvents lblUnitNo As Label
     Friend WithEvents lblVin As Label
@@ -977,13 +1361,69 @@ Partial Class WrWoInvoice
     Friend WithEvents Label8 As Label
     Friend WithEvents lblBCellNum As Label
     Friend WithEvents lblACellNum As Label
-    Friend WithEvents lblCuBHomeNum As Label
-    Friend WithEvents tbCuID As TextBox
+    Friend WithEvents lblBHomeNum As Label
     Friend WithEvents PrintPreviewDialog1 As PrintPreviewDialog
     Friend WithEvents PrintDocument1 As Printing.PrintDocument
     Friend WithEvents btnPreview As Button
     Friend WithEvents GroupBox9 As GroupBox
+    Friend WithEvents btnSaveAndExit As Button
+    Friend WithEvents btnCancel As Button
+    Friend WithEvents btnSaveAndCnvrtToInvoice As Button
+    Friend WithEvents lblWoNo As Label
+    Friend WithEvents lblAdminFname As Label
+    Friend WithEvents lblAdminLname As Label
+    Friend WithEvents btnHistory As Button
+    Friend WithEvents lblCompany As Label
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents lblDate As Label
+    Friend WithEvents Label25 As Label
     Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents lblUnitNo2 As Label
+    Friend WithEvents lblVin2 As Label
+    Friend WithEvents lblOdometer2 As Label
+    Friend WithEvents lblPlate2 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label13 As Label
+    Friend WithEvents Label14 As Label
+    Friend WithEvents lblModel2 As Label
+    Friend WithEvents lblMake2 As Label
+    Friend WithEvents lblYear2 As Label
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents Label18 As Label
+    Friend WithEvents lblCompany2 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label21 As Label
+    Friend WithEvents lblBCellNum2 As Label
+    Friend WithEvents lblACellNum2 As Label
+    Friend WithEvents lblBHomeNum2 As Label
+    Friend WithEvents lblAHomeNum2 As Label
+    Friend WithEvents lblCuLname2 As Label
+    Friend WithEvents lblCuFname2 As Label
+    Friend WithEvents Button9 As Button
+    Friend WithEvents GroupBox10 As GroupBox
+    Friend WithEvents lblDate2 As Label
+    Friend WithEvents Label33 As Label
+    Friend WithEvents Label34 As Label
+    Friend WithEvents lblAdminFname2 As Label
+    Friend WithEvents lblAdminLname2 As Label
+    Friend WithEvents lblWoNo2 As Label
+    Friend WithEvents Button10 As Button
+    Friend WithEvents lblBBusNum As Label
+    Friend WithEvents lblABusNum As Label
+    Friend WithEvents lblBBusNum2 As Label
+    Friend WithEvents lblABusNum2 As Label
+    Friend WithEvents Label1 As Label
+    Friend WithEvents tbTotal As TextBox
+    Friend WithEvents ContextMenuStrip1 As ContextMenuStrip
+    Friend WithEvents DeleteRowToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents tbTax As TextBox
+    Friend WithEvents lblTax As Label
     Friend WithEvents dgvWorkOrder As DataGridView
     Friend WithEvents colQty As DataGridViewTextBoxColumn
     Friend WithEvents colHrs As DataGridViewTextBoxColumn
@@ -993,35 +1433,4 @@ Partial Class WrWoInvoice
     Friend WithEvents colLabour As DataGridViewTextBoxColumn
     Friend WithEvents colTax As DataGridViewTextBoxColumn
     Friend WithEvents colTotal As DataGridViewTextBoxColumn
-    Friend WithEvents GroupBox2 As GroupBox
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label4 As Label
-    Friend WithEvents Label5 As Label
-    Friend WithEvents Label10 As Label
-    Friend WithEvents Label11 As Label
-    Friend WithEvents Label12 As Label
-    Friend WithEvents Label13 As Label
-    Friend WithEvents Label14 As Label
-    Friend WithEvents Label15 As Label
-    Friend WithEvents Label16 As Label
-    Friend WithEvents Label17 As Label
-    Friend WithEvents GroupBox3 As GroupBox
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents GroupBox4 As GroupBox
-    Friend WithEvents Label18 As Label
-    Friend WithEvents Label19 As Label
-    Friend WithEvents Label20 As Label
-    Friend WithEvents Label21 As Label
-    Friend WithEvents Label22 As Label
-    Friend WithEvents Label23 As Label
-    Friend WithEvents Label24 As Label
-    Friend WithEvents lblWOCuFname As Label
-    Friend WithEvents Button4 As Button
-    Friend WithEvents GroupBox10 As GroupBox
-    Friend WithEvents Button9 As Button
-    Friend WithEvents btnSaveAndExit As Button
-    Friend WithEvents btnCancel As Button
-    Friend WithEvents btnSaveAndCnvrtToInvoice As Button
-    Friend WithEvents tbWOno As TextBox
 End Class

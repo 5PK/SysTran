@@ -6,15 +6,14 @@ Imports Spire.Doc.Fields
 Imports System.Data.SqlClient
 Imports System.Data
 Imports System.IO.Directory
+Imports System.Text
 
 
 Imports System.Data.OleDb
 'Imports Excel = Microsoft.Office.Interop.Excel
 
 Imports Spire.Xls
-
-
-
+Imports System.IO
 
 Module WRWOINVMethods
 
@@ -36,6 +35,134 @@ Module WRWOINVMethods
         End Try
     End Sub
 
+    Public Sub FillWRWOLabels(ByRef frm As WrWoInvoice, vehicleID As String, customerID As String)
+
+        con1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TSAuto1.accdb"
+        con1.Open()
+
+        'frm.tbVehID.Text = vehicleID
+        'frm.tbCuID.Text = customerID
+
+        ''QUERIES RECORDS PERTAINING TO CUSTOMER ID
+        Dim strCu As String
+        Dim strVe As String
+
+        strCu = "SELECT * FROM Customers WHERE ID = " & customerID & " "
+        strVe = "SELECT * FROM CuVehicles WHERE ID = " & vehicleID & " "
+
+        Dim cmd As OleDbCommand = New OleDbCommand(strCu, con1)
+
+        'READ DATA INTO NEXT FORM TEXTBOXES
+        Dim rdr As OleDbDataReader = cmd.ExecuteReader()
+
+
+        'TODO - Fill Customer/Vehicle/Admin
+
+        While rdr.Read
+            frm.lblCuFname.Text = rdr("fname").ToString
+            frm.lblCuLname.Text = rdr("lname").ToString
+            frm.lblAHomeNum.Text = rdr("AHTEL").ToString
+            frm.lblBHomeNum.Text = rdr("htel").ToString
+            frm.lblACellNum.Text = rdr("acell").ToString
+            frm.lblBCellNum.Text = rdr("cell").ToString
+            frm.lblCompany.Text = rdr("company").ToString
+            frm.lblABusNum.Text = rdr("abtel").ToString
+            frm.lblBBusNum.Text = rdr("btel").ToString
+
+            frm.lblCuFname2.Text = rdr("fname").ToString
+            frm.lblCuLname2.Text = rdr("lname").ToString
+            frm.lblAHomeNum2.Text = rdr("AHTEL").ToString
+            frm.lblBHomeNum2.Text = rdr("htel").ToString
+            frm.lblACellNum2.Text = rdr("acell").ToString
+            frm.lblBCellNum2.Text = rdr("cell").ToString
+            frm.lblCompany2.Text = rdr("company").ToString
+            frm.lblABusNum2.Text = rdr("abtel").ToString
+            frm.lblBBusNum2.Text = rdr("btel").ToString
+
+        End While
+
+
+
+        rdr.Close()
+
+        cmd = New OleDbCommand(strVe, con1)
+        Dim rdr2 As OleDbDataReader = cmd.ExecuteReader()
+
+
+        While rdr2.Read
+
+            frm.lblYear.Text = rdr2("year").ToString
+            frm.lblMake.Text = rdr2("make").ToString
+            frm.lblModel.Text = rdr2("model").ToString
+            frm.lblPlate.Text = rdr2("plate").ToString
+            frm.lblOdometer.Text = rdr2("odometer").ToString
+            frm.lblVin.Text = rdr2("vin").ToString
+            frm.lblUnitNo.Text = rdr2("unitno").ToString
+
+            frm.lblYear2.Text = rdr2("year").ToString
+            frm.lblMake2.Text = rdr2("make").ToString
+            frm.lblModel2.Text = rdr2("model").ToString
+            frm.lblPlate2.Text = rdr2("plate").ToString
+            frm.lblOdometer2.Text = rdr2("odometer").ToString
+            frm.lblVin2.Text = rdr2("vin").ToString
+            frm.lblUnitNo2.Text = rdr2("unitno").ToString
+
+        End While
+
+        rdr2.Close()
+        con1.Close()
+    End Sub
+
+
+    Public Sub FillInvLabels(ByRef frm As Invoice, vehicleID As String, customerID As String)
+
+        con1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TSAuto1.accdb"
+        con1.Open()
+
+        ''QUERIES RECORDS PERTAINING TO CUSTOMER ID
+        Dim strCu As String
+        Dim strVe As String
+
+        strCu = "SELECT * FROM Customers WHERE ID = " & customerID & " "
+        strVe = "SELECT * FROM CuVehicles WHERE ID = " & vehicleID & " "
+
+        Dim cmd As OleDbCommand = New OleDbCommand(strCu, con1)
+
+        'READ DATA INTO NEXT FORM TEXTBOXES
+        Dim rdr As OleDbDataReader = cmd.ExecuteReader()
+
+
+        'TODO - Fill Customer/Vehicle/Admin
+
+        While rdr.Read
+            frm.lblCuFname.Text = rdr("fname").ToString
+            frm.lblCuLname.Text = rdr("lname").ToString
+            frm.lblCuAHomeNum.Text = rdr("AHTEL").ToString
+            frm.lblCuBHomeNum.Text = rdr("htel").ToString
+            frm.lblACellNum.Text = rdr("acell").ToString
+            frm.lblBCellNum.Text = rdr("cell").ToString
+        End While
+        rdr.Close()
+
+
+
+        cmd = New OleDbCommand(strVe, con1)
+        Dim rdr2 As OleDbDataReader = cmd.ExecuteReader()
+
+
+        While rdr2.Read
+            frm.lblYear.Text = rdr2("year").ToString
+            frm.lblMake.Text = rdr2("make").ToString
+            frm.lblModel.Text = rdr2("model").ToString
+            frm.lblPlate.Text = rdr2("plate").ToString
+            frm.lblOdometer.Text = rdr2("odometer").ToString
+            frm.lblVin.Text = rdr2("vin").ToString
+            frm.lblUnitNo.Text = rdr2("unitno").ToString
+        End While
+
+        rdr2.Close()
+        con1.Close()
+    End Sub
 
 
     Public Function GetInsertedRecord(ByVal table As String) As Integer
@@ -46,7 +173,7 @@ Module WRWOINVMethods
         con1.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TSAuto1.accdb"
         con1.Open()
 
-        Dim strcmd As String = "Select top 1 ID from" & table & "order by ID desc"
+        Dim strcmd As String = "Select top 1 ID from " & table & " order by ID desc"
         Dim cmd As OleDbCommand = New OleDbCommand(strcmd, con1)
 
         ID = Int32.Parse(cmd.ExecuteScalar)
@@ -60,6 +187,8 @@ Module WRWOINVMethods
     Public Sub CreateWRTextFile(ByVal tbWorkRequests As System.Windows.Forms.TextBox, WoID As Integer)
 
         Dim file As System.IO.StreamWriter
+        Dim filepath As String = "WorkRequests\"
+
         file = My.Computer.FileSystem.OpenTextFileWriter(WoID & "WR.txt", True)
         file.WriteLine(tbWorkRequests.Text)
         file.Close()
@@ -68,19 +197,10 @@ Module WRWOINVMethods
 
     Public Sub CreateWOTextFile(ByVal dgvWorkOrder As System.Windows.Forms.DataGridView, WoID As Integer)
 
+        Dim filepath As String = "WorkOrders\"
+        Dim filename As String = WoID.ToString
 
-        Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter(WoID & ".txt", True)
-
-        For i As Integer = 0 To dgvWorkOrder.Rows.Count - 2
-            For j As Integer = 0 To dgvWorkOrder.Columns.Count - 1
-
-                file.WriteLine(dgvWorkOrder.Rows(i).Cells(j).Value.ToString)
-
-            Next
-        Next
-
-        file.Close()
+        loadDGVtoTxt(dgvWorkOrder, filepath, filename)
 
     End Sub
 
@@ -88,7 +208,7 @@ Module WRWOINVMethods
 
         'Load document
         Dim doc As New Document
-        doc.LoadFromFile("C:\Users\ASUS\Desktop\swagcity\SysTran (2)\SysTran (2)\SysTran\WindowsApplication1\WindowsApplication1\Templates\WRFINAL.dotx")
+        doc.LoadFromFile("SysTran\WindowsApplication1\WindowsApplication1\Templates\WRFINAL.dotx")
 
         'Locate the bookmark
         Dim bookmarkNav As New BookmarksNavigator(doc)
@@ -151,47 +271,52 @@ Module WRWOINVMethods
 
     Public Sub loadDGVtoTxt(ByVal dgvWorkOrder As DataGridView, filepath As String, filename As String)
 
+        Dim file As String = filepath & filename & ".txt"
 
-        Dim file As System.IO.StreamWriter
-        file = My.Computer.FileSystem.OpenTextFileWriter(filepath & filename & ".txt", True)
+        Dim writer As TextWriter = New StreamWriter(file)
 
-        For i As Integer = 0 To dgvWorkOrder.Rows.Count - 2
-            For j As Integer = 0 To dgvWorkOrder.Columns.Count - 1
-
-                file.WriteLine(dgvWorkOrder.Rows(i).Cells(j).Value.ToString)
+        For i As Integer = 0 To dgvWorkOrder.Rows.Count - 2 Step +1
+            For j As Integer = 0 To dgvWorkOrder.Columns.Count - 1 Step +1
+                writer.Write(dgvWorkOrder.Rows(i).Cells(j).Value.ToString() & ",")
 
             Next
+            writer.Write(Environment.NewLine)
         Next
 
-        file.Close()
+        writer.Close()
 
 
     End Sub
 
 
-    Public Sub LoadTxtToDgv(ByRef datagridview As DataGridView, ByVal filename As String)
-
-        Dim reader As System.IO.StreamReader
-        reader = My.Computer.FileSystem.OpenTextFileReader(filename)
 
 
-        Dim str As String
-        Dim col As Integer = 0
-        Dim row As Integer = 0
+    Public Sub LoadTxtToDgv(ByRef datagridview As DataGridView, ByVal filepath As String, ByVal filename As String, ByRef isWorkOrder As Boolean)
+        Dim rowLimit As Integer = 0
 
+
+        Dim file As String = filepath & filename & ".txt"
+
+        Dim reader As New StreamReader(file, Encoding.Default)
+
+        Dim sline As String = ""
+
+        If isWorkOrder = True Then
+            rowLimit = 2
+        Else
+            rowLimit = 1
+        End If
 
         Do
-            str = reader.ReadLine
-            datagridview.Rows(row).Cells(col).Value = str
+            sline = reader.ReadLine
+            If sline Is Nothing Then Exit Do
+            Dim words() As String = sline.Split(",")
+            datagridview.Rows.Add("")
+            For ix As Integer = 0 To 7
+                datagridview.Rows(datagridview.Rows.Count - rowLimit).Cells(ix).Value = words(ix)
+            Next
+        Loop
 
-            col = col + 1
-
-            If col = 8 Then
-                row = row + 1
-                col = 0
-            End If
-
-        Loop Until str Is Nothing
 
     End Sub
 
@@ -201,7 +326,7 @@ Module WRWOINVMethods
     Public Sub InvoiceToExcel(ByVal dgvInvoice As DataGridView)
 
         Dim workbook As New Workbook
-        workbook.LoadFromFile("C:\Users\ASUS\Desktop\swagcity\SysTran (3) (1)\SysTran (3)\SysTran\WindowsApplication1\WindowsApplication1\Templates\TSAutoInvoice.xlsx")
+        workbook.LoadFromFile("SysTran\WindowsApplication1\WindowsApplication1\Templates\TSAutoInvoice.xlsx")
 
         Dim sheet As Worksheet = workbook.Worksheets(0)
 
@@ -254,6 +379,8 @@ Module WRWOINVMethods
     Public Sub PrintInvoice()
 
     End Sub
+
+
 
 
 End Module

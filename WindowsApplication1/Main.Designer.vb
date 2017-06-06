@@ -65,11 +65,31 @@ Partial Class SysTran
         Me.AddToolStripMenuItem3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateToolStripMenuItem6 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SystemAdminToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SettingsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.Button5 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button7 = New System.Windows.Forms.Button()
+        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.lblDayAfter = New System.Windows.Forms.Label()
+        Me.lblSelDay = New System.Windows.Forms.Label()
+        Me.lblDayBefore = New System.Windows.Forms.Label()
+        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
+        Me.Button6 = New System.Windows.Forms.Button()
+        Me.Button8 = New System.Windows.Forms.Button()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox3 = New System.Windows.Forms.GroupBox()
+        Me.GroupBox4 = New System.Windows.Forms.GroupBox()
+        Me.Button9 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
+        Me.GroupBox3.SuspendLayout()
+        Me.GroupBox4.SuspendLayout()
         Me.SuspendLayout()
         '
         'Button1
@@ -77,9 +97,9 @@ Partial Class SysTran
         Me.Button1.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(40, 90)
+        Me.Button1.Location = New System.Drawing.Point(15, 19)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(131, 43)
+        Me.Button1.Size = New System.Drawing.Size(161, 59)
         Me.Button1.TabIndex = 0
         Me.Button1.Text = "WORK IN PROGRESS"
         Me.Button1.UseVisualStyleBackColor = False
@@ -89,9 +109,9 @@ Partial Class SysTran
         Me.Button2.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(40, 167)
+        Me.Button2.Location = New System.Drawing.Point(201, 19)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(131, 43)
+        Me.Button2.Size = New System.Drawing.Size(161, 59)
         Me.Button2.TabIndex = 0
         Me.Button2.Text = "CREATE WORK ORDER"
         Me.Button2.UseVisualStyleBackColor = False
@@ -101,9 +121,9 @@ Partial Class SysTran
         Me.btnCustomers.BackColor = System.Drawing.Color.LightSteelBlue
         Me.btnCustomers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnCustomers.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnCustomers.Location = New System.Drawing.Point(40, 320)
+        Me.btnCustomers.Location = New System.Drawing.Point(18, 19)
         Me.btnCustomers.Name = "btnCustomers"
-        Me.btnCustomers.Size = New System.Drawing.Size(131, 43)
+        Me.btnCustomers.Size = New System.Drawing.Size(161, 59)
         Me.btnCustomers.TabIndex = 0
         Me.btnCustomers.Text = "CUSTOMERS"
         Me.btnCustomers.UseVisualStyleBackColor = False
@@ -113,9 +133,9 @@ Partial Class SysTran
         Me.Button4.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(40, 244)
+        Me.Button4.Location = New System.Drawing.Point(15, 97)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(131, 43)
+        Me.Button4.Size = New System.Drawing.Size(161, 59)
         Me.Button4.TabIndex = 0
         Me.Button4.Text = "INVOICES"
         Me.Button4.UseVisualStyleBackColor = False
@@ -126,7 +146,7 @@ Partial Class SysTran
         Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.FileToolStripMenuItem, Me.CustomersToolStripMenuItem, Me.VehiclesToolStripMenuItem, Me.OrderWritingToolStripMenuItem, Me.SuppliersToolStripMenuItem, Me.SystemAdminToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(1076, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(1664, 24)
         Me.MenuStrip1.TabIndex = 5
         Me.MenuStrip1.Text = "MenuStrip1"
         '
@@ -359,9 +379,16 @@ Partial Class SysTran
         '
         'SystemAdminToolStripMenuItem
         '
+        Me.SystemAdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SettingsToolStripMenuItem})
         Me.SystemAdminToolStripMenuItem.Name = "SystemAdminToolStripMenuItem"
         Me.SystemAdminToolStripMenuItem.Size = New System.Drawing.Size(96, 20)
         Me.SystemAdminToolStripMenuItem.Text = "System Admin"
+        '
+        'SettingsToolStripMenuItem
+        '
+        Me.SettingsToolStripMenuItem.Name = "SettingsToolStripMenuItem"
+        Me.SettingsToolStripMenuItem.Size = New System.Drawing.Size(116, 22)
+        Me.SettingsToolStripMenuItem.Text = "Settings"
         '
         'Button5
         '
@@ -370,7 +397,7 @@ Partial Class SysTran
         Me.Button5.BackColor = System.Drawing.Color.Crimson
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button5.Font = New System.Drawing.Font("Courier New", 18.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(870, 485)
+        Me.Button5.Location = New System.Drawing.Point(1458, 888)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(154, 79)
         Me.Button5.TabIndex = 0
@@ -381,7 +408,7 @@ Partial Class SysTran
         '
         Me.PictureBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.PictureBox1.Image = CType(resources.GetObject("PictureBox1.Image"), System.Drawing.Image)
-        Me.PictureBox1.Location = New System.Drawing.Point(747, 27)
+        Me.PictureBox1.Location = New System.Drawing.Point(1335, 27)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(329, 142)
         Me.PictureBox1.TabIndex = 7
@@ -392,29 +419,191 @@ Partial Class SysTran
         Me.Button3.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button3.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(40, 399)
+        Me.Button3.Location = New System.Drawing.Point(18, 103)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(131, 43)
+        Me.Button3.Size = New System.Drawing.Size(161, 59)
         Me.Button3.TabIndex = 8
         Me.Button3.Text = "VEHICLES"
         Me.Button3.UseVisualStyleBackColor = False
+        '
+        'Button7
+        '
+        Me.Button7.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button7.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button7.Location = New System.Drawing.Point(201, 26)
+        Me.Button7.Name = "Button7"
+        Me.Button7.Size = New System.Drawing.Size(161, 59)
+        Me.Button7.TabIndex = 10
+        Me.Button7.Text = "ACCOUNTS RECEIVABLE"
+        Me.Button7.UseVisualStyleBackColor = False
+        '
+        'GroupBox1
+        '
+        Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.GroupBox1.BackColor = System.Drawing.Color.Gray
+        Me.GroupBox1.Controls.Add(Me.lblDayAfter)
+        Me.GroupBox1.Controls.Add(Me.lblSelDay)
+        Me.GroupBox1.Controls.Add(Me.lblDayBefore)
+        Me.GroupBox1.Controls.Add(Me.TextBox3)
+        Me.GroupBox1.Controls.Add(Me.TextBox2)
+        Me.GroupBox1.Controls.Add(Me.TextBox1)
+        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
+        Me.GroupBox1.Font = New System.Drawing.Font("Courier New", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox1.Location = New System.Drawing.Point(512, 230)
+        Me.GroupBox1.Name = "GroupBox1"
+        Me.GroupBox1.Size = New System.Drawing.Size(762, 605)
+        Me.GroupBox1.TabIndex = 11
+        Me.GroupBox1.TabStop = False
+        '
+        'lblDayAfter
+        '
+        Me.lblDayAfter.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblDayAfter.AutoSize = True
+        Me.lblDayAfter.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDayAfter.Location = New System.Drawing.Point(611, 263)
+        Me.lblDayAfter.Name = "lblDayAfter"
+        Me.lblDayAfter.Size = New System.Drawing.Size(88, 18)
+        Me.lblDayAfter.TabIndex = 21
+        Me.lblDayAfter.Text = "DayAfter"
+        '
+        'lblSelDay
+        '
+        Me.lblSelDay.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblSelDay.AutoSize = True
+        Me.lblSelDay.Location = New System.Drawing.Point(310, 240)
+        Me.lblSelDay.Name = "lblSelDay"
+        Me.lblSelDay.Size = New System.Drawing.Size(142, 22)
+        Me.lblSelDay.TabIndex = 20
+        Me.lblSelDay.Text = "Selected Day"
+        '
+        'lblDayBefore
+        '
+        Me.lblDayBefore.Anchor = System.Windows.Forms.AnchorStyles.None
+        Me.lblDayBefore.AutoSize = True
+        Me.lblDayBefore.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDayBefore.Location = New System.Drawing.Point(68, 263)
+        Me.lblDayBefore.Name = "lblDayBefore"
+        Me.lblDayBefore.Size = New System.Drawing.Size(98, 18)
+        Me.lblDayBefore.TabIndex = 19
+        Me.lblDayBefore.Text = "DayBefore"
+        '
+        'TextBox3
+        '
+        Me.TextBox3.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox3.Location = New System.Drawing.Point(547, 293)
+        Me.TextBox3.Multiline = True
+        Me.TextBox3.Name = "TextBox3"
+        Me.TextBox3.Size = New System.Drawing.Size(200, 272)
+        Me.TextBox3.TabIndex = 18
+        '
+        'TextBox2
+        '
+        Me.TextBox2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox2.Location = New System.Drawing.Point(281, 293)
+        Me.TextBox2.Multiline = True
+        Me.TextBox2.Name = "TextBox2"
+        Me.TextBox2.Size = New System.Drawing.Size(200, 272)
+        Me.TextBox2.TabIndex = 17
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(12, 293)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(200, 272)
+        Me.TextBox1.TabIndex = 16
+        '
+        'MonthCalendar1
+        '
+        Me.MonthCalendar1.BackColor = System.Drawing.SystemColors.HotTrack
+        Me.MonthCalendar1.Location = New System.Drawing.Point(12, 36)
+        Me.MonthCalendar1.Name = "MonthCalendar1"
+        Me.MonthCalendar1.TabIndex = 15
+        Me.MonthCalendar1.TitleBackColor = System.Drawing.Color.Maroon
+        '
+        'Button6
+        '
+        Me.Button6.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button6.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button6.Location = New System.Drawing.Point(18, 26)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(161, 59)
+        Me.Button6.TabIndex = 12
+        Me.Button6.Text = "ACCOUNTS PAYABLE"
+        Me.Button6.UseVisualStyleBackColor = False
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.LightSteelBlue
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button8.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(204, 19)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(161, 59)
+        Me.Button8.TabIndex = 13
+        Me.Button8.Text = "SUPPLIERS"
+        Me.Button8.UseVisualStyleBackColor = False
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.Button1)
+        Me.GroupBox2.Controls.Add(Me.Button2)
+        Me.GroupBox2.Controls.Add(Me.Button4)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 227)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(377, 177)
+        Me.GroupBox2.TabIndex = 14
+        Me.GroupBox2.TabStop = False
+        '
+        'GroupBox3
+        '
+        Me.GroupBox3.Controls.Add(Me.btnCustomers)
+        Me.GroupBox3.Controls.Add(Me.Button3)
+        Me.GroupBox3.Controls.Add(Me.Button8)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 462)
+        Me.GroupBox3.Name = "GroupBox3"
+        Me.GroupBox3.Size = New System.Drawing.Size(377, 177)
+        Me.GroupBox3.TabIndex = 15
+        Me.GroupBox3.TabStop = False
+        '
+        'GroupBox4
+        '
+        Me.GroupBox4.Controls.Add(Me.Button7)
+        Me.GroupBox4.Controls.Add(Me.Button6)
+        Me.GroupBox4.Location = New System.Drawing.Point(12, 721)
+        Me.GroupBox4.Name = "GroupBox4"
+        Me.GroupBox4.Size = New System.Drawing.Size(377, 106)
+        Me.GroupBox4.TabIndex = 16
+        Me.GroupBox4.TabStop = False
+        '
+        'Button9
+        '
+        Me.Button9.Location = New System.Drawing.Point(413, 227)
+        Me.Button9.Name = "Button9"
+        Me.Button9.Size = New System.Drawing.Size(75, 23)
+        Me.Button9.TabIndex = 17
+        Me.Button9.Text = "Button9"
+        Me.Button9.UseVisualStyleBackColor = True
         '
         'SysTran
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoSize = True
-        Me.BackColor = System.Drawing.Color.LightGray
-        Me.ClientSize = New System.Drawing.Size(1076, 609)
+        Me.BackColor = System.Drawing.Color.Gray
+        Me.ClientSize = New System.Drawing.Size(1664, 1012)
         Me.ControlBox = False
-        Me.Controls.Add(Me.Button3)
+        Me.Controls.Add(Me.Button9)
+        Me.Controls.Add(Me.GroupBox4)
+        Me.Controls.Add(Me.GroupBox3)
+        Me.Controls.Add(Me.GroupBox2)
+        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.MenuStrip1)
-        Me.Controls.Add(Me.Button4)
-        Me.Controls.Add(Me.btnCustomers)
-        Me.Controls.Add(Me.Button2)
-        Me.Controls.Add(Me.Button1)
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "SysTran"
         Me.Text = "SYSTRAN - Automotive Business Solution by  Tran Solutions LTD."
@@ -422,6 +611,11 @@ Partial Class SysTran
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox1.ResumeLayout(False)
+        Me.GroupBox1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox3.ResumeLayout(False)
+        Me.GroupBox4.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -472,4 +666,20 @@ Partial Class SysTran
     Friend WithEvents Button5 As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button3 As Button
+    Friend WithEvents Button7 As Button
+    Friend WithEvents GroupBox1 As GroupBox
+    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents lblDayAfter As Label
+    Friend WithEvents lblSelDay As Label
+    Friend WithEvents lblDayBefore As Label
+    Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents Button6 As Button
+    Friend WithEvents Button8 As Button
+    Friend WithEvents GroupBox2 As GroupBox
+    Friend WithEvents GroupBox3 As GroupBox
+    Friend WithEvents GroupBox4 As GroupBox
+    Friend WithEvents Button9 As Button
 End Class
