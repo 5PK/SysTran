@@ -28,12 +28,11 @@ Partial Class PaymentSel
         Me.tbCheque = New System.Windows.Forms.TextBox()
         Me.tbTotalPaid = New System.Windows.Forms.TextBox()
         Me.tbInvTotal = New System.Windows.Forms.TextBox()
-        Me.tbOutstanding = New System.Windows.Forms.TextBox()
+        Me.tbChange = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.btnOK = New System.Windows.Forms.Button()
-        Me.btnExit = New System.Windows.Forms.Button()
         Me.tbDebit = New System.Windows.Forms.TextBox()
         Me.btnAR = New System.Windows.Forms.Button()
         Me.btnCash = New System.Windows.Forms.Button()
@@ -50,6 +49,8 @@ Partial Class PaymentSel
         Me.tbAR.ReadOnly = True
         Me.tbAR.Size = New System.Drawing.Size(100, 20)
         Me.tbAR.TabIndex = 0
+        Me.tbAR.TabStop = False
+        Me.tbAR.Text = "0.0"
         '
         'tbCash
         '
@@ -58,6 +59,8 @@ Partial Class PaymentSel
         Me.tbCash.Name = "tbCash"
         Me.tbCash.Size = New System.Drawing.Size(100, 20)
         Me.tbCash.TabIndex = 1
+        Me.tbCash.TabStop = False
+        Me.tbCash.Text = "0.0"
         '
         'tbCredit
         '
@@ -66,6 +69,8 @@ Partial Class PaymentSel
         Me.tbCredit.Name = "tbCredit"
         Me.tbCredit.Size = New System.Drawing.Size(100, 20)
         Me.tbCredit.TabIndex = 2
+        Me.tbCredit.TabStop = False
+        Me.tbCredit.Text = "0.0"
         '
         'tbCheque
         '
@@ -74,6 +79,8 @@ Partial Class PaymentSel
         Me.tbCheque.Name = "tbCheque"
         Me.tbCheque.Size = New System.Drawing.Size(100, 20)
         Me.tbCheque.TabIndex = 3
+        Me.tbCheque.TabStop = False
+        Me.tbCheque.Text = "0.0"
         '
         'tbTotalPaid
         '
@@ -82,6 +89,8 @@ Partial Class PaymentSel
         Me.tbTotalPaid.Name = "tbTotalPaid"
         Me.tbTotalPaid.Size = New System.Drawing.Size(100, 20)
         Me.tbTotalPaid.TabIndex = 4
+        Me.tbTotalPaid.TabStop = False
+        Me.tbTotalPaid.Text = "0.0"
         '
         'tbInvTotal
         '
@@ -91,14 +100,18 @@ Partial Class PaymentSel
         Me.tbInvTotal.Name = "tbInvTotal"
         Me.tbInvTotal.Size = New System.Drawing.Size(100, 20)
         Me.tbInvTotal.TabIndex = 5
+        Me.tbInvTotal.TabStop = False
+        Me.tbInvTotal.Text = "0.0"
         '
-        'tbOutstanding
+        'tbChange
         '
-        Me.tbOutstanding.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbOutstanding.Location = New System.Drawing.Point(151, 317)
-        Me.tbOutstanding.Name = "tbOutstanding"
-        Me.tbOutstanding.Size = New System.Drawing.Size(100, 20)
-        Me.tbOutstanding.TabIndex = 6
+        Me.tbChange.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbChange.Location = New System.Drawing.Point(151, 317)
+        Me.tbChange.Name = "tbChange"
+        Me.tbChange.Size = New System.Drawing.Size(100, 20)
+        Me.tbChange.TabIndex = 6
+        Me.tbChange.TabStop = False
+        Me.tbChange.Text = "0.0"
         '
         'Label5
         '
@@ -124,35 +137,23 @@ Partial Class PaymentSel
         '
         Me.Label7.AutoSize = True
         Me.Label7.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label7.Location = New System.Drawing.Point(25, 319)
+        Me.Label7.Location = New System.Drawing.Point(60, 319)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(84, 14)
+        Me.Label7.Size = New System.Drawing.Size(49, 14)
         Me.Label7.TabIndex = 13
-        Me.Label7.Text = "OUTSTANDING"
+        Me.Label7.Text = "CHANGE"
         '
         'btnOK
         '
         Me.btnOK.BackColor = System.Drawing.Color.PaleGreen
         Me.btnOK.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnOK.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnOK.Location = New System.Drawing.Point(49, 370)
+        Me.btnOK.Location = New System.Drawing.Point(97, 364)
         Me.btnOK.Name = "btnOK"
         Me.btnOK.Size = New System.Drawing.Size(75, 36)
         Me.btnOK.TabIndex = 14
         Me.btnOK.Text = "OK"
         Me.btnOK.UseVisualStyleBackColor = False
-        '
-        'btnExit
-        '
-        Me.btnExit.BackColor = System.Drawing.Color.Crimson
-        Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btnExit.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(151, 370)
-        Me.btnExit.Name = "btnExit"
-        Me.btnExit.Size = New System.Drawing.Size(75, 36)
-        Me.btnExit.TabIndex = 15
-        Me.btnExit.Text = "CANCEL"
-        Me.btnExit.UseVisualStyleBackColor = False
         '
         'tbDebit
         '
@@ -161,6 +162,8 @@ Partial Class PaymentSel
         Me.tbDebit.Name = "tbDebit"
         Me.tbDebit.Size = New System.Drawing.Size(100, 20)
         Me.tbDebit.TabIndex = 16
+        Me.tbDebit.TabStop = False
+        Me.tbDebit.Text = "0.0"
         '
         'btnAR
         '
@@ -235,12 +238,11 @@ Partial Class PaymentSel
         Me.Controls.Add(Me.btnCash)
         Me.Controls.Add(Me.btnAR)
         Me.Controls.Add(Me.tbDebit)
-        Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.btnOK)
         Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.tbOutstanding)
+        Me.Controls.Add(Me.tbChange)
         Me.Controls.Add(Me.tbInvTotal)
         Me.Controls.Add(Me.tbTotalPaid)
         Me.Controls.Add(Me.tbCheque)
@@ -261,12 +263,11 @@ Partial Class PaymentSel
     Friend WithEvents tbCheque As TextBox
     Friend WithEvents tbTotalPaid As TextBox
     Friend WithEvents tbInvTotal As TextBox
-    Friend WithEvents tbOutstanding As TextBox
+    Friend WithEvents tbChange As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label6 As Label
     Friend WithEvents Label7 As Label
     Friend WithEvents btnOK As Button
-    Friend WithEvents btnExit As Button
     Friend WithEvents tbDebit As TextBox
     Friend WithEvents btnAR As Button
     Friend WithEvents btnCash As Button

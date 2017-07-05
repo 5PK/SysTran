@@ -96,6 +96,12 @@
     <Compile Include="AccReceivableCustomer.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="AccRecPaymentSel.Designer.vb">
+      <DependentUpon>AccRecPaymentSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AccRecPaymentSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="AddVehicleCuSelect.Designer.vb">
       <DependentUpon>AddVehicleCuSelect.vb</DependentUpon>
     </Compile>
@@ -114,6 +120,8 @@
     <Compile Include="AdminSettings.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ChequeMethods.vb" />
+    <Compile Include="Converter.vb" />
     <Compile Include="DBControl.vb" />
     <Compile Include="CuMenuSel.Designer.vb">
       <DependentUpon>CuMenuSel.vb</DependentUpon>
@@ -121,6 +129,13 @@
     <Compile Include="CuMenuSel.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="ChequePrint.Designer.vb">
+      <DependentUpon>ChequePrint.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ChequePrint.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GlobalAdmin.vb" />
     <Compile Include="Invoice.Designer.vb">
       <DependentUpon>Invoice.vb</DependentUpon>
     </Compile>
@@ -149,6 +164,45 @@
       <DependentUpon>PaymentSel.vb</DependentUpon>
     </Compile>
     <Compile Include="PaymentSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PreviewDoc.Designer.vb">
+      <DependentUpon>PreviewDoc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="PreviewDoc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SimpleMultiselectDataGridView.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SupplierMakePayment.Designer.vb">
+      <DependentUpon>SupplierMakePayment.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierMakePayment.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SuppMakePaymentSelect.Designer.vb">
+      <DependentUpon>SuppMakePaymentSelect.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SuppMakePaymentSelect.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierPayable.Designer.vb">
+      <DependentUpon>SupplierPayable.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierPayable.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierPayableSel.Designer.vb">
+      <DependentUpon>SupplierPayableSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierPayableSel.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SupplierSel.Designer.vb">
+      <DependentUpon>SupplierSel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SupplierSel.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="TSauto1DataSet.Designer.vb">
@@ -236,11 +290,17 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AccPayable.resx">
+      <DependentUpon>AccPayable.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AccReceivable.resx">
       <DependentUpon>AccReceivable.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AccReceivableCustomer.resx">
       <DependentUpon>AccReceivableCustomer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AccRecPaymentSel.resx">
+      <DependentUpon>AccRecPaymentSel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AddCustomer.resx">
       <DependentUpon>AddCustomer.vb</DependentUpon>
@@ -257,6 +317,9 @@
     <EmbeddedResource Include="CuMenuSel.resx">
       <DependentUpon>CuMenuSel.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ChequePrint.resx">
+      <DependentUpon>ChequePrint.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Invoice.resx">
       <DependentUpon>Invoice.vb</DependentUpon>
     </EmbeddedResource>
@@ -271,6 +334,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PaymentSel.resx">
       <DependentUpon>PaymentSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreviewDoc.resx">
+      <DependentUpon>PreviewDoc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierMakePayment.resx">
+      <DependentUpon>SupplierMakePayment.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SuppMakePaymentSelect.resx">
+      <DependentUpon>SuppMakePaymentSelect.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierPayable.resx">
+      <DependentUpon>SupplierPayable.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierPayableSel.resx">
+      <DependentUpon>SupplierPayableSel.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SupplierSel.resx">
+      <DependentUpon>SupplierSel.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UpdateVehicleSelect.resx">
       <DependentUpon>UpdateVehicleSelect.vb</DependentUpon>
@@ -345,37 +426,10 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Excel">
-      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>9</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="Microsoft.Office.Interop.Word">
-      <Guid>{00020905-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>8</VersionMajor>
-      <VersionMinor>7</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
     <COMReference Include="MSHTML">
       <Guid>{3050F1C5-98B5-11CF-BB82-00AA00BDCE0B}</Guid>
       <VersionMajor>4</VersionMajor>
       <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>primary</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
-    </COMReference>
-    <COMReference Include="VBIDE">
-      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
-      <VersionMajor>5</VersionMajor>
-      <VersionMinor>3</VersionMinor>
       <Lcid>0</Lcid>
       <WrapperTool>primary</WrapperTool>
       <Isolated>False</Isolated>

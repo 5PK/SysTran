@@ -3,7 +3,7 @@ Imports System.IO
 
 Public Class InvoiceHistorySelChild
 
-    Public VehID As String
+    Dim VehicleID As Integer
     Dim con As New OleDbConnection
 
 
@@ -11,12 +11,13 @@ Public Class InvoiceHistorySelChild
     Dim dt As New DataTable
 
 
-    Public Sub New()
+    Public Sub New(ByVal VehID As Integer)
 
         ' This call is required by the designer.
         InitializeComponent()
 
         ' Add any initialization after the InitializeComponent() call.
+        VehicleID = VehID
 
     End Sub
 
@@ -28,28 +29,21 @@ Public Class InvoiceHistorySelChild
 
     Private Sub loadDgvInvoices()
 
-
-
         con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TSAuto1.accdb"
         con.Open()
 
         ds.Tables.Add(dt)
 
-        Dim str As String = "SELECT ID FROM Invoice WHERE vehID = " & VehID & ";"
-
-        MessageBox.Show(str)
+        Dim str As String = "SELECT Dte AS [Date], ID AS [Invoice #], odometer AS [Odometer], InvTotal AS [Cost] FROM Invoice WHERE vehID = " & VehicleID & " AND isInvoiceConverted = False;"
 
         Dim da As New OleDbDataAdapter
         da = New OleDbDataAdapter(str, con)
 
-
         da.Fill(dt)
-
 
         dgvInvoiceHistory.DataSource = dt.DefaultView
 
         con.Close()
-        MessageBox.Show(VehID)
 
     End Sub
 
@@ -60,24 +54,22 @@ Public Class InvoiceHistorySelChild
 
         If dgvInvoiceHistory.SelectedCells.Count > 0 Then
 
-            Dim SelectedRowIndex As Integer = dgvInvoiceHistory.SelectedCells(0).RowIndex
+            Dim SelectedRowIndex As Integer = dgvInvoiceHistory.SelectedCells(1).RowIndex
             Dim selectedRow As DataGridViewRow = dgvInvoiceHistory.Rows(SelectedRowIndex)
 
-
             'GETS Invoice ID
-            InvID = Convert.ToInt32(selectedRow.Cells(0).Value)
+            InvID = Convert.ToInt32(selectedRow.Cells(1).Value)
 
         End If
 
         'FILL INVOICE HISTORY CHILD FORM DGV AND LABELS
-        Dim frm As New InvoiceHistoryChild
+        Dim frm As New InvoiceHistoryChild(InvID)
 
         Dim filepath As String = "Invoices/"
         Dim filename As String = Convert.ToString(InvID) & "INV"
         frm.Show()
 
         LoadTxtToDgv(frm.dgvInvoice, filepath, filename, False)
-
 
     End Sub
 

@@ -70,14 +70,6 @@ Partial Class SysTran
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button7 = New System.Windows.Forms.Button()
-        Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.lblDayAfter = New System.Windows.Forms.Label()
-        Me.lblSelDay = New System.Windows.Forms.Label()
-        Me.lblDayBefore = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
-        Me.MonthCalendar1 = New System.Windows.Forms.MonthCalendar()
         Me.Button6 = New System.Windows.Forms.Button()
         Me.Button8 = New System.Windows.Forms.Button()
         Me.GroupBox2 = New System.Windows.Forms.GroupBox()
@@ -86,7 +78,6 @@ Partial Class SysTran
         Me.Button9 = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
         Me.GroupBox4.SuspendLayout()
@@ -109,7 +100,7 @@ Partial Class SysTran
         Me.Button2.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(201, 19)
+        Me.Button2.Location = New System.Drawing.Point(15, 100)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(161, 59)
         Me.Button2.TabIndex = 0
@@ -133,7 +124,7 @@ Partial Class SysTran
         Me.Button4.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button4.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(15, 97)
+        Me.Button4.Location = New System.Drawing.Point(15, 180)
         Me.Button4.Name = "Button4"
         Me.Button4.Size = New System.Drawing.Size(161, 59)
         Me.Button4.TabIndex = 0
@@ -198,13 +189,13 @@ Partial Class SysTran
         'TransactionsToolStripMenuItem
         '
         Me.TransactionsToolStripMenuItem.Name = "TransactionsToolStripMenuItem"
-        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.TransactionsToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.TransactionsToolStripMenuItem.Text = "Transactions"
         '
         'SummaryToolStripMenuItem
         '
         Me.SummaryToolStripMenuItem.Name = "SummaryToolStripMenuItem"
-        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.SummaryToolStripMenuItem.Size = New System.Drawing.Size(141, 22)
         Me.SummaryToolStripMenuItem.Text = "Summary"
         '
         'DeleteToolStripMenuItem
@@ -236,14 +227,14 @@ Partial Class SysTran
         '
         Me.VehiclesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ModifyToolStripMenuItem, Me.VehicleHistoryToolStripMenuItem, Me.VehicleRemindersToolStripMenuItem, Me.VehicleListToolStripMenuItem})
         Me.VehiclesToolStripMenuItem.Name = "VehiclesToolStripMenuItem"
-        Me.VehiclesToolStripMenuItem.Size = New System.Drawing.Size(61, 20)
+        Me.VehiclesToolStripMenuItem.Size = New System.Drawing.Size(62, 20)
         Me.VehiclesToolStripMenuItem.Text = "Vehicles"
         '
         'ModifyToolStripMenuItem
         '
         Me.ModifyToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AddToolStripMenuItem2, Me.UpdateToolStripMenuItem2, Me.DeleteToolStripMenuItem2})
         Me.ModifyToolStripMenuItem.Name = "ModifyToolStripMenuItem"
-        Me.ModifyToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.ModifyToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.ModifyToolStripMenuItem.Text = "Modify"
         '
         'AddToolStripMenuItem2
@@ -267,19 +258,19 @@ Partial Class SysTran
         'VehicleHistoryToolStripMenuItem
         '
         Me.VehicleHistoryToolStripMenuItem.Name = "VehicleHistoryToolStripMenuItem"
-        Me.VehicleHistoryToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.VehicleHistoryToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.VehicleHistoryToolStripMenuItem.Text = "Vehicle History"
         '
         'VehicleRemindersToolStripMenuItem
         '
         Me.VehicleRemindersToolStripMenuItem.Name = "VehicleRemindersToolStripMenuItem"
-        Me.VehicleRemindersToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.VehicleRemindersToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.VehicleRemindersToolStripMenuItem.Text = "Vehicle Reminders"
         '
         'VehicleListToolStripMenuItem
         '
         Me.VehicleListToolStripMenuItem.Name = "VehicleListToolStripMenuItem"
-        Me.VehicleListToolStripMenuItem.Size = New System.Drawing.Size(170, 22)
+        Me.VehicleListToolStripMenuItem.Size = New System.Drawing.Size(171, 22)
         Me.VehicleListToolStripMenuItem.Text = "Vehicle List"
         '
         'OrderWritingToolStripMenuItem
@@ -362,19 +353,19 @@ Partial Class SysTran
         'TransactionsToolStripMenuItem1
         '
         Me.TransactionsToolStripMenuItem1.Name = "TransactionsToolStripMenuItem1"
-        Me.TransactionsToolStripMenuItem1.Size = New System.Drawing.Size(140, 22)
+        Me.TransactionsToolStripMenuItem1.Size = New System.Drawing.Size(141, 22)
         Me.TransactionsToolStripMenuItem1.Text = "Transactions"
         '
         'AddToolStripMenuItem3
         '
         Me.AddToolStripMenuItem3.Name = "AddToolStripMenuItem3"
-        Me.AddToolStripMenuItem3.Size = New System.Drawing.Size(140, 22)
+        Me.AddToolStripMenuItem3.Size = New System.Drawing.Size(141, 22)
         Me.AddToolStripMenuItem3.Text = "Add"
         '
         'UpdateToolStripMenuItem6
         '
         Me.UpdateToolStripMenuItem6.Name = "UpdateToolStripMenuItem6"
-        Me.UpdateToolStripMenuItem6.Size = New System.Drawing.Size(140, 22)
+        Me.UpdateToolStripMenuItem6.Size = New System.Drawing.Size(141, 22)
         Me.UpdateToolStripMenuItem6.Text = "Update"
         '
         'SystemAdminToolStripMenuItem
@@ -431,97 +422,12 @@ Partial Class SysTran
         Me.Button7.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button7.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(201, 26)
+        Me.Button7.Location = New System.Drawing.Point(18, 110)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(161, 59)
         Me.Button7.TabIndex = 10
         Me.Button7.Text = "ACCOUNTS RECEIVABLE"
         Me.Button7.UseVisualStyleBackColor = False
-        '
-        'GroupBox1
-        '
-        Me.GroupBox1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.GroupBox1.BackColor = System.Drawing.Color.Gray
-        Me.GroupBox1.Controls.Add(Me.lblDayAfter)
-        Me.GroupBox1.Controls.Add(Me.lblSelDay)
-        Me.GroupBox1.Controls.Add(Me.lblDayBefore)
-        Me.GroupBox1.Controls.Add(Me.TextBox3)
-        Me.GroupBox1.Controls.Add(Me.TextBox2)
-        Me.GroupBox1.Controls.Add(Me.TextBox1)
-        Me.GroupBox1.Controls.Add(Me.MonthCalendar1)
-        Me.GroupBox1.Font = New System.Drawing.Font("Courier New", 14.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.GroupBox1.Location = New System.Drawing.Point(512, 230)
-        Me.GroupBox1.Name = "GroupBox1"
-        Me.GroupBox1.Size = New System.Drawing.Size(762, 605)
-        Me.GroupBox1.TabIndex = 11
-        Me.GroupBox1.TabStop = False
-        '
-        'lblDayAfter
-        '
-        Me.lblDayAfter.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblDayAfter.AutoSize = True
-        Me.lblDayAfter.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDayAfter.Location = New System.Drawing.Point(611, 263)
-        Me.lblDayAfter.Name = "lblDayAfter"
-        Me.lblDayAfter.Size = New System.Drawing.Size(88, 18)
-        Me.lblDayAfter.TabIndex = 21
-        Me.lblDayAfter.Text = "DayAfter"
-        '
-        'lblSelDay
-        '
-        Me.lblSelDay.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblSelDay.AutoSize = True
-        Me.lblSelDay.Location = New System.Drawing.Point(310, 240)
-        Me.lblSelDay.Name = "lblSelDay"
-        Me.lblSelDay.Size = New System.Drawing.Size(142, 22)
-        Me.lblSelDay.TabIndex = 20
-        Me.lblSelDay.Text = "Selected Day"
-        '
-        'lblDayBefore
-        '
-        Me.lblDayBefore.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.lblDayBefore.AutoSize = True
-        Me.lblDayBefore.Font = New System.Drawing.Font("Courier New", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblDayBefore.Location = New System.Drawing.Point(68, 263)
-        Me.lblDayBefore.Name = "lblDayBefore"
-        Me.lblDayBefore.Size = New System.Drawing.Size(98, 18)
-        Me.lblDayBefore.TabIndex = 19
-        Me.lblDayBefore.Text = "DayBefore"
-        '
-        'TextBox3
-        '
-        Me.TextBox3.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(547, 293)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(200, 272)
-        Me.TextBox3.TabIndex = 18
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(281, 293)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(200, 272)
-        Me.TextBox2.TabIndex = 17
-        '
-        'TextBox1
-        '
-        Me.TextBox1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(12, 293)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(200, 272)
-        Me.TextBox1.TabIndex = 16
-        '
-        'MonthCalendar1
-        '
-        Me.MonthCalendar1.BackColor = System.Drawing.SystemColors.HotTrack
-        Me.MonthCalendar1.Location = New System.Drawing.Point(12, 36)
-        Me.MonthCalendar1.Name = "MonthCalendar1"
-        Me.MonthCalendar1.TabIndex = 15
-        Me.MonthCalendar1.TitleBackColor = System.Drawing.Color.Maroon
         '
         'Button6
         '
@@ -540,7 +446,7 @@ Partial Class SysTran
         Me.Button8.BackColor = System.Drawing.Color.LightSteelBlue
         Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button8.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(204, 19)
+        Me.Button8.Location = New System.Drawing.Point(18, 188)
         Me.Button8.Name = "Button8"
         Me.Button8.Size = New System.Drawing.Size(161, 59)
         Me.Button8.TabIndex = 13
@@ -552,9 +458,9 @@ Partial Class SysTran
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button4)
-        Me.GroupBox2.Location = New System.Drawing.Point(12, 227)
+        Me.GroupBox2.Location = New System.Drawing.Point(12, 133)
         Me.GroupBox2.Name = "GroupBox2"
-        Me.GroupBox2.Size = New System.Drawing.Size(377, 177)
+        Me.GroupBox2.Size = New System.Drawing.Size(197, 251)
         Me.GroupBox2.TabIndex = 14
         Me.GroupBox2.TabStop = False
         '
@@ -563,9 +469,9 @@ Partial Class SysTran
         Me.GroupBox3.Controls.Add(Me.btnCustomers)
         Me.GroupBox3.Controls.Add(Me.Button3)
         Me.GroupBox3.Controls.Add(Me.Button8)
-        Me.GroupBox3.Location = New System.Drawing.Point(12, 462)
+        Me.GroupBox3.Location = New System.Drawing.Point(12, 423)
         Me.GroupBox3.Name = "GroupBox3"
-        Me.GroupBox3.Size = New System.Drawing.Size(377, 177)
+        Me.GroupBox3.Size = New System.Drawing.Size(197, 259)
         Me.GroupBox3.TabIndex = 15
         Me.GroupBox3.TabStop = False
         '
@@ -575,16 +481,16 @@ Partial Class SysTran
         Me.GroupBox4.Controls.Add(Me.Button6)
         Me.GroupBox4.Location = New System.Drawing.Point(12, 721)
         Me.GroupBox4.Name = "GroupBox4"
-        Me.GroupBox4.Size = New System.Drawing.Size(377, 106)
+        Me.GroupBox4.Size = New System.Drawing.Size(197, 189)
         Me.GroupBox4.TabIndex = 16
         Me.GroupBox4.TabStop = False
         '
         'Button9
         '
-        Me.Button9.Location = New System.Drawing.Point(413, 227)
+        Me.Button9.Location = New System.Drawing.Point(134, 95)
         Me.Button9.Name = "Button9"
         Me.Button9.Size = New System.Drawing.Size(75, 23)
-        Me.Button9.TabIndex = 17
+        Me.Button9.TabIndex = 20
         Me.Button9.Text = "Button9"
         Me.Button9.UseVisualStyleBackColor = True
         '
@@ -600,10 +506,10 @@ Partial Class SysTran
         Me.Controls.Add(Me.GroupBox4)
         Me.Controls.Add(Me.GroupBox3)
         Me.Controls.Add(Me.GroupBox2)
-        Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.MenuStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.MainMenuStrip = Me.MenuStrip1
         Me.Name = "SysTran"
         Me.Text = "SYSTRAN - Automotive Business Solution by  Tran Solutions LTD."
@@ -611,8 +517,6 @@ Partial Class SysTran
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.GroupBox1.ResumeLayout(False)
-        Me.GroupBox1.PerformLayout()
         Me.GroupBox2.ResumeLayout(False)
         Me.GroupBox3.ResumeLayout(False)
         Me.GroupBox4.ResumeLayout(False)
@@ -667,14 +571,6 @@ Partial Class SysTran
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents Button3 As Button
     Friend WithEvents Button7 As Button
-    Friend WithEvents GroupBox1 As GroupBox
-    Friend WithEvents TextBox3 As TextBox
-    Friend WithEvents TextBox2 As TextBox
-    Friend WithEvents TextBox1 As TextBox
-    Friend WithEvents MonthCalendar1 As MonthCalendar
-    Friend WithEvents lblDayAfter As Label
-    Friend WithEvents lblSelDay As Label
-    Friend WithEvents lblDayBefore As Label
     Friend WithEvents SettingsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents Button6 As Button
     Friend WithEvents Button8 As Button

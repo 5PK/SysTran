@@ -35,17 +35,17 @@ Partial Class PendingWO
         Me.dgvWOPending.AllowUserToResizeColumns = False
         Me.dgvWOPending.AllowUserToResizeRows = False
         Me.dgvWOPending.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvWOPending.Location = New System.Drawing.Point(12, 27)
+        Me.dgvWOPending.Location = New System.Drawing.Point(12, 12)
         Me.dgvWOPending.MultiSelect = False
         Me.dgvWOPending.Name = "dgvWOPending"
         Me.dgvWOPending.ReadOnly = True
         Me.dgvWOPending.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvWOPending.Size = New System.Drawing.Size(494, 390)
+        Me.dgvWOPending.Size = New System.Drawing.Size(803, 390)
         Me.dgvWOPending.TabIndex = 0
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(134, 438)
+        Me.Button1.Location = New System.Drawing.Point(12, 426)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 45)
         Me.Button1.TabIndex = 1
@@ -57,7 +57,7 @@ Partial Class PendingWO
         Me.btnExit.BackColor = System.Drawing.Color.Crimson
         Me.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btnExit.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnExit.Location = New System.Drawing.Point(299, 438)
+        Me.btnExit.Location = New System.Drawing.Point(740, 427)
         Me.btnExit.Name = "btnExit"
         Me.btnExit.Size = New System.Drawing.Size(75, 45)
         Me.btnExit.TabIndex = 2
@@ -69,7 +69,7 @@ Partial Class PendingWO
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.LightGray
-        Me.ClientSize = New System.Drawing.Size(518, 495)
+        Me.ClientSize = New System.Drawing.Size(827, 492)
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.dgvWOPending)

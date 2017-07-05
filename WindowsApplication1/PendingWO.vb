@@ -8,12 +8,9 @@ Public Class PendingWO
     Dim ds As New DataSet
     Dim dt As New DataTable
 
-    'Dim ds2 As New DataSet
-    'Dim dt2 As New DataTable
-
-
     Private Sub PendingWO_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         loadWOPending()
+
     End Sub
 
     Private Sub loadWOPending()
@@ -24,59 +21,62 @@ Public Class PendingWO
         ds.Tables.Add(dt)
 
         Dim da As New OleDbDataAdapter
-        da = New OleDbDataAdapter("SELECT ID, fname, lname, make, model, plate FROM WorkOrder WHERE WOStatus = True;", con)
 
+        Dim cmdSTR2 As String = "SELECT WorkOrder.dte AS [Date], WorkOrder.ID AS [Work Order #], WorkOrder.VehID, WorkOrder.CusID, Customers.fname AS [First Name], Customers.lname AS [Last Name], " &
+                                "CuVehicles.year AS [Year], CuVehicles.make AS [Make], CuVehicles.model AS [Model], CuVehicles.unitno AS [Unit #] " &
+                                "FROM (Customers INNER JOIN CuVehicles ON Customers.ID = CuVehicles.cusid) INNER JOIN WorkOrder ON CuVehicles.ID = WorkOrder.VehID " &
+                                "WHERE WorkOrder.WOStatus = False; "
+
+        da = New OleDbDataAdapter(cmdSTR2, con)
 
         da.Fill(dt)
-
 
         dgvWOPending.DataSource = dt.DefaultView
 
         con.Close()
-
     End Sub
 
 
     Private Sub dgvWOPending_CellMouseDoubleClick(sender As Object, e As DataGridViewCellMouseEventArgs) Handles dgvWOPending.CellMouseDoubleClick
 
-
         'SELECTION
         Dim WoID As Integer
+        Dim CusID As Integer
+        Dim VehID As Integer
+        Dim Dte As System.DateTime
 
         If dgvWOPending.SelectedCells.Count > 0 Then
 
-            Dim SelectedRowIndex As Integer = dgvWOPending.SelectedCells(0).RowIndex
+            Dim SelectedRowIndex As Integer = dgvWOPending.SelectedCells(1).RowIndex
             Dim selectedRow As DataGridViewRow = dgvWOPending.Rows(SelectedRowIndex)
 
-
-            'GETS WOID ID
-            WoID = Convert.ToString(selectedRow.Cells(0).Value)
+            WoID = Convert.ToString(selectedRow.Cells(1).Value)
+            VehID = Convert.ToString(selectedRow.Cells(2).Value)
+            CusID = Convert.ToString(selectedRow.Cells(3).Value)
+            Dte = Convert.ToDateTime(selectedRow.Cells(0).Value)
 
         End If
 
         'OPEN WRWOINVOICE FORM
-        Dim frm As New WrWoInvoice
-        frm.Show()
+        Dim frm As New WrWoInvoice(WoID, CusID, VehID, Dte)
+
         frm.IsWOFirstCreation(False)
-        frm.lblWoNo.Text = WoID
 
         'Load WR and WO text
         Dim filepath As String = "WorkOrders\"
         Dim filename As String = WoID
 
         LoadTxtToDgv(frm.dgvWorkOrder, filepath, filename, True)
+        frm.CalculateCells()
+        FillWRWOLabels(frm, VehID, CusID)
 
-
-        Me.Close()
-
-
-
-
-
-
-    End Sub
-
-    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        frm.Show()
         Me.Close()
     End Sub
+
+    Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
+        Me.Close()
+    End Sub
+
+
 End Class

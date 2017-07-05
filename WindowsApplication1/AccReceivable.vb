@@ -16,16 +16,20 @@ Public Class AccReceivable
     Private Sub AccReceivable_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TSauto1.accdb"
         con.Open()
+
         loadCustomers()
-        dt1 = dt2
         dgvAccR.Rows(0).Cells(0).Selected = False
+
+        dgvAccR.Columns(0).Visible = False
+        dt2 = dt1
+
 
 
     End Sub
 
     Private Sub tbCustomerSel_TextChanged(sender As Object, e As EventArgs) Handles tbCustomerSel.TextChanged
 
-        dt2.DefaultView.RowFilter = "fname Like '%" & tbCustomerSel.Text & "%' OR lname LIKE '%" & tbCustomerSel.Text & "%' OR company LIKE '%" & tbCustomerSel.Text & "%'"
+        dt2.DefaultView.RowFilter = "[First Name] Like '%" & tbCustomerSel.Text & "%' OR [Last Name] LIKE '%" & tbCustomerSel.Text & "%' OR [Company] LIKE '%" & tbCustomerSel.Text & "%'"
 
 
     End Sub
@@ -34,9 +38,14 @@ Public Class AccReceivable
 
         ds.Tables.Add(dt1)
         Dim da As New OleDbDataAdapter
+        Dim daCMD As String = "SELECT Customers.ID, Customers.company AS [Company], Customers.fname AS [First Name], Customers.lname AS [Last Name], SUM(m.Balance) AS [Balance] " &
+                              "FROM (SELECT DISTINCT cusID, Balance FROM Invoice) As m " &
+                              "INNER JOIN Customers on  m.cusID = Customers.ID " &
+                              "WHERE Invoice.Balance > 0 " &
+                              "GROUP BY Customers.ID, Customers.company, Customers.fname, Customers.lname"
 
-        'da = New OleDbDataAdapter("SELECT Customers.company, Customers.fname, Customers.lname, SUM(m.Balance) FROM (SELECT DISTINCT CusID, Balance FROM AccReceivable) AS m INNER JOIN Customers ON m.CusID = Customers.ID;", con)
-        da = New OleDbDataAdapter("SELECT Customers.fname, Customers.lname, SUM(m.Balance) FROM (SELECT DISTINCT CusID, Balance FROM AccReceivable) AS m INNER JOIN Customers ON m.CusID = Customers.ID GROUP BY Customers.fname, Customers.lname", con)
+
+        da = New OleDbDataAdapter(daCMD, con)
 
         da.Fill(dt1)
 
@@ -55,11 +64,21 @@ Public Class AccReceivable
 
         customerID = selectedRow.Cells(0).Value
 
+        Dim frm As New AccReceivableCustomer(customerID)
+
+        frm.Show()
+
+        Me.Close()
+
 
 
     End Sub
 
     Private Sub btnExit_Click(sender As Object, e As EventArgs) Handles btnExit.Click
         Me.Close()
+    End Sub
+
+    Private Sub dgvAccR_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvAccR.CellContentClick
+
     End Sub
 End Class

@@ -26,17 +26,17 @@ Partial Class InvoiceSelect
         Me.dgvVehicles = New System.Windows.Forms.DataGridView()
         Me.dgvCustomers = New System.Windows.Forms.DataGridView()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.tbCustomerSel = New System.Windows.Forms.TextBox()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Button1 = New System.Windows.Forms.Button()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.tbCustomerSel = New System.Windows.Forms.TextBox()
+        Me.dgvInvoices = New System.Windows.Forms.DataGridView()
         Me.GroupBox3 = New System.Windows.Forms.GroupBox()
         Me.Button3 = New System.Windows.Forms.Button()
         Me.GroupBox2.SuspendLayout()
         CType(Me.dgvVehicles, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.dgvCustomers, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox1.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvInvoices, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.GroupBox3.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -60,10 +60,11 @@ Partial Class InvoiceSelect
         Me.dgvVehicles.AllowUserToResizeRows = False
         Me.dgvVehicles.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvVehicles.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgvVehicles.Location = New System.Drawing.Point(21, 221)
+        Me.dgvVehicles.Location = New System.Drawing.Point(20, 221)
         Me.dgvVehicles.MultiSelect = False
         Me.dgvVehicles.Name = "dgvVehicles"
         Me.dgvVehicles.ReadOnly = True
+        Me.dgvVehicles.RowHeadersVisible = False
         Me.dgvVehicles.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvVehicles.Size = New System.Drawing.Size(432, 162)
         Me.dgvVehicles.TabIndex = 1
@@ -76,12 +77,13 @@ Partial Class InvoiceSelect
         Me.dgvCustomers.AllowUserToResizeRows = False
         Me.dgvCustomers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvCustomers.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.dgvCustomers.Location = New System.Drawing.Point(21, 28)
+        Me.dgvCustomers.Location = New System.Drawing.Point(20, 34)
         Me.dgvCustomers.MultiSelect = False
         Me.dgvCustomers.Name = "dgvCustomers"
         Me.dgvCustomers.ReadOnly = True
+        Me.dgvCustomers.RowHeadersVisible = False
         Me.dgvCustomers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.dgvCustomers.Size = New System.Drawing.Size(432, 170)
+        Me.dgvCustomers.Size = New System.Drawing.Size(432, 162)
         Me.dgvCustomers.TabIndex = 0
         '
         'GroupBox1
@@ -97,22 +99,6 @@ Partial Class InvoiceSelect
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Search By"
         '
-        'tbCustomerSel
-        '
-        Me.tbCustomerSel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.tbCustomerSel.Location = New System.Drawing.Point(6, 46)
-        Me.tbCustomerSel.Name = "tbCustomerSel"
-        Me.tbCustomerSel.Size = New System.Drawing.Size(238, 20)
-        Me.tbCustomerSel.TabIndex = 0
-        '
-        'TextBox1
-        '
-        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.TextBox1.Location = New System.Drawing.Point(354, 46)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(109, 20)
-        Me.TextBox1.TabIndex = 1
-        '
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(354, 72)
@@ -122,25 +108,42 @@ Partial Class InvoiceSelect
         Me.Button1.Text = "GET INVOICE #"
         Me.Button1.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'TextBox1
         '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.AllowUserToDeleteRows = False
-        Me.DataGridView1.AllowUserToResizeColumns = False
-        Me.DataGridView1.AllowUserToResizeRows = False
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
-        Me.DataGridView1.Location = New System.Drawing.Point(20, 19)
-        Me.DataGridView1.MultiSelect = False
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.ReadOnly = True
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(432, 120)
-        Me.DataGridView1.TabIndex = 2
+        Me.TextBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.TextBox1.Location = New System.Drawing.Point(354, 46)
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.Size = New System.Drawing.Size(109, 20)
+        Me.TextBox1.TabIndex = 1
+        '
+        'tbCustomerSel
+        '
+        Me.tbCustomerSel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbCustomerSel.Location = New System.Drawing.Point(6, 46)
+        Me.tbCustomerSel.Name = "tbCustomerSel"
+        Me.tbCustomerSel.Size = New System.Drawing.Size(238, 20)
+        Me.tbCustomerSel.TabIndex = 0
+        '
+        'dgvInvoices
+        '
+        Me.dgvInvoices.AllowUserToAddRows = False
+        Me.dgvInvoices.AllowUserToDeleteRows = False
+        Me.dgvInvoices.AllowUserToResizeColumns = False
+        Me.dgvInvoices.AllowUserToResizeRows = False
+        Me.dgvInvoices.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvInvoices.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically
+        Me.dgvInvoices.Location = New System.Drawing.Point(20, 19)
+        Me.dgvInvoices.MultiSelect = False
+        Me.dgvInvoices.Name = "dgvInvoices"
+        Me.dgvInvoices.ReadOnly = True
+        Me.dgvInvoices.RowHeadersVisible = False
+        Me.dgvInvoices.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.dgvInvoices.Size = New System.Drawing.Size(432, 120)
+        Me.dgvInvoices.TabIndex = 2
         '
         'GroupBox3
         '
-        Me.GroupBox3.Controls.Add(Me.DataGridView1)
+        Me.GroupBox3.Controls.Add(Me.dgvInvoices)
         Me.GroupBox3.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.GroupBox3.Location = New System.Drawing.Point(13, 545)
         Me.GroupBox3.Name = "GroupBox3"
@@ -175,7 +178,7 @@ Partial Class InvoiceSelect
         CType(Me.dgvCustomers, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvInvoices, System.ComponentModel.ISupportInitialize).EndInit()
         Me.GroupBox3.ResumeLayout(False)
         Me.ResumeLayout(False)
 
@@ -188,7 +191,7 @@ Partial Class InvoiceSelect
     Friend WithEvents TextBox1 As TextBox
     Friend WithEvents tbCustomerSel As TextBox
     Friend WithEvents Button1 As Button
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgvInvoices As DataGridView
     Friend WithEvents GroupBox3 As GroupBox
     Friend WithEvents Button3 As Button
 End Class

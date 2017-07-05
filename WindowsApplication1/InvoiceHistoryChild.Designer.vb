@@ -22,6 +22,9 @@ Partial Class InvoiceHistoryChild
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.dgvInvoice = New System.Windows.Forms.DataGridView()
         Me.colQty = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.colHrs = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -49,6 +52,15 @@ Partial Class InvoiceHistoryChild
         Me.lblCuFname = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblCompany = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.lblDate = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.tbSubtot = New System.Windows.Forms.TextBox()
+        Me.tbTax = New System.Windows.Forms.TextBox()
+        Me.lblTax = New System.Windows.Forms.Label()
+        Me.tbTotal = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.dgvInvoice, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,12 +71,38 @@ Partial Class InvoiceHistoryChild
         Me.dgvInvoice.AllowUserToResizeColumns = False
         Me.dgvInvoice.AllowUserToResizeRows = False
         Me.dgvInvoice.BackgroundColor = System.Drawing.Color.LightGray
+        DataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInvoice.ColumnHeadersDefaultCellStyle = DataGridViewCellStyle1
         Me.dgvInvoice.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvInvoice.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.colQty, Me.colHrs, Me.colDesc, Me.colPartsEa, Me.colTotPart, Me.colLabour, Me.colTax, Me.colTotal})
+        DataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window
+        DataGridViewCellStyle2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText
+        DataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[False]
+        Me.dgvInvoice.DefaultCellStyle = DataGridViewCellStyle2
+        Me.dgvInvoice.Enabled = False
         Me.dgvInvoice.Location = New System.Drawing.Point(12, 154)
         Me.dgvInvoice.MultiSelect = False
         Me.dgvInvoice.Name = "dgvInvoice"
         Me.dgvInvoice.ReadOnly = True
+        DataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
+        DataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        DataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Control
+        DataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText
+        DataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.dgvInvoice.RowHeadersDefaultCellStyle = DataGridViewCellStyle3
+        Me.dgvInvoice.RowHeadersVisible = False
         Me.dgvInvoice.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvInvoice.Size = New System.Drawing.Size(590, 250)
         Me.dgvInvoice.TabIndex = 18
@@ -74,21 +112,21 @@ Partial Class InvoiceHistoryChild
         Me.colQty.HeaderText = "Qty"
         Me.colQty.Name = "colQty"
         Me.colQty.ReadOnly = True
-        Me.colQty.Width = 35
+        Me.colQty.Width = 38
         '
         'colHrs
         '
         Me.colHrs.HeaderText = "Hrs"
         Me.colHrs.Name = "colHrs"
         Me.colHrs.ReadOnly = True
-        Me.colHrs.Width = 35
+        Me.colHrs.Width = 38
         '
         'colDesc
         '
         Me.colDesc.HeaderText = "Description"
         Me.colDesc.Name = "colDesc"
         Me.colDesc.ReadOnly = True
-        Me.colDesc.Width = 250
+        Me.colDesc.Width = 275
         '
         'colPartsEa
         '
@@ -129,7 +167,7 @@ Partial Class InvoiceHistoryChild
         '
         Me.lblUnitNo.AutoSize = True
         Me.lblUnitNo.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblUnitNo.Location = New System.Drawing.Point(58, 103)
+        Me.lblUnitNo.Location = New System.Drawing.Point(81, 125)
         Me.lblUnitNo.Name = "lblUnitNo"
         Me.lblUnitNo.Size = New System.Drawing.Size(28, 14)
         Me.lblUnitNo.TabIndex = 29
@@ -139,7 +177,7 @@ Partial Class InvoiceHistoryChild
         '
         Me.lblVin.AutoSize = True
         Me.lblVin.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblVin.Location = New System.Drawing.Point(110, 59)
+        Me.lblVin.Location = New System.Drawing.Point(81, 103)
         Me.lblVin.Name = "lblVin"
         Me.lblVin.Size = New System.Drawing.Size(28, 14)
         Me.lblVin.TabIndex = 28
@@ -149,7 +187,7 @@ Partial Class InvoiceHistoryChild
         '
         Me.lblOdometer.AutoSize = True
         Me.lblOdometer.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblOdometer.Location = New System.Drawing.Point(110, 81)
+        Me.lblOdometer.Location = New System.Drawing.Point(81, 81)
         Me.lblOdometer.Name = "lblOdometer"
         Me.lblOdometer.Size = New System.Drawing.Size(28, 14)
         Me.lblOdometer.TabIndex = 27
@@ -159,7 +197,7 @@ Partial Class InvoiceHistoryChild
         '
         Me.lblPlate.AutoSize = True
         Me.lblPlate.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblPlate.Location = New System.Drawing.Point(110, 125)
+        Me.lblPlate.Location = New System.Drawing.Point(81, 59)
         Me.lblPlate.Name = "lblPlate"
         Me.lblPlate.Size = New System.Drawing.Size(28, 14)
         Me.lblPlate.TabIndex = 26
@@ -241,7 +279,7 @@ Partial Class InvoiceHistoryChild
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.Button1.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.ForeColor = System.Drawing.SystemColors.ControlText
-        Me.Button1.Location = New System.Drawing.Point(278, 427)
+        Me.Button1.Location = New System.Drawing.Point(283, 422)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 34)
         Me.Button1.TabIndex = 30
@@ -272,7 +310,7 @@ Partial Class InvoiceHistoryChild
         '
         Me.lblCuLname.AutoSize = True
         Me.lblCuLname.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCuLname.Location = New System.Drawing.Point(516, 32)
+        Me.lblCuLname.Location = New System.Drawing.Point(485, 59)
         Me.lblCuLname.Name = "lblCuLname"
         Me.lblCuLname.Size = New System.Drawing.Size(77, 14)
         Me.lblCuLname.TabIndex = 34
@@ -282,7 +320,7 @@ Partial Class InvoiceHistoryChild
         '
         Me.lblCuFname.AutoSize = True
         Me.lblCuFname.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lblCuFname.Location = New System.Drawing.Point(435, 32)
+        Me.lblCuFname.Location = New System.Drawing.Point(402, 59)
         Me.lblCuFname.Name = "lblCuFname"
         Me.lblCuFname.Size = New System.Drawing.Size(77, 14)
         Me.lblCuFname.TabIndex = 33
@@ -292,7 +330,7 @@ Partial Class InvoiceHistoryChild
         '
         Me.Label4.AutoSize = True
         Me.Label4.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(192, 58)
+        Me.Label4.Location = New System.Drawing.Point(192, 59)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(28, 14)
         Me.Label4.TabIndex = 36
@@ -302,17 +340,119 @@ Partial Class InvoiceHistoryChild
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(192, 31)
+        Me.Label1.Location = New System.Drawing.Point(192, 32)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(35, 14)
         Me.Label1.TabIndex = 35
         Me.Label1.Text = "INV#"
+        '
+        'lblCompany
+        '
+        Me.lblCompany.AutoSize = True
+        Me.lblCompany.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblCompany.Location = New System.Drawing.Point(402, 32)
+        Me.lblCompany.Name = "lblCompany"
+        Me.lblCompany.Size = New System.Drawing.Size(77, 14)
+        Me.lblCompany.TabIndex = 37
+        Me.lblCompany.Text = "lblCompany"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(192, 81)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(35, 14)
+        Me.Label5.TabIndex = 38
+        Me.Label5.Text = "DATE"
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Font = New System.Drawing.Font("Courier New", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblDate.Location = New System.Drawing.Point(233, 81)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(28, 14)
+        Me.lblDate.TabIndex = 39
+        Me.lblDate.Text = "***"
+        '
+        'Label23
+        '
+        Me.Label23.AutoSize = True
+        Me.Label23.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label23.Location = New System.Drawing.Point(449, 404)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(72, 16)
+        Me.Label23.TabIndex = 45
+        Me.Label23.Text = "SubTotal"
+        '
+        'tbSubtot
+        '
+        Me.tbSubtot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbSubtot.Location = New System.Drawing.Point(527, 403)
+        Me.tbSubtot.Name = "tbSubtot"
+        Me.tbSubtot.ReadOnly = True
+        Me.tbSubtot.Size = New System.Drawing.Size(75, 20)
+        Me.tbSubtot.TabIndex = 44
+        Me.tbSubtot.Text = "0.0"
+        Me.tbSubtot.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'tbTax
+        '
+        Me.tbTax.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbTax.Location = New System.Drawing.Point(527, 422)
+        Me.tbTax.Name = "tbTax"
+        Me.tbTax.ReadOnly = True
+        Me.tbTax.Size = New System.Drawing.Size(75, 20)
+        Me.tbTax.TabIndex = 43
+        Me.tbTax.Text = "0.0"
+        Me.tbTax.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'lblTax
+        '
+        Me.lblTax.AutoSize = True
+        Me.lblTax.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblTax.Location = New System.Drawing.Point(489, 423)
+        Me.lblTax.Name = "lblTax"
+        Me.lblTax.Size = New System.Drawing.Size(32, 16)
+        Me.lblTax.TabIndex = 42
+        Me.lblTax.Text = "Tax"
+        '
+        'tbTotal
+        '
+        Me.tbTotal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.tbTotal.Location = New System.Drawing.Point(527, 441)
+        Me.tbTotal.Name = "tbTotal"
+        Me.tbTotal.ReadOnly = True
+        Me.tbTotal.Size = New System.Drawing.Size(75, 20)
+        Me.tbTotal.TabIndex = 41
+        Me.tbTotal.Text = "0.0"
+        Me.tbTotal.TextAlign = System.Windows.Forms.HorizontalAlignment.Right
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Font = New System.Drawing.Font("Courier New", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label8.Location = New System.Drawing.Point(473, 442)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(48, 16)
+        Me.Label8.TabIndex = 40
+        Me.Label8.Text = "Total"
         '
         'InvoiceHistoryChild
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(617, 483)
+        Me.Controls.Add(Me.Label23)
+        Me.Controls.Add(Me.tbSubtot)
+        Me.Controls.Add(Me.tbTax)
+        Me.Controls.Add(Me.lblTax)
+        Me.Controls.Add(Me.tbTotal)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.lblDate)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.lblCompany)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.lblCuLname)
@@ -341,14 +481,6 @@ Partial Class InvoiceHistoryChild
     End Sub
 
     Friend WithEvents dgvInvoice As DataGridView
-    Friend WithEvents colQty As DataGridViewTextBoxColumn
-    Friend WithEvents colHrs As DataGridViewTextBoxColumn
-    Friend WithEvents colDesc As DataGridViewTextBoxColumn
-    Friend WithEvents colPartsEa As DataGridViewTextBoxColumn
-    Friend WithEvents colTotPart As DataGridViewTextBoxColumn
-    Friend WithEvents colLabour As DataGridViewTextBoxColumn
-    Friend WithEvents colTax As DataGridViewTextBoxColumn
-    Friend WithEvents colTotal As DataGridViewTextBoxColumn
     Friend WithEvents lblUnitNo As Label
     Friend WithEvents lblVin As Label
     Friend WithEvents lblOdometer As Label
@@ -367,4 +499,21 @@ Partial Class InvoiceHistoryChild
     Friend WithEvents lblCuFname As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents lblCompany As Label
+    Friend WithEvents Label5 As Label
+    Friend WithEvents lblDate As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents tbSubtot As TextBox
+    Friend WithEvents tbTax As TextBox
+    Friend WithEvents lblTax As Label
+    Friend WithEvents tbTotal As TextBox
+    Friend WithEvents Label8 As Label
+    Friend WithEvents colQty As DataGridViewTextBoxColumn
+    Friend WithEvents colHrs As DataGridViewTextBoxColumn
+    Friend WithEvents colDesc As DataGridViewTextBoxColumn
+    Friend WithEvents colPartsEa As DataGridViewTextBoxColumn
+    Friend WithEvents colTotPart As DataGridViewTextBoxColumn
+    Friend WithEvents colLabour As DataGridViewTextBoxColumn
+    Friend WithEvents colTax As DataGridViewTextBoxColumn
+    Friend WithEvents colTotal As DataGridViewTextBoxColumn
 End Class

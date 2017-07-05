@@ -1,4 +1,9 @@
-﻿Public Class SysTran
+﻿Imports System.Data.OleDb
+
+Public Class SysTran
+
+    Dim con As New OleDbConnection
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         My.Forms.PendingWO.Show()
     End Sub
@@ -66,6 +71,22 @@
 
     Private Sub SysTran_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
+        con.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=TSAuto1.accdb"
+        con.Open()
+
+        Dim cmdStr = "SELECT LabourRate, TaxRate, Fname, Lname, Regno FROM Administrator WHERE ID = 1"
+
+        Dim cmd As OleDbCommand = New OleDbCommand(cmdStr, con)
+
+        Dim rdr As OleDbDataReader = cmd.ExecuteReader
+
+        While rdr.Read
+            GlobalAdmin.LABOURRATE = rdr("LabourRate").ToString
+            GlobalAdmin.TAX = rdr("TaxRate").ToString
+            GlobalAdmin.ADMINFNAME = rdr("Fname").ToString
+            GlobalAdmin.ADMINLNAME = rdr("Lname").ToString
+            GlobalAdmin.REGNO = rdr("Regno").ToString
+        End While
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
@@ -76,7 +97,7 @@
         My.Forms.Invoice.Show()
     End Sub
 
-    Private Sub Label2_Click(sender As Object, e As EventArgs) Handles lblSelDay.Click
+    Private Sub Label2_Click(sender As Object, e As EventArgs)
 
     End Sub
 
@@ -89,21 +110,32 @@
 
     Private Sub Button6_Click_1(sender As Object, e As EventArgs) Handles Button6.Click
 
+
+
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         My.Forms.AccReceivable.Show()
     End Sub
 
-    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
-        Dim frm As New PaymentSel
 
+    Private Sub TextBox1_TextChanged(sender As Object, e As EventArgs)
 
-        frm.tbAR.Text = 100.0
-        frm.tbInvTotal.Text = 100.0
-        frm.tbOutstanding.Text = 0.0
+    End Sub
 
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        My.Forms.SupplierSel.Show()
+    End Sub
+
+    Private Sub MenuStrip1_ItemClicked(sender As Object, e As ToolStripItemClickedEventArgs) Handles MenuStrip1.ItemClicked
+
+    End Sub
+
+    Private Sub Button9_Click_1(sender As Object, e As EventArgs) Handles Button9.Click
+
+        Dim frm As New ChequePrint(1122, Date.Now, 3, 122.44)
         frm.Show()
+
 
     End Sub
 End Class

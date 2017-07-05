@@ -39,11 +39,20 @@ Partial Class AccReceivable
         '
         'dgvAccR
         '
+        Me.dgvAccR.AllowUserToAddRows = False
+        Me.dgvAccR.AllowUserToDeleteRows = False
+        Me.dgvAccR.AllowUserToResizeColumns = False
+        Me.dgvAccR.AllowUserToResizeRows = False
         Me.dgvAccR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvAccR.Location = New System.Drawing.Point(12, 82)
+        Me.dgvAccR.MultiSelect = False
         Me.dgvAccR.Name = "dgvAccR"
+        Me.dgvAccR.ReadOnly = True
+        Me.dgvAccR.RowHeadersVisible = False
+        Me.dgvAccR.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvAccR.Size = New System.Drawing.Size(743, 379)
         Me.dgvAccR.TabIndex = 0
+        Me.dgvAccR.TabStop = False
         '
         'btnExit
         '
@@ -99,12 +108,12 @@ Partial Class AccReceivable
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TakePaymentToolStripMenuItem})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(149, 26)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(150, 26)
         '
         'TakePaymentToolStripMenuItem
         '
         Me.TakePaymentToolStripMenuItem.Name = "TakePaymentToolStripMenuItem"
-        Me.TakePaymentToolStripMenuItem.Size = New System.Drawing.Size(148, 22)
+        Me.TakePaymentToolStripMenuItem.Size = New System.Drawing.Size(149, 22)
         Me.TakePaymentToolStripMenuItem.Text = "Take Payment"
         '
         'tbCustomerSel
@@ -140,6 +149,7 @@ Partial Class AccReceivable
         Me.Controls.Add(Me.btnExit)
         Me.Controls.Add(Me.dgvAccR)
         Me.Name = "AccReceivable"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "AccReceivable"
         CType(Me.dgvAccR, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ContextMenuStrip1.ResumeLayout(False)

@@ -30,7 +30,10 @@ Partial Class InvoiceHistorySelChild
         '
         Me.dgvInvoiceHistory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvInvoiceHistory.Location = New System.Drawing.Point(12, 12)
+        Me.dgvInvoiceHistory.MultiSelect = False
         Me.dgvInvoiceHistory.Name = "dgvInvoiceHistory"
+        Me.dgvInvoiceHistory.ReadOnly = True
+        Me.dgvInvoiceHistory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.dgvInvoiceHistory.Size = New System.Drawing.Size(404, 220)
         Me.dgvInvoiceHistory.TabIndex = 0
         '
