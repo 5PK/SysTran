@@ -455,6 +455,7 @@ Partial Class SysTran
         '
         'GroupBox2
         '
+        Me.GroupBox2.BackColor = System.Drawing.Color.Gray
         Me.GroupBox2.Controls.Add(Me.Button1)
         Me.GroupBox2.Controls.Add(Me.Button2)
         Me.GroupBox2.Controls.Add(Me.Button4)
@@ -466,6 +467,7 @@ Partial Class SysTran
         '
         'GroupBox3
         '
+        Me.GroupBox3.BackColor = System.Drawing.Color.Gray
         Me.GroupBox3.Controls.Add(Me.btnCustomers)
         Me.GroupBox3.Controls.Add(Me.Button3)
         Me.GroupBox3.Controls.Add(Me.Button8)
@@ -477,6 +479,7 @@ Partial Class SysTran
         '
         'GroupBox4
         '
+        Me.GroupBox4.BackColor = System.Drawing.Color.Gray
         Me.GroupBox4.Controls.Add(Me.Button7)
         Me.GroupBox4.Controls.Add(Me.Button6)
         Me.GroupBox4.Location = New System.Drawing.Point(12, 721)
